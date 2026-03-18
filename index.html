@@ -3,290 +3,405 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Axysmed | Salud Digital para Estudiantes y Profesionales</title>
     <meta
       name="description"
-      content="Axysmed integra tecnología, salud y educación clínica en una experiencia digital moderna, humana y escalable."
+      content="Axysmed conecta monitoreo clínico, simulación médica y educación en salud dentro de un ecosistema digital profesional. Diseñado para Ecuador."
     />
-    <title>Axysmed | Health-Tech Platform</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Figtree:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <nav class="navbar container">
-          <a class="brand" href="#inicio" aria-label="Ir al inicio de Axysmed">
-            <span class="brand-mark"></span>
-            <span>Axysmed</span>
-          </a>
+    <nav id="navbar" class="navbar">
+      <a class="nav-logo" href="#inicio" aria-label="Ir al inicio de Axysmed">
+        <span class="nav-pulse"></span>
+        <span>Axys<em>med</em></span>
+      </a>
 
-          <button
-            class="nav-toggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="nav-menu"
-            aria-label="Abrir menú"
-          >
-            <span></span>
-            <span></span>
-          </button>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="Abrir menu"
+      >
+        <span></span>
+        <span></span>
+      </button>
 
-          <div class="nav-menu" id="nav-menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#psyke">Psyke</a>
-            <a href="#vita">Vita</a>
-            <a href="#contacto">Contacto</a>
-            <a href="#nosotros">Nosotros</a>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="inicio">
+        <div class="mesh mesh-teal" style="width: 560px; height: 560px; top: -180px; left: -120px"></div>
+        <div class="mesh mesh-blue" style="width: 440px; height: 440px; bottom: -80px; right: -60px"></div>
+        <div class="mesh mesh-sky" style="width: 300px; height: 300px; top: 35%; right: 15%"></div>
+
+        <div class="hero-content">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span>Ecosistema Health-Tech / Ecuador</span>
           </div>
-        </nav>
-      </header>
-
-      <main>
-        <section class="hero-section" id="inicio">
-          <div class="hero-backdrop hero-backdrop-left"></div>
-          <div class="hero-backdrop hero-backdrop-right"></div>
-          <div class="container">
-            <div class="hero-frame reveal">
-              <div class="hero-grid">
-                <div class="hero-copy">
-                  <span class="eyebrow">Health-tech con enfoque clínico</span>
-                  <h1>Axysmed conecta tecnología, salud y educación en una sola base digital.</h1>
-                  <p class="hero-text">
-                    Creamos la landing principal de una techmed pensada para presentar
-                    una visión clara, profesional y humana antes de abrir Vita y Psyke
-                    como productos en sus propios entornos.
-                  </p>
-
-                  <div class="hero-actions">
-                    <a class="btn btn-primary" href="#vita">Ver Vita</a>
-                    <a class="btn btn-secondary" href="#psyke">Explorar Psyke</a>
-                  </div>
-
-                  <div class="hero-note">
-                    <div class="hero-note-stack" aria-hidden="true">
-                      <span>A</span>
-                      <span>X</span>
-                      <span>M</span>
-                    </div>
-                    <div class="hero-note-text">
-                      <strong>Base institucional activa</strong>
-                      <span>Diseñada para presentar el ecosistema Axysmed con claridad premium.</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="hero-visual">
-                  <div class="hero-visual-canvas">
-                    <div class="floating-badge">
-                      <strong>150K +</strong>
-                      <span>Interacciones clínicas proyectadas</span>
-                    </div>
-
-                    <div class="visual-window">
-                      <div class="visual-toolbar">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>
-
-                      <div class="visual-columns">
-                        <article class="visual-card">
-                          <small>Vita</small>
-                          <strong>Monitoreo y seguimiento</strong>
-                          <span>Signos vitales, trazabilidad y lectura visual.</span>
-                        </article>
-                        <article class="visual-card visual-card-alt">
-                          <small>Psyke</small>
-                          <strong>Simulación clínica</strong>
-                          <span>Casos guiados y feedback educativo continuo.</span>
-                        </article>
-                      </div>
-
-                      <div class="visual-curve" aria-hidden="true"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="hero-stats">
-                <article>
-                  <strong>2</strong>
-                  <span>productos base</span>
-                </article>
-                <article>
-                  <strong>1</strong>
-                  <span>ecosistema institucional</span>
-                </article>
-                <article>
-                  <strong>360°</strong>
-                  <span>visión clínica y educativa</span>
-                </article>
-                <article>
-                  <strong>100%</strong>
-                  <span>enfoque profesional</span>
-                </article>
-              </div>
-            </div>
+          <h1>Salud digital para quienes <em>cuidan</em> y quienes <em>aprenden</em></h1>
+          <p class="hero-sub">
+            Axysmed reune monitoreo clinico, simulacion medica y formacion en salud
+            dentro de un solo ecosistema digital, construido con criterio clinico real.
+          </p>
+          <div class="hero-actions">
+            <a href="#productos" class="btn-primary">Ver productos</a>
+            <a href="#contacto" class="btn-ghost">Solicitar acceso</a>
           </div>
-        </section>
+        </div>
 
-        <section class="about-section section-space" id="nosotros">
-          <div class="container">
-            <div class="section-shell about-shell">
-              <div class="about-grid">
-                <div class="about-copy reveal">
-                  <span class="section-tag">Nosotros</span>
-                  <h2>Axysmed nace para integrar salud, tecnología y educación clínica.</h2>
-                  <p>
-                    La visión de Axysmed parte de una necesidad real: construir una
-                    experiencia digital en salud que no se vea fragmentada. Buscamos unir
-                    monitoreo, formación clínica y criterio humano dentro de una marca
-                    sólida, moderna y confiable.
-                  </p>
-                  <p>
-                    Esta landing funciona como base institucional para presentar propósito,
-                    innovación y dirección estratégica antes de abrir el ecosistema
-                    completo hacia productos independientes.
-                  </p>
-                </div>
+        <svg class="ecg-line" viewBox="0 0 600 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path
+            d="M0 30 H140 L155 10 L165 50 L175 5 L185 55 L195 30 H280 L295 20 L300 30 H440 L455 15 L465 45 L475 8 L485 52 L495 30 H600"
+            stroke="#0098B4"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </section>
 
-                <div class="about-visual reveal">
-                  <div class="about-visual-card">
-                    <div class="about-visual-panel">
-                      <span>Propósito</span>
-                      <strong>Diseño clínico con lectura clara y enfoque humano.</strong>
-                    </div>
-                    <div class="about-visual-mini">
-                      <article>
-                        <strong>Innovación</strong>
-                        <span>UX limpia y productos escalables.</span>
-                      </article>
-                      <article>
-                        <strong>Confianza</strong>
-                        <span>Lenguaje visual premium para salud digital.</span>
-                      </article>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-num">2</span>
+          <span class="stat-label">Productos en desarrollo</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">360°</span>
+          <span class="stat-label">Vision clinica y educativa</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Criterio clinico real</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">EC</span>
+          <span class="stat-label">Disenado para Ecuador</span>
+        </div>
+      </div>
 
-        <section class="reference-section section-space">
-          <div class="container">
-            <div class="section-shell reference-shell">
-              <div class="section-heading reveal">
-                <span class="section-tag">Información Referencial</span>
-                <h2>Una base visual pensada para mostrar el ecosistema Axysmed.</h2>
-              </div>
+      <section id="productos">
+        <div class="mesh mesh-teal" style="width: 350px; height: 350px; top: -60px; right: 5%; opacity: 0.35"></div>
+        <div class="reveal section-header">
+          <span class="section-tag">Nuestros Productos</span>
+          <h2>Dos herramientas.<br />Un mismo proposito.</h2>
+          <p class="section-lead">
+            Vita y Psyke forman el nucleo del ecosistema Axysmed, cada uno resolviendo
+            un problema concreto en salud digital.
+          </p>
+        </div>
 
-              <div class="reference-grid">
-                <article class="reference-card reveal" id="vita">
-                  <div class="reference-icon">V</div>
-                  <strong>Vita</strong>
-                  <p>Monitoreo de signos vitales, seguimiento clínico y visualización ordenada de datos.</p>
-                </article>
-                <article class="reference-card reveal" id="psyke">
-                  <div class="reference-icon reference-icon-alt">P</div>
-                  <strong>Psyke</strong>
-                  <p>Simulador de entrevistas clínicas, casos guiados y feedback para formación médica.</p>
-                </article>
-                <article class="reference-card reveal">
-                  <div class="reference-icon">D</div>
-                  <strong>Datos</strong>
-                  <p>Lectura clara de información clínica para apoyar decisiones y seguimiento.</p>
-                </article>
-                <article class="reference-card reveal">
-                  <div class="reference-icon">E</div>
-                  <strong>Educación</strong>
-                  <p>Experiencias guiadas para estudiantes, docentes y entrenamiento profesional.</p>
-                </article>
-                <article class="reference-card reveal">
-                  <div class="reference-icon">I</div>
-                  <strong>Instituciones</strong>
-                  <p>Una arquitectura visual preparada para crecer con clínicas y espacios académicos.</p>
-                </article>
-                <article class="reference-card reveal">
-                  <div class="reference-icon">H</div>
-                  <strong>Enfoque Humano</strong>
-                  <p>Tecnología pensada para sentirse útil, accesible y cercana en contextos de salud.</p>
-                </article>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="vision-section section-space">
-          <div class="container vision-band reveal">
-            <div class="vision-copy">
-              <span class="section-tag">Visión</span>
-              <h2>Construir un ecosistema digital en salud para estudiantes, profesionales e instituciones.</h2>
-              <p>
-                Axysmed prepara una presencia principal sobria y profesional para luego
-                conectar Vita y Psyke en subdominios propios, sin perder consistencia
-                de marca ni claridad clínica.
-              </p>
-            </div>
-
-            <div class="vision-points">
-              <article>
-                <strong>Estudiantes</strong>
-                <span>Aprendizaje estructurado y simulación clínica.</span>
-              </article>
-              <article>
-                <strong>Profesionales</strong>
-                <span>Seguimiento visual y herramientas orientadas a práctica.</span>
-              </article>
-              <article>
-                <strong>Instituciones</strong>
-                <span>Escalabilidad, consistencia y proyección digital en salud.</span>
-              </article>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="site-footer" id="contacto">
-        <div class="container footer-grid">
-          <div>
-            <a class="brand footer-brand" href="#inicio">
-              <span class="brand-mark"></span>
-              <span>Axysmed</span>
-            </a>
-            <p class="footer-text">
-              Health-tech enfocada en monitoreo, educación clínica y experiencias
-              digitales con estándar profesional.
+        <div class="products-grid">
+          <article class="product-card vita reveal">
+            <span class="product-badge">En desarrollo</span>
+            <div class="product-icon">V</div>
+            <div class="product-name">Vita</div>
+            <div class="product-tagline">Monitoreo Clinico</div>
+            <p class="product-desc">
+              Plataforma de seguimiento de signos vitales, trazabilidad de pacientes y
+              visualizacion ordenada de datos clinicos. Disenada para centros de
+              atencion primaria y hospitales.
             </p>
-          </div>
+            <ul class="product-features">
+              <li><span class="feat-dot"></span>Registro y seguimiento de signos vitales</li>
+              <li><span class="feat-dot"></span>Trazabilidad completa del paciente</li>
+              <li><span class="feat-dot"></span>Visualizacion de datos en tiempo real</li>
+              <li><span class="feat-dot"></span>Compatible con flujos de trabajo clinico</li>
+              <li><span class="feat-dot"></span>Exportacion y reportes estructurados</li>
+            </ul>
+          </article>
 
-          <div>
-            <h4>Links</h4>
-            <div class="footer-links">
-              <a href="#inicio">Inicio</a>
-              <a href="#psyke">Psyke</a>
-              <a href="#vita">Vita</a>
-              <a href="#nosotros">Nosotros</a>
-              <a href="#contacto">Contacto</a>
+          <article class="product-card psyke reveal">
+            <span class="product-badge">En desarrollo</span>
+            <div class="product-icon">P</div>
+            <div class="product-name">Psyke</div>
+            <div class="product-tagline">Simulacion Clinica</div>
+            <p class="product-desc">
+              Simulador de entrevistas clinicas y casos guiados con retroalimentacion
+              educativa continua. Pensado para estudiantes de ciencias de la salud que
+              necesitan practica estructurada.
+            </p>
+            <ul class="product-features">
+              <li><span class="feat-dot"></span>Casos clinicos guiados por niveles</li>
+              <li><span class="feat-dot"></span>Retroalimentacion inmediata y detallada</li>
+              <li><span class="feat-dot"></span>Simulacion de entrevistas medicas</li>
+              <li><span class="feat-dot"></span>Banco de escenarios por especialidad</li>
+              <li><span class="feat-dot"></span>Seguimiento del progreso academico</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="nosotros">
+        <div class="about-grid">
+          <div class="about-left reveal">
+            <span class="section-tag">Nosotros</span>
+            <h2>Construido desde adentro del sistema de salud</h2>
+            <p class="section-lead">
+              Axysmed no nacio en una incubadora. Nacio en las salas de clinica, en
+              las practicas hospitalarias y en la frustracion de no encontrar
+              herramientas digitales pensadas para la realidad del sistema de salud en
+              Ecuador.
+            </p>
+
+            <div class="about-values">
+              <div class="value-item">
+                <div class="value-icon">P</div>
+                <div>
+                  <div class="value-title">Proposito clinico real</div>
+                  <div class="value-desc">
+                    Cada decision de diseno parte de necesidades identificadas en
+                    entornos reales de salud.
+                  </div>
+                </div>
+              </div>
+
+              <div class="value-item">
+                <div class="value-icon">U</div>
+                <div>
+                  <div class="value-title">UX orientada al profesional</div>
+                  <div class="value-desc">
+                    Interfaces limpias que reducen la carga cognitiva y se adaptan al
+                    ritmo clinico.
+                  </div>
+                </div>
+              </div>
+
+              <div class="value-item">
+                <div class="value-icon">C</div>
+                <div>
+                  <div class="value-title">Confianza en cada detalle</div>
+                  <div class="value-desc">
+                    Lenguaje visual y flujos disenados para inspirar confianza
+                    institucional.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div>
-            <h4>Contacto</h4>
-            <div class="footer-links">
-              <a href="mailto:hola@axysmed.com">hola@axysmed.com</a>
-              <a href="tel:+593000000000">+593 000 000 000</a>
-              <span>Axysmed Digital Health</span>
+          <div class="reveal founder-wrap">
+            <div class="about-card">
+              <div class="founder-tag">Fundador</div>
+              <div class="founder-name">Favio</div>
+              <div class="founder-role">
+                Interno de Enfermeria - Universidad Ecotec, Guayaquil<br />
+                Desarrollador Health-Tech
+              </div>
+              <p class="founder-bio">
+                Estudiante de enfermeria en practica clinica activa, con formacion en
+                cuidados criticos, documentacion NANDA/NOC/NIC y protocolos de UCI.
+                Paralelamente, construye Axysmed como respuesta directa a los vacios
+                digitales que observa cada dia en el sistema de salud ecuatoriano.
+              </p>
+              <div class="founder-tags">
+                <span class="ftag">Enfermeria Critica</span>
+                <span class="ftag">NANDA/NOC/NIC</span>
+                <span class="ftag">iOS - Swift</span>
+                <span class="ftag">UI/UX en Salud</span>
+                <span class="ftag">Ecuador</span>
+              </div>
             </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </section>
+
+      <section id="vision">
+        <div class="section-centered reveal">
+          <span class="section-tag">Vision</span>
+          <h2>Un ecosistema completo para la salud digital</h2>
+          <p class="section-lead">
+            Axysmed esta disenado para escalar junto a clinicas, universidades y
+            profesionales que necesitan mas que una app aislada.
+          </p>
+        </div>
+
+        <div class="ecosystem-grid">
+          <article class="eco-card reveal">
+            <div class="eco-icon">MC</div>
+            <div class="eco-title">Monitoreo Clinico</div>
+            <p class="eco-desc">
+              Registro continuo de signos vitales y trazabilidad del paciente con
+              lectura visual clara.
+            </p>
+          </article>
+          <article class="eco-card reveal">
+            <div class="eco-icon">SM</div>
+            <div class="eco-title">Simulacion Medica</div>
+            <p class="eco-desc">
+              Casos guiados y feedback educativo para estudiantes de ciencias de la
+              salud.
+            </p>
+          </article>
+          <article class="eco-card reveal">
+            <div class="eco-icon">DC</div>
+            <div class="eco-title">Datos Clinicos</div>
+            <p class="eco-desc">
+              Lectura e interpretacion ordenada de informacion clinica para apoyar
+              decisiones.
+            </p>
+          </article>
+          <article class="eco-card reveal">
+            <div class="eco-icon">ES</div>
+            <div class="eco-title">Educacion en Salud</div>
+            <p class="eco-desc">
+              Experiencias guiadas para estudiantes, docentes y entrenamiento clinico
+              continuo.
+            </p>
+          </article>
+          <article class="eco-card reveal">
+            <div class="eco-icon">IN</div>
+            <div class="eco-title">Instituciones</div>
+            <p class="eco-desc">
+              Arquitectura funcional preparada para crecer con clinicas y espacios
+              academicos.
+            </p>
+          </article>
+          <article class="eco-card reveal">
+            <div class="eco-icon">EH</div>
+            <div class="eco-title">Enfoque Humano</div>
+            <p class="eco-desc">
+              Tecnologia pensada para sentirse util, accesible y cercana en contextos
+              de salud real.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="audiencia">
+        <div class="section-centered reveal">
+          <span class="section-tag">Para quien</span>
+          <h2>Disenado para todos en el sistema de salud</h2>
+        </div>
+
+        <div class="audience-row">
+          <article class="aud-card reveal">
+            <div class="aud-num">01</div>
+            <div class="aud-title">Estudiantes</div>
+            <p class="aud-desc">
+              Simulacion clinica estructurada, casos reales y retroalimentacion
+              inmediata para aprender haciendo desde el primer ano.
+            </p>
+          </article>
+          <article class="aud-card reveal">
+            <div class="aud-num">02</div>
+            <div class="aud-title">Profesionales</div>
+            <p class="aud-desc">
+              Herramientas de seguimiento visual y monitoreo orientadas a la practica
+              clinica diaria, sin complejidad innecesaria.
+            </p>
+          </article>
+          <article class="aud-card reveal">
+            <div class="aud-num">03</div>
+            <div class="aud-title">Instituciones</div>
+            <p class="aud-desc">
+              Escalabilidad, consistencia de marca clinica y proyeccion digital en
+              salud para centros educativos y de atencion.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contacto">
+        <div class="mesh mesh-teal" style="width: 400px; height: 400px; top: -80px; right: -60px; opacity: 0.4"></div>
+        <div class="contact-inner reveal">
+          <span class="section-tag">Contacto</span>
+          <h2>Interesado en Axysmed?</h2>
+          <p class="section-lead">
+            Si eres institucion educativa, profesional de salud o inversionista y
+            quieres saber mas sobre Vita o Psyke, escribenos.
+          </p>
+
+          <form class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text" placeholder="Tu nombre completo" required />
+              </div>
+              <div class="form-group">
+                <label for="correo">Correo</label>
+                <input id="correo" type="email" placeholder="tu@correo.com" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="perfil">Perfil</label>
+              <select id="perfil">
+                <option value="">Selecciona tu perfil</option>
+                <option>Estudiante de salud</option>
+                <option>Profesional de salud</option>
+                <option>Institucion educativa</option>
+                <option>Centro de salud / Clinica</option>
+                <option>Inversionista / Aliado</option>
+                <option>Otro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" placeholder="Cuentanos como podemos ayudarte o colaborar..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-form">Enviar mensaje</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="nav-pulse"></span>
+            <span>Axys<em>med</em></span>
+          </div>
+          <p>
+            Health-tech enfocada en monitoreo clinico, educacion en salud y
+            experiencias digitales con estandar profesional. Construida desde Ecuador.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Plataforma</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Vita</a></li>
+            <li><a href="#productos">Psyke</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#vision">Vision</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:hola@axysmed.com">hola@axysmed.com</a></li>
+            <li><a href="#contacto">Formulario</a></li>
+            <li><a href="#contacto">Solicitar demo</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>(c) 2025 <span>Axysmed</span>. Todos los derechos reservados.</p>
+        <p>Disenado con criterio clinico - Guayaquil, Ecuador</p>
+      </div>
+    </footer>
 
     <script src="./script.js"></script>
   </body>

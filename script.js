@@ -1,7 +1,37 @@
+const nav = document.getElementById("navbar");
 const navToggle = document.querySelector(".nav-toggle");
-const navMenu = document.querySelector(".nav-menu");
-const navLinks = document.querySelectorAll(".nav-menu a");
+const navMenu = document.getElementById("nav-menu");
+const navLinks = document.querySelectorAll(".nav-links a");
 const revealItems = document.querySelectorAll(".reveal");
+const contactForm = document.querySelector(".contact-form");
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("visible"));
+}
+
+window.addEventListener("scroll", () => {
+  if (!nav) {
+    return;
+  }
+
+  nav.classList.toggle("scrolled", window.scrollY > 30);
+});
 
 if (navToggle && navMenu) {
   navToggle.addEventListener("click", () => {
@@ -17,25 +47,22 @@ if (navToggle && navMenu) {
   });
 }
 
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      });
-    },
-    {
-      threshold: 0.18,
-      rootMargin: "0px 0px -30px 0px",
+    const submitButton = contactForm.querySelector(".btn-form");
+    if (!submitButton) {
+      return;
     }
-  );
 
-  revealItems.forEach((item) => observer.observe(item));
-} else {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
+    submitButton.textContent = "Mensaje enviado";
+    submitButton.style.background = "#00897B";
+
+    window.setTimeout(() => {
+      submitButton.textContent = "Enviar mensaje";
+      submitButton.style.background = "";
+      contactForm.reset();
+    }, 3000);
+  });
 }
