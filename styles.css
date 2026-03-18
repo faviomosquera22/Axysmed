@@ -20,6 +20,7 @@
   --radius-xl: 34px;
   --radius-lg: 24px;
   --radius-md: 18px;
+  --copy-max: 34rem;
   --container: min(1180px, calc(100vw - 2rem));
 }
 
@@ -40,6 +41,11 @@ body {
     radial-gradient(circle at top left, rgba(145, 202, 228, 0.24), transparent 22%),
     radial-gradient(circle at right top, rgba(206, 237, 250, 0.9), transparent 28%),
     linear-gradient(180deg, #f9fcff 0%, #f4f9fd 46%, #f7fbfe 100%);
+}
+
+main {
+  display: grid;
+  gap: 0;
 }
 
 img {
@@ -171,7 +177,7 @@ button {
 
 .hero-frame {
   position: relative;
-  padding: 1.35rem;
+  padding: 1.4rem;
   border: 1px solid rgba(142, 186, 212, 0.22);
   border-radius: 42px;
   background:
@@ -182,8 +188,8 @@ button {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.98fr);
-  gap: 1.3rem;
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+  gap: 1.4rem;
   align-items: stretch;
 }
 
@@ -202,7 +208,8 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2.4rem;
+  min-height: 34rem;
+  padding: 2.5rem;
   border-radius: 28px;
   background:
     linear-gradient(135deg, rgba(57, 108, 146, 0.96), rgba(127, 188, 223, 0.62)),
@@ -240,8 +247,8 @@ button {
 }
 
 .hero-copy h1 {
-  max-width: 12ch;
-  font-size: clamp(3rem, 6.6vw, 5.7rem);
+  max-width: 8.5ch;
+  font-size: clamp(2.8rem, 5vw, 4.9rem);
 }
 
 .hero-text,
@@ -254,7 +261,7 @@ button {
 }
 
 .hero-text {
-  max-width: 38rem;
+  max-width: 30rem;
   margin-top: 1.3rem;
   color: rgba(255, 255, 255, 0.88);
   font-size: 1.05rem;
@@ -306,6 +313,7 @@ button {
   gap: 1rem;
   margin-top: 2rem;
   padding: 1rem 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.12);
 }
@@ -358,6 +366,7 @@ button {
 
 .hero-visual {
   position: relative;
+  min-height: 34rem;
   border-radius: 28px;
   padding: 1rem;
   background:
@@ -368,6 +377,7 @@ button {
 .hero-visual-canvas {
   position: relative;
   min-height: 100%;
+  height: 100%;
   padding: 1rem;
   border-radius: 24px;
   background:
@@ -381,11 +391,11 @@ button {
   top: 1rem;
   right: 1rem;
   z-index: 2;
-  width: 10.5rem;
+  width: 14rem;
   padding: 0.9rem 1rem;
-  border: 1px solid rgba(125, 174, 205, 0.18);
+  border: 1px solid rgba(125, 174, 205, 0.24);
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.97);
   color: var(--title);
   box-shadow: var(--shadow-sm);
 }
@@ -404,16 +414,15 @@ button {
 
 .visual-window {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 31rem;
-  padding: 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100%;
+  padding: 1.1rem;
   border-radius: 24px;
-  border: 1px solid rgba(136, 181, 209, 0.2);
+  border: 1px solid rgba(136, 181, 209, 0.26);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.06)),
-    linear-gradient(140deg, rgba(66, 120, 160, 0.52), rgba(178, 220, 242, 0.54));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.12)),
+    linear-gradient(140deg, rgba(66, 120, 160, 0.66), rgba(178, 220, 242, 0.62));
   overflow: hidden;
 }
 
@@ -436,14 +445,16 @@ button {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   align-items: end;
-  margin-top: auto;
+  align-self: end;
+  margin-top: 4.5rem;
 }
 
 .visual-card {
-  padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 10.5rem;
+  padding: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.28);
   backdrop-filter: blur(10px);
   color: #ffffff;
 }
@@ -487,16 +498,19 @@ button {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-top: 1.2rem;
+  padding: 0;
   border-radius: 26px;
-  background:
-    linear-gradient(180deg, rgba(65, 112, 150, 0.94), rgba(112, 173, 208, 0.86));
-  color: #ffffff;
 }
 
 .hero-stats article {
-  padding: 0.85rem 0.4rem;
+  padding: 1.1rem 0.8rem;
+  border: 1px solid rgba(113, 162, 191, 0.18);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(65, 112, 150, 0.94), rgba(112, 173, 208, 0.86));
+  box-shadow: var(--shadow-sm);
+  color: #ffffff;
   text-align: center;
 }
 
@@ -515,18 +529,34 @@ button {
 }
 
 .section-space {
-  padding: 2.4rem 0 5rem;
+  padding: 2rem 0 4.5rem;
+}
+
+.section-shell {
+  padding: 1.4rem;
+  border: 1px solid rgba(137, 180, 206, 0.2);
+  border-radius: 36px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(240, 248, 253, 0.9)),
+    var(--surface);
+  box-shadow: var(--shadow-md);
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
   gap: 1.4rem;
-  align-items: center;
+  align-items: stretch;
 }
 
 .about-copy {
-  padding: 1.3rem 0.6rem 1.3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.3rem;
+  border: 1px solid rgba(127, 169, 197, 0.18);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.76);
 }
 
 .about-copy h2,
@@ -538,7 +568,7 @@ button {
 }
 
 .about-copy p {
-  max-width: 38rem;
+  max-width: var(--copy-max);
   color: var(--muted);
   font-size: 1rem;
 }
@@ -547,7 +577,12 @@ button {
   margin-top: 1rem;
 }
 
+.about-visual {
+  display: grid;
+}
+
 .about-visual-card {
+  height: 100%;
   padding: 1rem;
   border-radius: var(--radius-xl);
   background:
@@ -556,8 +591,8 @@ button {
 }
 
 .about-visual-panel {
-  min-height: 17rem;
-  padding: 1.5rem;
+  min-height: 18rem;
+  padding: 1.6rem;
   border-radius: 24px;
   background:
     radial-gradient(circle at top right, rgba(154, 208, 233, 0.36), transparent 25%),
@@ -610,6 +645,7 @@ button {
 }
 
 .section-heading {
+  max-width: 42rem;
   margin-bottom: 1.8rem;
 }
 
@@ -620,8 +656,14 @@ button {
 }
 
 .reference-card {
-  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 14.5rem;
+  padding: 1.5rem;
   border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(236, 246, 252, 0.92)),
+    var(--surface);
 }
 
 .reference-icon {
@@ -657,7 +699,7 @@ button {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.92fr);
   gap: 1.2rem;
-  padding: 1.3rem;
+  padding: 1.4rem;
   border-radius: 32px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(236, 245, 251, 0.9)),
@@ -666,11 +708,14 @@ button {
 }
 
 .vision-copy {
-  padding: 1rem;
+  padding: 1.2rem;
+  border: 1px solid rgba(127, 169, 197, 0.18);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.78);
 }
 
 .vision-copy p {
-  max-width: 42rem;
+  max-width: var(--copy-max);
   color: var(--muted);
 }
 
@@ -680,10 +725,11 @@ button {
 }
 
 .vision-points article {
-  padding: 1.15rem;
+  padding: 1.2rem;
   border: 1px solid rgba(123, 170, 198, 0.18);
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.9);
+  min-height: 7.5rem;
 }
 
 .vision-points strong {
@@ -705,7 +751,8 @@ button {
   display: grid;
   grid-template-columns: 1.2fr 0.85fr 0.95fr;
   gap: 1.5rem;
-  padding: 1.7rem;
+  align-items: start;
+  padding: 1.8rem;
   border-radius: 30px;
 }
 
@@ -763,6 +810,11 @@ button {
   .about-visual-panel strong {
     max-width: none;
   }
+
+  .hero-copy,
+  .hero-visual {
+    min-height: auto;
+  }
 }
 
 @media (max-width: 760px) {
@@ -807,6 +859,7 @@ button {
 
   .hero-copy,
   .hero-frame,
+  .section-shell,
   .hero-visual,
   .visual-window,
   .footer-grid {
@@ -828,6 +881,11 @@ button {
   .reference-grid,
   .hero-stats {
     grid-template-columns: 1fr;
+  }
+
+  .reference-card,
+  .vision-points article {
+    min-height: auto;
   }
 
   .visual-card-alt {
@@ -858,6 +916,7 @@ button {
   }
 
   .hero-frame,
+  .section-shell,
   .hero-copy,
   .about-visual-card,
   .reference-card,
