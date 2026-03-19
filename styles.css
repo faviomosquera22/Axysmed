@@ -535,9 +535,13 @@ h2 {
 }
 
 .psyke-logo-card {
-  width: 70px;
+  width: 188px;
   height: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.product-card.psyke .product-name {
+  display: none;
 }
 
 .product-desc {
@@ -2515,7 +2519,7 @@ footer {
   }
 
   .psyke-logo-card {
-    width: 68px;
+    width: 156px;
     height: auto;
   }
 
