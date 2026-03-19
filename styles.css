@@ -2355,6 +2355,28 @@ h2 {
   transform: translateY(-1px);
 }
 
+.btn-form:disabled {
+  cursor: wait;
+  opacity: 0.92;
+  transform: none;
+}
+
+.contact-feedback {
+  min-height: 1.4rem;
+  margin-top: 0.1rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.contact-feedback.is-success {
+  color: #0f8a63;
+}
+
+.contact-feedback.is-error {
+  color: #c45353;
+}
+
 .contact-note {
   margin-top: 1rem;
   font-size: 0.92rem;

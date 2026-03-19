@@ -948,21 +948,26 @@
             quieres saber más sobre Vita o Psyke, escríbenos.
           </p>
 
-          <form class="contact-form">
+          <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="8cd60916-1839-4939-959a-be684b3e7871" />
+            <input type="hidden" name="subject" value="Nuevo mensaje desde Axysmed" />
+            <input type="hidden" name="from_name" value="Axysmed Website" />
+            <input type="hidden" name="botcheck" value="" />
+
             <div class="form-row">
               <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input id="nombre" type="text" placeholder="Tu nombre completo" required />
+                <input id="nombre" name="name" type="text" placeholder="Tu nombre completo" required />
               </div>
               <div class="form-group">
                 <label for="correo">Correo</label>
-                <input id="correo" type="email" placeholder="tu@correo.com" required />
+                <input id="correo" name="email" type="email" placeholder="tu@correo.com" required />
               </div>
             </div>
 
             <div class="form-group">
               <label for="perfil">Perfil</label>
-              <select id="perfil">
+              <select id="perfil" name="perfil">
                 <option value="">Selecciona tu perfil</option>
                 <option>Estudiante de salud</option>
                 <option>Profesional de salud</option>
@@ -975,10 +980,11 @@
 
             <div class="form-group">
               <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" placeholder="Cuéntanos cómo podemos ayudarte o colaborar..."></textarea>
+              <textarea id="mensaje" name="message" placeholder="Cuéntanos cómo podemos ayudarte o colaborar..." required></textarea>
             </div>
 
             <button type="submit" class="btn-form">Enviar mensaje</button>
+            <p class="contact-feedback" aria-live="polite"></p>
           </form>
           <p class="contact-note">
             También puedes escribirnos a

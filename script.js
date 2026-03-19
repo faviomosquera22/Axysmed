@@ -49,22 +49,64 @@ if (navToggle && navMenu) {
 }
 
 if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
+  contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const submitButton = contactForm.querySelector(".btn-form");
+    const feedback = contactForm.querySelector(".contact-feedback");
     if (!submitButton) {
       return;
     }
 
-    submitButton.textContent = "Mensaje enviado";
-    submitButton.style.background = "#00897B";
+    const defaultLabel = "Enviar mensaje";
+    submitButton.disabled = true;
+    submitButton.textContent = "Enviando...";
+    submitButton.style.background = "#0d7f93";
 
-    window.setTimeout(() => {
-      submitButton.textContent = "Enviar mensaje";
-      submitButton.style.background = "";
+    if (feedback) {
+      feedback.textContent = "";
+      feedback.classList.remove("is-success", "is-error");
+    }
+
+    try {
+      const formData = new FormData(contactForm);
+      formData.append("pagina", window.location.href);
+
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "No se pudo enviar el mensaje.");
+      }
+
+      submitButton.textContent = "Mensaje enviado";
+      submitButton.style.background = "#00897B";
+
+      if (feedback) {
+        feedback.textContent = "Tu mensaje fue enviado correctamente. Revisaremos tu solicitud pronto.";
+        feedback.classList.add("is-success");
+      }
+
       contactForm.reset();
-    }, 3000);
+    } catch (error) {
+      submitButton.textContent = defaultLabel;
+      submitButton.style.background = "";
+
+      if (feedback) {
+        feedback.textContent = "Hubo un problema al enviar el mensaje. Intenta de nuevo o escríbenos a axysmedtech@gmail.com.";
+        feedback.classList.add("is-error");
+      }
+    } finally {
+      submitButton.disabled = false;
+      if (submitButton.textContent === "Enviando...") {
+        submitButton.textContent = defaultLabel;
+        submitButton.style.background = "";
+      }
+    }
   });
 }
 
