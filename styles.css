@@ -999,7 +999,8 @@ h2 {
 
 .showcase-carousel {
   min-width: 0;
-  padding: 1rem;
+  position: relative;
+  padding: 1rem 1rem 4rem;
   border-radius: 28px;
   overflow: hidden;
 }
@@ -1032,12 +1033,12 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 440px;
+  min-height: 300px;
   padding: 0.4rem;
 }
 
 .showcase-carousel-wide .showcase-slide-visual {
-  min-height: 520px;
+  min-height: 380px;
 }
 
 .showcase-carousel .showcase-image {
@@ -1054,18 +1055,18 @@ h2 {
 
 .showcase-carousel .showcase-image.is-mobile {
   max-width: min(100%, 340px);
-  max-height: 520px;
+  max-height: 360px;
 }
 
 .showcase-carousel .showcase-image.is-desktop {
   width: 100%;
-  max-height: 520px;
+  max-height: 420px;
 }
 
 .showcase-carousel figcaption {
   display: grid;
   gap: 0.3rem;
-  margin-top: 0.9rem;
+  margin-top: 0.6rem;
 }
 
 .showcase-carousel figcaption strong {
@@ -1088,10 +1089,10 @@ h2 {
 
 .showcase-carousel-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 0.4rem;
 }
 
 .showcase-carousel-dots {
@@ -1126,7 +1127,12 @@ h2 {
 
 .showcase-carousel-controls {
   display: flex;
-  gap: 0.6rem;
+  justify-content: space-between;
+  position: absolute;
+  inset: 50% 0 auto 0;
+  transform: translateY(-50%);
+  padding: 0 0.8rem;
+  pointer-events: none;
 }
 
 .showcase-carousel-button {
@@ -1139,7 +1145,9 @@ h2 {
   font-size: 1.2rem;
   line-height: 1;
   cursor: pointer;
+  pointer-events: auto;
   transition: transform 0.2s, border-color 0.2s, background 0.2s;
+  backdrop-filter: blur(10px);
 }
 
 .showcase-carousel-button:hover {
@@ -2570,7 +2578,7 @@ footer {
 
   .showcase-slide-visual,
   .showcase-carousel-wide .showcase-slide-visual {
-    min-height: 380px;
+    min-height: 280px;
   }
 
   .vita-option-grid {
@@ -2704,9 +2712,19 @@ footer {
     align-items: flex-start;
   }
 
+  .showcase-carousel-controls {
+    position: static;
+    inset: auto;
+    transform: none;
+    width: 100%;
+    padding: 0;
+    justify-content: flex-start;
+    gap: 0.6rem;
+  }
+
   .showcase-slide-visual,
   .showcase-carousel-wide .showcase-slide-visual {
-    min-height: 300px;
+    min-height: 240px;
   }
 
   .showcase-image.is-mobile {
