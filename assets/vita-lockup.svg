@@ -1,0 +1,8 @@
+<svg width="720" height="220" viewBox="0 0 720 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0 6) scale(0.48)">
+    <rect x="4" y="38" width="356" height="356" rx="72" fill="#3597A8"/>
+    <path d="M88 118C82 100 93 92 111 92H139C152 92 161 98 166 111L230 281C234 292 243 296 253 296H280C297 296 305 314 296 328L289 340C283 350 274 356 262 356H192C173 356 158 345 151 328L88 118Z" fill="white"/>
+    <path d="M220 123C225 107 235 100 250 100H286C303 100 312 113 306 129L283 190C278 203 267 210 253 210H228C209 210 199 193 206 175L220 123Z" fill="white"/>
+  </g>
+  <text x="210" y="150" fill="#252A2F" font-family="Figtree, Arial, sans-serif" font-size="118" font-weight="700" letter-spacing="-3">Vita</text>
+</svg>

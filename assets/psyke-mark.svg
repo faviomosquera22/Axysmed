@@ -1,0 +1,9 @@
+<svg width="320" height="280" viewBox="20 60 320 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="psykeAccentMark" x1="24" y1="80" x2="284" y2="316" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#13E3E1" />
+      <stop offset="1" stop-color="#04CFC4" />
+    </linearGradient>
+  </defs>
+  <path d="M60 70C35 96 24 135 24 180C24 219 33 254 45 284H96L115 284C121 284 126 288 128 293L139 325C141 332 149 332 151 325L171 220C173 211 186 211 188 220L210 311C212 318 221 318 223 311L245 240C247 233 257 232 261 238L283 284H284H315C327 254 336 219 336 180C336 134 324 95 300 70" stroke="url(#psykeAccentMark)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

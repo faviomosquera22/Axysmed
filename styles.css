@@ -514,7 +514,7 @@ h2 {
 }
 
 .vita-logo-card {
-  width: 104px;
+  width: 58px;
   height: auto;
   margin-bottom: 1rem;
 }
@@ -535,9 +535,9 @@ h2 {
 }
 
 .psyke-logo-card {
-  width: 108px;
+  width: 70px;
   height: auto;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 .product-desc {
@@ -630,9 +630,9 @@ h2 {
 }
 
 .vita-logo-showcase {
-  width: 128px;
+  width: 112px;
   height: auto;
-  margin-bottom: 0.9rem;
+  margin-bottom: 1rem;
 }
 
 .vita-actions {
@@ -674,7 +674,7 @@ h2 {
 }
 
 .vita-logo-inline {
-  width: 120px;
+  width: 110px;
   height: auto;
   margin-bottom: 1rem;
 }
@@ -1398,9 +1398,9 @@ h2 {
 }
 
 .psyke-logo-showcase {
-  width: 144px;
+  width: 176px;
   height: auto;
-  margin-bottom: 0.9rem;
+  margin-bottom: 1rem;
 }
 
 .psyke-copy .section-tag,
@@ -1488,7 +1488,7 @@ h2 {
 }
 
 .psyke-logo-inline {
-  width: 132px;
+  width: 168px;
   height: auto;
   margin-bottom: 1rem;
 }
@@ -2488,13 +2488,17 @@ footer {
   }
 
   .psyke-logo-showcase {
-    width: 126px;
+    width: 152px;
     height: auto;
   }
 
-  .psyke-logo-card,
+  .psyke-logo-card {
+    width: 68px;
+    height: auto;
+  }
+
   .psyke-logo-inline {
-    width: 102px;
+    width: 144px;
     height: auto;
   }
 
@@ -2539,13 +2543,17 @@ footer {
   }
 
   .vita-logo-showcase {
-    width: 118px;
+    width: 100px;
     height: auto;
   }
 
-  .vita-logo-card,
+  .vita-logo-card {
+    width: 54px;
+    height: auto;
+  }
+
   .vita-logo-inline {
-    width: 96px;
+    width: 88px;
     height: auto;
   }
 
