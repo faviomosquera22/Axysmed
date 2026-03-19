@@ -1,0 +1,21 @@
+<svg width="1080" height="360" viewBox="0 0 1080 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="psykeAccent" x1="24" y1="80" x2="284" y2="316" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#13E3E1" />
+      <stop offset="1" stop-color="#04CFC4" />
+    </linearGradient>
+    <linearGradient id="psykeDots" x1="274" y1="138" x2="340" y2="138" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#23BBFF" />
+      <stop offset="1" stop-color="#08E2B1" />
+    </linearGradient>
+  </defs>
+  <path d="M60 70C35 96 24 135 24 180C24 219 33 254 45 284H96L115 284C121 284 126 288 128 293L139 325C141 332 149 332 151 325L171 220C173 211 186 211 188 220L210 311C212 318 221 318 223 311L245 240C247 233 257 232 261 238L283 284H284H315C327 254 336 219 336 180C336 134 324 95 300 70" stroke="url(#psykeAccent)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="414" cy="154" r="18" fill="url(#psykeDots)" />
+  <circle cx="468" cy="154" r="18" fill="#08E2B1" />
+  <text x="522" y="185" fill="#080D1F" font-family="Figtree, Arial, sans-serif" font-size="138" font-weight="700" letter-spacing="10">PSYKE</text>
+  <path d="M566 129H626C642 129 656 143 656 159C656 175 642 189 626 189H566V129Z" fill="white"/>
+  <path d="M516 270H1010" stroke="#0D1A32" stroke-width="7" stroke-linecap="round"/>
+  <text x="514" y="318" fill="#1299B8" font-family="Figtree, Arial, sans-serif" font-size="64" font-weight="500" letter-spacing="12">SIMULADOR CLÍNICO</text>
+  <circle cx="1038" cy="154" r="18" fill="#1CA7FF" />
+  <circle cx="1074" cy="154" r="18" fill="#08E2B1" />
+</svg>

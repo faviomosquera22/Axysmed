@@ -1,0 +1,20 @@
+<svg width="1080" height="320" viewBox="0 0 1080 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="axysmedIconBgLight" x1="32" y1="24" x2="272" y2="268" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#78C6CB" />
+      <stop offset="1" stop-color="#72BCC1" />
+    </linearGradient>
+    <linearGradient id="axysmedWordLight" x1="575" y1="60" x2="970" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" />
+      <stop offset="1" stop-color="#7CD7E6" />
+    </linearGradient>
+  </defs>
+  <rect x="8" y="20" width="248" height="248" rx="64" fill="url(#axysmedIconBgLight)" />
+  <circle cx="48" cy="76" r="6" fill="#BFECEE" />
+  <circle cx="214" cy="76" r="6" fill="#BFECEE" />
+  <circle cx="48" cy="224" r="6" fill="#BFECEE" />
+  <circle cx="214" cy="224" r="6" fill="#BFECEE" />
+  <path d="M48 152H81C89 152 89 147 91 139L98 116C100 108 105 108 107 116L120 182C122 190 127 190 129 182L143 102C145 92 150 92 152 102L166 206C168 216 173 216 176 206L188 154C190 146 194 146 199 146H214" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="190" cy="152" r="13" fill="url(#axysmedIconBgLight)" stroke="white" stroke-width="8" />
+  <text x="292" y="223" fill="url(#axysmedWordLight)" font-family="Figtree, Arial, sans-serif" font-size="150" font-weight="700" letter-spacing="-4">AxysMed</text>
+</svg>
