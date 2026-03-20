@@ -4,6 +4,7 @@ const navLinks = document.querySelectorAll(".nav-menu a");
 const revealItems = document.querySelectorAll("[data-reveal]");
 const leadForms = document.querySelectorAll("[data-lead-form]");
 const trackedClicks = document.querySelectorAll("[data-track-click]");
+const rotators = document.querySelectorAll("[data-rotator]");
 
 function postJson(url, payload, useKeepalive = false) {
   return fetch(url, {
@@ -70,6 +71,28 @@ trackedClicks.forEach((element) => {
   element.addEventListener("click", () => {
     trackClick(element.dataset.trackProduct, element.dataset.trackLocation);
   });
+});
+
+rotators.forEach((rotator) => {
+  const images = Array.from(rotator.querySelectorAll(".rotator-image"));
+  const interval = Number(rotator.dataset.interval || 2800);
+
+  if (images.length < 2) {
+    return;
+  }
+
+  let currentIndex = images.findIndex((image) => image.classList.contains("is-active"));
+
+  if (currentIndex < 0) {
+    currentIndex = 0;
+    images[0].classList.add("is-active");
+  }
+
+  window.setInterval(() => {
+    images[currentIndex].classList.remove("is-active");
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add("is-active");
+  }, interval);
 });
 
 leadForms.forEach((form) => {
