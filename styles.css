@@ -217,6 +217,15 @@ a {
 
 .hero-home .hero-copy {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(242, 248, 255, 0.92));
+  max-width: 980px;
+}
+
+.hero-home .hero-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero-home .hero-lead {
+  max-width: 72ch;
 }
 
 .product-hero .hero-copy {
