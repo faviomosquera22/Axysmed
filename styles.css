@@ -535,6 +535,61 @@ p {
   color: #ffffff;
 }
 
+.section-closing {
+  padding-top: 1rem;
+}
+
+.closing-panel {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(240, 247, 255, 0.92));
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow);
+}
+
+.closing-copy {
+  max-width: 760px;
+}
+
+.closing-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.closing-link {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1.25rem 1.35rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(0, 152, 180, 0.1), rgba(31, 111, 229, 0.12));
+  border: 1px solid rgba(10, 31, 60, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.closing-link strong {
+  font-family: var(--font-head);
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.closing-link span {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.closing-link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.closing-link-vita {
+  background: linear-gradient(135deg, rgba(11, 157, 122, 0.12), rgba(32, 180, 134, 0.14));
+}
+
 .final-cta-box {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(242, 247, 252, 0.9));
 }
@@ -751,6 +806,7 @@ p {
   .result-grid,
   .split-fit-grid,
   .product-showcase-grid,
+  .closing-actions,
   .cta-band-inner,
   .final-cta-box,
   .footer-inner {
