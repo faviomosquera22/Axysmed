@@ -581,6 +581,13 @@ p {
   font-weight: 600;
 }
 
+.closing-link em {
+  margin-top: 0.25rem;
+  font-style: normal;
+  font-weight: 800;
+  color: var(--text);
+}
+
 .closing-link:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-soft);
