@@ -3,1041 +3,226 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Axysmed | Salud Digital para Estudiantes y Profesionales</title>
+    <title>Axysmed | Formación clínica y atención al paciente</title>
     <meta
       name="description"
-      content="Axysmed conecta monitoreo clínico, simulación médica y educación en salud dentro de un ecosistema digital profesional, hecho en Ecuador para Ecuador."
+      content="Axysmed organiza su propuesta en dos rutas claras: Psyke para formación clínica y Vita para atención y seguimiento del paciente."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Figtree:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Figtree:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/svg+xml" href="./assets/axysmed-logo-dark.svg" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/svg+xml" href="/assets/axysmed-logo-dark.svg" />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body>
-    <nav id="navbar" class="navbar">
-      <a class="nav-logo" href="#inicio" aria-label="Ir al inicio de Axysmed">
-        <img src="./assets/axysmed-logo-dark.svg" alt="Axysmed" class="brand-logo" />
-      </a>
+  <body class="site-body">
+    <header class="site-header" id="top">
+      <nav class="navbar">
+        <a class="nav-logo" href="/" aria-label="Ir al inicio de Axysmed">
+          <img src="/assets/axysmed-logo-dark.svg" alt="Axysmed" class="brand-logo" />
+        </a>
 
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="nav-menu"
-        aria-label="Abrir menú"
-      >
-        <span></span>
-        <span></span>
-      </button>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Abrir menú"
+        >
+          <span></span>
+          <span></span>
+        </button>
 
-      <ul class="nav-links" id="nav-menu">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#productos">Productos</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#vision">Visión</a></li>
-        <li><a href="#contacto" class="nav-cta">Contacto</a></li>
-      </ul>
-    </nav>
+        <div class="nav-menu" id="nav-menu">
+          <a href="/" aria-current="page">Inicio</a>
+          <a href="/psyke">Psyke</a>
+          <a href="/vita">Vita</a>
+          <a href="#contacto-rutas" class="btn btn-primary nav-cta">
+            Contactar
+          </a>
+        </div>
+      </nav>
+    </header>
 
     <main>
-      <section id="inicio">
-        <div class="mesh mesh-teal" style="width: 560px; height: 560px; top: -180px; left: -120px"></div>
-        <div class="mesh mesh-blue" style="width: 440px; height: 440px; bottom: -80px; right: -60px"></div>
-        <div class="mesh mesh-sky" style="width: 300px; height: 300px; top: 35%; right: 15%"></div>
+      <section class="page-hero hero-home">
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal>
+            <span class="eyebrow">Axysmed / dos soluciones, dos audiencias</span>
+            <h1>Tecnología que mejora la formación y la atención en salud</h1>
+            <p class="hero-lead">
+              Axysmed tiene dos soluciones claras: <strong>Psyke</strong> para
+              estudiantes y universidades que necesitan práctica clínica, y
+              <strong>Vita</strong> para clínicas y profesionales que necesitan ordenar
+              la atención y el seguimiento del paciente.
+            </p>
+            <div class="button-row">
+              <a href="/psyke" class="btn btn-primary" data-track-click data-track-product="Psyke" data-track-location="home-hero">
+                Explorar Psyke
+              </a>
+              <a href="/vita" class="btn btn-secondary" data-track-click data-track-product="Vita" data-track-location="home-hero">
+                Explorar Vita
+              </a>
+            </div>
+          </div>
 
-        <div class="hero-content">
-          <div class="badge">
-            <span class="badge-dot"></span>
-            <span>Health-Tech hecho en Ecuador para Ecuador</span>
-          </div>
-          <h1>Salud digital para quienes <em>cuidan</em> y quienes <em>aprenden</em></h1>
-          <p class="hero-sub">
-            Axysmed reúne monitoreo clínico, simulación médica y formación en salud
-            dentro de un solo ecosistema digital, construido con criterio clínico real.
-          </p>
-          <div class="hero-actions">
-            <a href="#productos" class="btn-primary">Ver productos</a>
-            <a href="#contacto" class="btn-ghost">Solicitar acceso</a>
-          </div>
+          <aside class="hero-panel" data-reveal>
+            <div class="mini-flow">
+              <span class="mini-flow-label">Problema</span>
+              <p>Una misma web no debe hablar igual a estudiantes, universidades, clínicas y profesionales.</p>
+            </div>
+            <div class="mini-flow">
+              <span class="mini-flow-label">Solución</span>
+              <p>Separar la propuesta en dos rutas para que cada visitante entienda rápido qué resuelve Axysmed.</p>
+            </div>
+            <div class="mini-flow">
+              <span class="mini-flow-label">Resultado</span>
+              <p>Más claridad, menos fricción y un camino más corto hacia una demo del producto correcto.</p>
+            </div>
+          </aside>
         </div>
-
-        <svg class="ecg-line" viewBox="0 0 600 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path
-            d="M0 30 H140 L155 10 L165 50 L175 5 L185 55 L195 30 H280 L295 20 L300 30 H440 L455 15 L465 45 L475 8 L485 52 L495 30 H600"
-            stroke="#0098B4"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
       </section>
 
-      <div class="stats-bar">
-        <div class="stat-item">
-          <span class="stat-num">2</span>
-          <span class="stat-label">Productos en desarrollo</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">360°</span>
-          <span class="stat-label">Visión clínica y educativa</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">100%</span>
-          <span class="stat-label">Criterio clínico real</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">EC</span>
-          <span class="stat-label">Hecho en Ecuador</span>
-        </div>
-      </div>
-
-      <section id="productos">
-        <div class="mesh mesh-teal" style="width: 350px; height: 350px; top: -60px; right: 5%; opacity: 0.35"></div>
-        <div class="reveal section-header">
-          <span class="section-tag">Nuestros Productos</span>
-          <h2>Dos herramientas.<br />Un mismo propósito.</h2>
-          <p class="section-lead">
-            Vita y Psyke forman el núcleo del ecosistema Axysmed, cada uno resolviendo
-            un problema concreto en salud digital.
+      <section class="section-block">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Elige tu ruta</span>
+          <h2>Cada solución responde a un problema distinto</h2>
+          <p>
+            En lugar de mezclar mensajes, la home ahora dirige a cada audiencia hacia
+            la propuesta que realmente necesita evaluar.
           </p>
         </div>
 
-        <div class="products-grid">
-          <article class="product-card vita reveal">
-            <span class="product-badge">En desarrollo</span>
-            <div class="product-logo">
-              <img src="./assets/vita-logo.svg" alt="Vita" class="vita-logo-card" />
-            </div>
-            <div class="product-name">Vita</div>
-            <div class="product-tagline">Monitoreo Clínico</div>
-            <p class="product-desc">
-              Plataforma de seguimiento de signos vitales, trazabilidad de pacientes y
-              visualización ordenada de datos clínicos. Diseñada para centros de
-              atención primaria y hospitales.
+        <div class="container audience-grid">
+          <article class="audience-card audience-card-psyke" data-reveal>
+            <img src="/assets/psyke-lockup-dark.svg" alt="Psyke" class="product-lockup" />
+            <span class="audience-tag">Estudiantes y universidades</span>
+            <h3>Entrena casos clínicos sin riesgo</h3>
+            <p>
+              <strong>Problema:</strong> la formación clínica suele llegar con poca
+              práctica real y miedo a equivocarse.
             </p>
-            <ul class="product-features">
-              <li><span class="feat-dot"></span>Registro y seguimiento de signos vitales</li>
-              <li><span class="feat-dot"></span>Trazabilidad completa del paciente</li>
-              <li><span class="feat-dot"></span>Visualización de datos en tiempo real</li>
-              <li><span class="feat-dot"></span>Compatible con flujos de trabajo clínico</li>
-              <li><span class="feat-dot"></span>Exportación y reportes estructurados</li>
-            </ul>
-            <a href="#vita-demo" class="product-link">Ver muestra de Vita</a>
+            <p>
+              <strong>Solución:</strong> Psyke permite practicar casos clínicos,
+              repetir escenarios y recibir evaluación automática.
+            </p>
+            <p>
+              <strong>Resultado:</strong> estudiantes mejor preparados para tomar
+              decisiones antes de atender pacientes reales.
+            </p>
+            <a href="/psyke" class="btn btn-primary" data-track-click data-track-product="Psyke" data-track-location="home-card">
+              Explorar Psyke
+            </a>
           </article>
 
-          <article class="product-card psyke reveal">
-            <span class="product-badge">En desarrollo</span>
-            <div class="product-logo">
-              <img src="./assets/psyke-lockup-dark.svg" alt="Psyke" class="psyke-logo-card" />
-            </div>
-            <div class="product-name">Psyke</div>
-            <div class="product-tagline">Simulación Clínica</div>
-            <p class="product-desc">
-              Simulador de entrevistas clínicas y casos guiados con retroalimentación
-              educativa continua. Pensado para estudiantes de ciencias de la salud que
-              necesitan práctica estructurada.
+          <article class="audience-card audience-card-vita" data-reveal>
+            <img src="/assets/vita-lockup.svg" alt="Vita" class="product-lockup" />
+            <span class="audience-tag">Clínicas y profesionales</span>
+            <h3>Optimiza la atención y seguimiento del paciente</h3>
+            <p>
+              <strong>Problema:</strong> la operación diaria se vuelve lenta cuando la
+              información del paciente está dispersa y el seguimiento es irregular.
             </p>
-            <ul class="product-features">
-              <li><span class="feat-dot"></span>Casos clínicos guiados por niveles</li>
-              <li><span class="feat-dot"></span>Retroalimentación inmediata y detallada</li>
-              <li><span class="feat-dot"></span>Simulación de entrevistas médicas</li>
-              <li><span class="feat-dot"></span>Banco de escenarios por especialidad</li>
-              <li><span class="feat-dot"></span>Seguimiento del progreso académico</li>
-            </ul>
-            <a href="#psyke-demo" class="product-link">Ver muestra de Psyke</a>
+            <p>
+              <strong>Solución:</strong> Vita centraliza registro, monitoreo y
+              seguimiento clínico en tiempo real.
+            </p>
+            <p>
+              <strong>Resultado:</strong> equipos más organizados, menos errores y
+              pacientes con mejor continuidad de atención.
+            </p>
+            <a href="/vita" class="btn btn-primary btn-vita" data-track-click data-track-product="Vita" data-track-location="home-card">
+              Explorar Vita
+            </a>
           </article>
         </div>
       </section>
 
-      <section id="vita-demo">
-        <div class="vita-intro reveal">
-          <div class="vita-copy">
-            <img src="./assets/vita-logo.svg" alt="Vita" class="vita-logo-showcase" />
-            <span class="section-tag">Vita</span>
-            <h2>Triage, seguimiento y operación clínica en una sola base visual.</h2>
-            <p class="section-lead">
-              Vita une evaluación rápida, historial, seguimiento por módulos y portal
-              profesional para que paciente, profesional e institución trabajen con
-              más continuidad y mejor lectura clínica.
-            </p>
-          </div>
-          <div class="vita-actions">
-            <a href="https://website-gilt-seven-66.vercel.app" class="btn-primary" target="_blank" rel="noreferrer">Abrir Vita</a>
-            <a href="#vita-modulos" class="btn-ghost">Ver módulos de Vita</a>
-          </div>
+      <section class="section-block section-tinted">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Prueba visual</span>
+          <h2>Antes de pedir una demo, cada audiencia debe ver el producto correcto</h2>
+          <p>
+            Mostrar pantallas reales reduce fricción. Un visitante entiende más rápido
+            lo que resuelve Axysmed cuando puede anticipar la experiencia de cada solución.
+          </p>
         </div>
 
-        <div class="vita-hero-panel reveal">
-          <div class="vita-hero-copy">
-            <img src="./assets/vita-logo.svg" alt="Vita" class="vita-logo-inline" />
-            <span class="vita-kicker">VITA / TRIAGE Y SEGUIMIENTO</span>
-            <h3>Vita se mueve entre paciente, resultado y portal clínico sin perder orden.</h3>
-            <p>
-              Las pantallas muestran una ruta coherente: bienvenida, triaje rápido,
-              resultado con plan inmediato, módulos de autocuidado y luego un portal
-              profesional con signos vitales, diagnósticos, vacunación, nutrición,
-              kardex y reportes.
-            </p>
-            <div class="vita-chip-row">
-              <span class="vita-chip">Triage rápido</span>
-              <span class="vita-chip">Datos locales</span>
-              <span class="vita-chip">Portal clínico</span>
-              <span class="vita-chip vita-chip-accent">Seguimiento modular</span>
+        <div class="container showcase-grid">
+          <article class="showcase-card" data-reveal>
+            <div class="showcase-media">
+              <img src="/assets/psyke/psyke-case.png" alt="Caso clínico dentro de Psyke" />
             </div>
-            <div class="vita-feature-grid">
-              <article class="vita-feature-card">
-                <h4>Experiencia paciente</h4>
-                <ul>
-                  <li>Inicio con estado diario, recomendaciones y evaluación rápida.</li>
-                  <li>Resultados con nivel de confianza, seguimiento y plan inmediato.</li>
-                  <li>Opciones de atención, vacunación, medicación y nutrición.</li>
-                </ul>
-              </article>
-              <article class="vita-feature-card">
-                <h4>Experiencia profesional</h4>
-                <ul>
-                  <li>Búsqueda de paciente y apertura directa de ficha clínica.</li>
-                  <li>Panel con signos vitales, diagnósticos, kardex y módulos MSP.</li>
-                  <li>Vista clara de riesgo, trazabilidad y cumplimiento diario.</li>
-                </ul>
-              </article>
-              <article class="vita-feature-card">
-                <h4>Lectura operativa</h4>
-                <ul>
-                  <li>Interfaz clara para hospitales, consulta y seguimiento continuo.</li>
-                  <li>Bloques de vacunación, nutrición y cuidados específicos.</li>
-                  <li>Preparado para un ecosistema clínico serio y escalable.</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-
-          <div class="showcase-carousel showcase-carousel-light" data-carousel data-autoplay="5200" aria-label="Carrusel principal de Vita">
-            <div class="showcase-carousel-track">
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img
-                    src="./assets/vita/vita-result-1.png"
-                    alt="Pantalla de bienvenida y acceso por rol en Vita"
-                    class="showcase-image is-mobile"
-                  />
-                </div>
-                <figcaption>
-                  <strong>Bienvenida y acceso por rol</strong>
-                  <span>Paciente, profesional e institución dentro de una misma base clínica.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img
-                    src="./assets/vita/vita-options.png"
-                    alt="Inicio del paciente en Vita"
-                    class="showcase-image is-mobile"
-                  />
-                </div>
-                <figcaption>
-                  <strong>Inicio del paciente</strong>
-                  <span>Estado diario, recomendaciones y acceso rápido a evaluación.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img
-                    src="./assets/vita/vita-welcome.png"
-                    alt="Resultado clínico en Vita con plan inmediato"
-                    class="showcase-image is-mobile"
-                  />
-                </div>
-                <figcaption>
-                  <strong>Resultado con plan inmediato</strong>
-                  <span>Confianza, seguimiento recomendado y acciones sugeridas.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img
-                    src="./assets/vita/vita-signos.png"
-                    alt="Panel clínico operativo de Vita"
-                    class="showcase-image is-desktop"
-                  />
-                </div>
-                <figcaption>
-                  <strong>Portal clínico operativo</strong>
-                  <span>Vista profesional con módulos, prioridades y seguimiento asistencial.</span>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="showcase-carousel-footer">
-              <div class="showcase-carousel-dots" aria-label="Seleccionar vista de Vita"></div>
-              <div class="showcase-carousel-controls">
-                <button type="button" class="showcase-carousel-button" data-carousel-prev aria-label="Vista anterior de Vita">‹</button>
-                <button type="button" class="showcase-carousel-button" data-carousel-next aria-label="Vista siguiente de Vita">›</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="vita-modulos" class="vita-modules reveal">
-          <div class="vita-modules-copy">
-            <span class="section-tag">Módulos Vita</span>
-            <h3>Desde una app de paciente hasta un portal profesional completo.</h3>
-            <p>
-              Vita no se queda en una sola pantalla. Las capturas muestran navegación
-              de paciente, evaluación, resultados, vacunación y módulos web para
-              seguimiento clínico y registro asistencial.
-            </p>
-          </div>
-          <div class="vita-module-groups">
-            <article class="vita-module-card">
-              <h4>Paciente</h4>
-              <div class="vita-module-tags">
-                <span>Inicio</span>
-                <span>Historial</span>
-                <span>Resumen</span>
-                <span>Portal</span>
-                <span>Triage rápido</span>
-                <span>Chequeo emocional</span>
-                <span>Opciones de atención</span>
-                <span>Interpretación de exámenes</span>
-                <span>Centros cercanos</span>
-                <span>Medicaciones</span>
-                <span>Nutrición</span>
-                <span>Vacunación</span>
-              </div>
-            </article>
-            <article class="vita-module-card">
-              <h4>Portal profesional</h4>
-              <div class="vita-module-tags">
-                <span>Inicio</span>
-                <span>Pacientes</span>
-                <span>Triage</span>
-                <span>Ingreso de triaje</span>
-                <span>Seguimiento</span>
-                <span>Horarios / turno</span>
-                <span>HCE estructurada</span>
-                <span>Prescripción</span>
-                <span>LIS / RIS</span>
-                <span>Hospitalización</span>
-                <span>Quirúrgico</span>
-                <span>Signos vitales</span>
-                <span>Medicación</span>
-                <span>Vacunación</span>
-                <span>Nutrición</span>
-                <span>Salud emocional</span>
-                <span>Diagnósticos</span>
-                <span>Kardex</span>
-                <span>Formularios MSP</span>
-                <span>Reportes del paciente</span>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <div class="vita-gallery reveal">
-          <div class="showcase-carousel showcase-carousel-light showcase-carousel-wide" data-carousel data-autoplay="6400" aria-label="Galería de Vita">
-            <div class="showcase-carousel-track">
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/vita/vita-vacunacion-mobile.png" alt="Seguimiento recomendado en Vita" class="showcase-image is-mobile" />
-                </div>
-                <figcaption>
-                  <strong>Seguimiento y plan inmediato</strong>
-                  <span>Resultado orientativo con seguimiento recomendado, cita sugerida y acciones de autocuidado.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/vita/vita-home-mobile.png" alt="Vacunación del paciente en Vita" class="showcase-image is-mobile" />
-                </div>
-                <figcaption>
-                  <strong>Vacunación del paciente</strong>
-                  <span>Resumen general, pendientes, próximas dosis e historial vacunal desde la app móvil.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/vita/vita-pacientes-web.png" alt="Módulo de vacunación y stock en Vita" class="showcase-image is-desktop" />
-                </div>
-                <figcaption>
-                  <strong>Vacunación operativa y stock</strong>
-                  <span>Selección de paciente, vacunas faltantes, aplicación y control de inventario del centro.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/vita/vita-hero-reference.png" alt="Diagnósticos y contexto clínico en Vita" class="showcase-image is-desktop" />
-                </div>
-                <figcaption>
-                  <strong>Diagnósticos y contexto clínico</strong>
-                  <span>Lectura rápida de diagnósticos principales, secundarios y contexto clínico dentro de la ficha.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/vita/vita-kardex.png" alt="Módulo de kardex en Vita" class="showcase-image is-desktop" />
-                </div>
-                <figcaption>
-                  <strong>Kardex de enfermería</strong>
-                  <span>Administración estructurada de medicamentos con formato institucional y trazabilidad por turno.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/vita/vita-nutricion-web.png" alt="Módulo de signos vitales en Vita" class="showcase-image is-desktop" />
-                </div>
-                <figcaption>
-                  <strong>Signos vitales y monitoreo</strong>
-                  <span>Registro horario, parámetros clínicos y trazabilidad de la evolución del paciente.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/vita/vita-dashboard-web.png" alt="Panel profesional general de Vita" class="showcase-image is-desktop" />
-                </div>
-                <figcaption>
-                  <strong>Panel profesional</strong>
-                  <span>Vista general del entorno clínico con navegación por módulos, alertas y seguimiento asistencial.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/vita/vita-vacunacion-web.png" alt="Búsqueda y apertura de ficha en Vita" class="showcase-image is-desktop" />
-                </div>
-                <figcaption>
-                  <strong>Búsqueda y apertura de ficha</strong>
-                  <span>Ingreso a la ruta clínica desde un panel con pacientes, prioridades y accesos directos.</span>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="showcase-carousel-footer">
-              <div class="showcase-carousel-dots" aria-label="Seleccionar captura de Vita"></div>
-              <div class="showcase-carousel-controls">
-                <button type="button" class="showcase-carousel-button" data-carousel-prev aria-label="Captura anterior de Vita">‹</button>
-                <button type="button" class="showcase-carousel-button" data-carousel-next aria-label="Captura siguiente de Vita">›</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="vita-footer-cta reveal">
-          <div>
-            <span class="section-tag">Próximo paso</span>
-            <h3>Vita ya tiene una base visual lista para mostrar seguimiento real.</h3>
-            <p>
-              La demo ya abre la experiencia de Vita para revisar el flujo paciente,
-              resultado, autocuidado y portal clínico desde una misma base visual.
-            </p>
-          </div>
-          <a href="https://website-gilt-seven-66.vercel.app" class="btn-primary" target="_blank" rel="noreferrer">Probar Vita</a>
-        </div>
-      </section>
-
-      <section id="psyke-demo">
-        <div class="psyke-intro reveal">
-          <div class="psyke-copy">
-            <img src="./assets/psyke-lockup-light.svg" alt="Psyke" class="psyke-logo-showcase" />
-            <span class="section-tag">Psyke</span>
-            <h2>Simulación clínica con enfoque educativo, clínico y CACES.</h2>
-            <p class="section-lead">
-              Psyke combina entrevista clínica, práctica guiada, bibliotecas temáticas,
-              módulos diagnósticos y rutas operativas para que el estudiante practique
-              con más estructura y criterio.
-            </p>
-          </div>
-          <div class="psyke-actions">
-            <a href="https://simulador-mental.vercel.app" class="btn-primary" target="_blank" rel="noreferrer">Abrir Psyke</a>
-            <a href="#psyke-caces" class="btn-ghost">Ver enfoque CACES</a>
-          </div>
-        </div>
-
-        <div class="psyke-hero-panel reveal">
-          <div class="psyke-hero-copy">
-            <img src="./assets/psyke-lockup-light.svg" alt="Psyke" class="psyke-logo-inline" />
-            <span class="psyke-kicker">PSYKE / ENTREVISTA CLÍNICA</span>
-            <h3>Practica entrevistas, razonamiento y cierre clínico con más orden.</h3>
-            <p>
-              El simulador permite conversar con pacientes ficticios, seguir guías
-              educativas, explorar síntomas, marcar alertas como riesgo suicida y
-              revisar el caso desde un panel estructurado.
-            </p>
-            <div class="psyke-chip-row">
-              <span class="psyke-chip">Biblioteca clínica</span>
-              <span class="psyke-chip">Simulación conversacional IA</span>
-              <span class="psyke-chip psyke-chip-accent">Enfoque educativo, no diagnóstico</span>
-            </div>
-            <div class="psyke-mini-grid">
-              <article class="psyke-mini-card">
-                <h4>Qué encuentra el estudiante</h4>
-                <ul>
-                  <li>Casos de salud mental, urgencias y entrevista clínica.</li>
-                  <li>Paciente simulado con respuesta contextual en tiempo real.</li>
-                  <li>Señales clínicas y foco de seguridad para orientar preguntas.</li>
-                </ul>
-              </article>
-              <article class="psyke-mini-card">
-                <h4>Flujo base</h4>
-                <ol>
-                  <li>Selecciona módulo, tema y dificultad.</li>
-                  <li>Inicia el caso o quiz con temporizador configurable.</li>
-                  <li>Responde, justifica y revisa retroalimentación.</li>
-                </ol>
-              </article>
-              <article class="psyke-mini-card">
-                <h4>Seguridad educativa</h4>
-                <ul>
-                  <li>Uso con datos ficticios y enfoque académico.</li>
-                  <li>Alertas para riesgo, derivación y priorización clínica.</li>
-                  <li>No reemplaza evaluación profesional.</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-
-          <div class="showcase-carousel showcase-carousel-dark" data-carousel data-autoplay="5600" aria-label="Carrusel principal de Psyke">
-            <div class="showcase-carousel-track">
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/psyke/psyke-login.png" alt="Pantalla de acceso de Psyke" class="showcase-image is-desktop" />
-                </div>
-                <figcaption>
-                  <strong>Acceso y onboarding</strong>
-                  <span>Biblioteca clínica, modo seguro y entrada directa al simulador.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/psyke/psyke-dashboard.png" alt="Configuración previa del intento CACES en Psyke" class="showcase-image is-desktop" />
-                </div>
-                <figcaption>
-                  <strong>Configuración CACES</strong>
-                  <span>Componente, dificultad, cantidad de preguntas y retroalimentación configurable.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/psyke/psyke-routes.png" alt="Caso en curso y entrevista clínica en Psyke" class="showcase-image is-desktop" />
-                </div>
-                <figcaption>
-                  <strong>Caso en curso</strong>
-                  <span>Entrevista clínica, sugerencias de exploración y seguridad educativa visible.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/psyke/psyke-ecg.png" alt="Dashboard operativo de Psyke" class="showcase-image is-desktop" />
-                </div>
-                <figcaption>
-                  <strong>Dashboard operativo</strong>
-                  <span>Módulos activos, rutas clínicas y continuidad del entrenamiento.</span>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="showcase-carousel-footer">
-              <div class="showcase-carousel-dots" aria-label="Seleccionar vista de Psyke"></div>
-              <div class="showcase-carousel-controls">
-                <button type="button" class="showcase-carousel-button" data-carousel-prev aria-label="Vista anterior de Psyke">‹</button>
-                <button type="button" class="showcase-carousel-button" data-carousel-next aria-label="Vista siguiente de Psyke">›</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="psyke-caces" class="psyke-caces reveal">
-          <div class="psyke-caces-copy">
-            <span class="section-tag">Banco CACES</span>
-            <h3>Psyke está preparado para práctica orientada a preguntas tipo CACES.</h3>
-            <p>
-              El simulador permite configurar componente, subcomponente, tema,
-              dificultad, cantidad de preguntas, tipo de pregunta y forma de
-              retroalimentación. El bloque CACES queda visible como propuesta central
-              de entrenamiento académico.
-            </p>
-          </div>
-          <div class="psyke-caces-stats">
-            <div class="psyke-stat-card">
-              <span class="psyke-stat-label">Banco total CACES</span>
-              <strong>3160</strong>
-              <p>Preguntas disponibles para práctica estructurada.</p>
-            </div>
-            <div class="psyke-stat-card">
-              <span class="psyke-stat-label">Modo sugerido</span>
-              <strong>Directa + caso clínico</strong>
-              <p>Enfatiza razonamiento, secuencia y toma de decisiones.</p>
-            </div>
-            <div class="psyke-stat-card">
-              <span class="psyke-stat-label">Configuración</span>
-              <strong>Quiz de 5 + temporizador</strong>
-              <p>Permite simular ritmo real y revisar desempeño.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="psyke-domain-grid reveal">
-          <article class="psyke-domain-card">
-            <h4>Categorías visibles en Psyke</h4>
-            <ul class="psyke-domain-list">
-              <li>Fundamentos del cuidado enfermero</li>
-              <li>Mujer, recién nacido, niño y adolescente</li>
-              <li>Adulto y adulto mayor</li>
-              <li>Cuidado familiar, comunitario e intercultural</li>
-              <li>Bases educativas, administrativas, investigativas y epidemiológicas</li>
-              <li>Salud mental y entrevista clínica</li>
-              <li>Geriatría y gerontología</li>
-              <li>Pediatría y neonatología</li>
-              <li>Psicología y psiquiatría</li>
-              <li>Procesos y gestión del cuidado</li>
-              <li>Farmacología clínica</li>
-              <li>Morfofisiología aplicada</li>
-              <li>Cuidados críticos y urgencias</li>
-              <li>Ginecología y salud sexual</li>
-            </ul>
-          </article>
-
-          <article class="psyke-domain-card">
-            <h4>Opciones del simulador</h4>
-            <div class="psyke-module-tags">
-              <span>Dashboard</span>
-              <span>Genera un caso</span>
-              <span>Biblioteca clínica</span>
-              <span>PAE asistido</span>
-              <span>Simulador de patologías</span>
-              <span>Simulador de trastornos mentales</span>
-              <span>Urgencias</span>
-              <span>Triage por carrera</span>
-              <span>Simulador de ECG</span>
-              <span>Simulador de ecografía</span>
-              <span>Laboratorio</span>
-              <span>Gasometría</span>
-              <span>Imágenes clínicas</span>
-              <span>RCP y algoritmos</span>
-              <span>Simulador dinámico</span>
-              <span>Materno-infantil</span>
-              <span>Cálculo clínico</span>
-              <span>Medicamentos</span>
-              <span>Procedimientos</span>
-              <span>Notas clínicas</span>
-              <span>PAE</span>
-              <span>CACES</span>
-              <span>Mis sesiones</span>
-              <span>Reportes</span>
-              <span>Perfil</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="psyke-gallery reveal">
-          <div class="showcase-carousel showcase-carousel-dark showcase-carousel-wide" data-carousel data-autoplay="6800" aria-label="Galería de Psyke">
-            <div class="showcase-carousel-track">
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/psyke/psyke-login.png" alt="Onboarding y acceso en Psyke" class="showcase-image is-desktop" />
-                </div>
-                <figcaption>
-                  <strong>Onboarding y acceso</strong>
-                  <span>Entrada al simulador con identidad clara y foco de seguridad educativa.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/psyke/psyke-dashboard.png" alt="Configuración previa del intento CACES en Psyke" class="showcase-image is-desktop" />
-                </div>
-                <figcaption>
-                  <strong>Práctica tipo CACES</strong>
-                  <span>Banco ampliado, opciones del intento y configuración previa del quiz.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/psyke/psyke-routes.png" alt="Entrevista clínica en vivo en Psyke" class="showcase-image is-desktop" />
-                </div>
-                <figcaption>
-                  <strong>Entrevista clínica en vivo</strong>
-                  <span>Paciente simulado, enfoque humanístico y panel del caso en tiempo real.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/psyke/psyke-ecg.png" alt="Dashboard y cobertura del sistema en Psyke" class="showcase-image is-desktop" />
-                </div>
-                <figcaption>
-                  <strong>Dashboard y cobertura del sistema</strong>
-                  <span>Módulos, casos nuevos, accesos rápidos y contexto operativo del entrenamiento.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/psyke/psyke-case.png" alt="Simulador de ECG y monitorización en Psyke" class="showcase-image is-desktop" />
-                </div>
-                <figcaption>
-                  <strong>ECG y monitorización</strong>
-                  <span>Diagnóstico procedimental, signos en vivo y toma de decisiones clínicas.</span>
-                </figcaption>
-              </figure>
-              <figure class="showcase-slide">
-                <div class="showcase-slide-visual">
-                  <img src="./assets/psyke/psyke-caces.png" alt="Rutas clínicas recomendadas en Psyke" class="showcase-image is-desktop" />
-                </div>
-                <figcaption>
-                  <strong>Rutas clínicas recomendadas</strong>
-                  <span>Continuidad práctica por módulos, enfoque y progresión educativa.</span>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="showcase-carousel-footer">
-              <div class="showcase-carousel-dots" aria-label="Seleccionar captura de Psyke"></div>
-              <div class="showcase-carousel-controls">
-                <button type="button" class="showcase-carousel-button" data-carousel-prev aria-label="Captura anterior de Psyke">‹</button>
-                <button type="button" class="showcase-carousel-button" data-carousel-next aria-label="Captura siguiente de Psyke">›</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="psyke-footer-cta reveal">
-          <div>
-            <span class="section-tag">Probar Psyke</span>
-            <h3>Deja el acceso listo para mostrar una demo real del simulador.</h3>
-            <p>
-              El acceso ya abre la demo funcional del simulador para revisar
-              entrevista clínica, módulos diagnósticos y la ruta CACES.
-            </p>
-          </div>
-          <a href="https://simulador-mental.vercel.app" class="btn-primary" target="_blank" rel="noreferrer">Probar Psyke</a>
-        </div>
-      </section>
-
-      <section id="nosotros">
-        <div class="about-grid">
-          <div class="about-left reveal">
-            <span class="section-tag">Nosotros</span>
-            <h2>Construido desde adentro del sistema de salud</h2>
-            <p class="section-lead">
-              Axysmed no nació en una incubadora. Nació en las salas de clínica, en
-              las prácticas hospitalarias y en la frustración de no encontrar
-              herramientas digitales pensadas para la realidad del sistema de salud en
-              Ecuador.
-            </p>
-
-            <div class="about-values">
-              <div class="value-item">
-                <div class="value-icon" aria-hidden="true">
-                  <svg class="icon-svg" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 3v18" />
-                    <path d="M3 12h18" />
-                    <path d="m7.5 7.5 9 9" />
-                    <path d="m16.5 7.5-9 9" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="value-title">Propósito clínico real</div>
-                  <div class="value-desc">
-                    Cada decisión de diseño parte de necesidades identificadas en
-                    entornos reales de salud.
-                  </div>
-                </div>
-              </div>
-
-              <div class="value-item">
-                <div class="value-icon" aria-hidden="true">
-                  <svg class="icon-svg" viewBox="0 0 24 24" fill="none">
-                    <rect x="6" y="4" width="12" height="16" rx="2" />
-                    <path d="M9 9h6" />
-                    <path d="M9 13h6" />
-                    <path d="M9 17h4" />
-                    <path d="M10 2h4" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="value-title">UX orientada al profesional</div>
-                  <div class="value-desc">
-                    Interfaces limpias que reducen la carga cognitiva y se adaptan al
-                    ritmo clínico.
-                  </div>
-                </div>
-              </div>
-
-              <div class="value-item">
-                <div class="value-icon" aria-hidden="true">
-                  <svg class="icon-svg" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 3 5 6v5c0 4.4 2.8 8.4 7 10 4.2-1.6 7-5.6 7-10V6l-7-3Z" />
-                    <path d="M9 12h6" />
-                    <path d="M12 9v6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="value-title">Confianza en cada detalle</div>
-                  <div class="value-desc">
-                    Lenguaje visual y flujos diseñados para inspirar confianza
-                    institucional.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="reveal founder-wrap">
-            <div class="about-card">
-              <div class="founder-tag">Fundador</div>
-              <div class="founder-name">Favio Mosquera</div>
-              <div class="founder-role">
-                Estudiante de Enfermería - Universidad Ecotec, Guayaquil<br />
-                Desarrollador Health-Tech
-              </div>
-              <p class="founder-bio">
-                Estudiante de enfermería con experiencia académica y práctica en
-                entornos clínicos, enfocado en documentación NANDA/NOC/NIC, cuidado
-                del paciente y procesos asistenciales. Construye Axysmed como una
-                respuesta directa a los vacíos digitales que identifica en la
-                formación y la atención en salud del contexto ecuatoriano.
+            <div class="showcase-copy">
+              <span class="audience-tag">Psyke</span>
+              <h3>Simulación clínica guiada</h3>
+              <p>
+                Casos estructurados, rutas de práctica y evaluación automática para
+                programas de formación clínica.
               </p>
-              <div class="founder-tags">
-                <span class="ftag">Estudiante de Enfermería</span>
-                <span class="ftag">Práctica Clínica</span>
-                <span class="ftag">NANDA/NOC/NIC</span>
-                <span class="ftag">Cuidado del Paciente</span>
-                <span class="ftag">Hecho en Ecuador</span>
-              </div>
+              <a href="/psyke" class="btn btn-primary" data-track-click data-track-product="Psyke" data-track-location="home-showcase">
+                Ver recorrido de Psyke
+              </a>
             </div>
+          </article>
+
+          <article class="showcase-card" data-reveal>
+            <div class="showcase-media">
+              <img src="/assets/vita/vita-dashboard-web.png" alt="Dashboard clínico dentro de Vita" />
+            </div>
+            <div class="showcase-copy">
+              <span class="audience-tag">Vita</span>
+              <h3>Operación clínica ordenada</h3>
+              <p>
+                Registro, monitoreo y seguimiento del paciente en una misma base de trabajo.
+              </p>
+              <a href="/vita" class="btn btn-primary btn-vita" data-track-click data-track-product="Vita" data-track-location="home-showcase">
+                Ver recorrido de Vita
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-band" id="contacto-rutas">
+        <div class="container cta-band-inner" data-reveal>
+          <div>
+            <span class="section-kicker">Conversión</span>
+            <h2>Cuando la audiencia entiende rápido la propuesta, el siguiente paso es más fácil</h2>
+            <p>
+              Si tu objetivo es captar universidades, clínicas o profesionales, esta
+              segmentación sí favorece la web porque reduce confusión y mejora la
+              intención de contacto desde la primera pantalla.
+            </p>
           </div>
-        </div>
-      </section>
-
-      <section id="vision">
-        <div class="section-centered reveal">
-          <span class="section-tag">Visión</span>
-          <h2>Un ecosistema completo para la salud digital</h2>
-          <p class="section-lead">
-            Axysmed está diseñado para escalar junto a clínicas, universidades y
-            profesionales que necesitan más que una app aislada.
-          </p>
-        </div>
-
-        <div class="ecosystem-grid">
-          <article class="eco-card reveal">
-            <div class="eco-icon" aria-hidden="true">
-              <svg class="icon-svg" viewBox="0 0 24 24" fill="none">
-                <path d="M3 12h4l2-4 3 8 2-4h7" />
-                <path d="M5 18h14" />
-              </svg>
-            </div>
-            <div class="eco-title">Monitoreo Clínico</div>
-            <p class="eco-desc">
-              Registro continuo de signos vitales y trazabilidad del paciente con
-              lectura visual clara.
-            </p>
-          </article>
-          <article class="eco-card reveal">
-            <div class="eco-icon" aria-hidden="true">
-              <svg class="icon-svg" viewBox="0 0 24 24" fill="none">
-                <path d="M9 6a3 3 0 1 0 0 6" />
-                <path d="M15 6a3 3 0 1 1 0 6" />
-                <path d="M9 12c-1.7 0-3 1.3-3 3v1h4" />
-                <path d="M15 12c1.7 0 3 1.3 3 3v1h-4" />
-                <path d="M12 9v8" />
-              </svg>
-            </div>
-            <div class="eco-title">Simulación Médica</div>
-            <p class="eco-desc">
-              Casos guiados y feedback educativo para estudiantes de ciencias de la
-              salud.
-            </p>
-          </article>
-          <article class="eco-card reveal">
-            <div class="eco-icon" aria-hidden="true">
-              <svg class="icon-svg" viewBox="0 0 24 24" fill="none">
-                <path d="M5 18V9" />
-                <path d="M12 18V5" />
-                <path d="M19 18v-7" />
-                <path d="M3 18h18" />
-              </svg>
-            </div>
-            <div class="eco-title">Datos Clínicos</div>
-            <p class="eco-desc">
-              Lectura e interpretación ordenada de información clínica para apoyar
-              decisiones.
-            </p>
-          </article>
-          <article class="eco-card reveal">
-            <div class="eco-icon" aria-hidden="true">
-              <svg class="icon-svg" viewBox="0 0 24 24" fill="none">
-                <path d="M4 8h16" />
-                <path d="M7 5h10v14H7z" />
-                <path d="M10 12h4" />
-                <path d="M12 10v4" />
-              </svg>
-            </div>
-            <div class="eco-title">Educación en Salud</div>
-            <p class="eco-desc">
-              Experiencias guiadas para estudiantes, docentes y entrenamiento clínico
-              continuo.
-            </p>
-          </article>
-          <article class="eco-card reveal">
-            <div class="eco-icon" aria-hidden="true">
-              <svg class="icon-svg" viewBox="0 0 24 24" fill="none">
-                <path d="M4 20h16" />
-                <path d="M6 20V8h12v12" />
-                <path d="M10 12h4" />
-                <path d="M12 10v4" />
-              </svg>
-            </div>
-            <div class="eco-title">Instituciones</div>
-            <p class="eco-desc">
-              Arquitectura funcional preparada para crecer con clínicas y espacios
-              académicos.
-            </p>
-          </article>
-          <article class="eco-card reveal">
-            <div class="eco-icon" aria-hidden="true">
-              <svg class="icon-svg" viewBox="0 0 24 24" fill="none">
-                <path d="M12 20c4.6-3.4 7-6.1 7-9.2A4.3 4.3 0 0 0 12 7a4.3 4.3 0 0 0-7 3.8c0 3.1 2.4 5.8 7 9.2Z" />
-                <path d="M12 10v4" />
-                <path d="M10 12h4" />
-              </svg>
-            </div>
-            <div class="eco-title">Enfoque Humano</div>
-            <p class="eco-desc">
-              Tecnología pensada para sentirse útil, accesible y cercana en contextos
-              de salud real.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="audiencia">
-        <div class="section-centered reveal">
-          <span class="section-tag">Para quién</span>
-          <h2>Diseñado para todos en el sistema de salud</h2>
-        </div>
-
-        <div class="audience-row">
-          <article class="aud-card reveal">
-            <div class="aud-num">01</div>
-            <div class="aud-title">Estudiantes</div>
-            <p class="aud-desc">
-              Simulación clínica estructurada, casos reales y retroalimentación
-              inmediata para aprender haciendo desde el primer año.
-            </p>
-          </article>
-          <article class="aud-card reveal">
-            <div class="aud-num">02</div>
-            <div class="aud-title">Profesionales</div>
-            <p class="aud-desc">
-              Herramientas de seguimiento visual y monitoreo orientadas a la práctica
-              clínica diaria, sin complejidad innecesaria.
-            </p>
-          </article>
-          <article class="aud-card reveal">
-            <div class="aud-num">03</div>
-            <div class="aud-title">Instituciones</div>
-            <p class="aud-desc">
-              Escalabilidad, consistencia de marca clínica y proyección digital en
-              salud para centros educativos y de atención.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="contacto">
-        <div class="mesh mesh-teal" style="width: 400px; height: 400px; top: -80px; right: -60px; opacity: 0.4"></div>
-        <div class="contact-inner reveal">
-          <span class="section-tag">Contacto</span>
-          <h2>¿Interesado en Axysmed?</h2>
-          <p class="section-lead">
-            Si eres institución educativa, profesional de salud o inversionista y
-            quieres saber más sobre Vita o Psyke, escríbenos.
-          </p>
-
-          <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="8cd60916-1839-4939-959a-be684b3e7871" />
-            <input type="hidden" name="subject" value="Nuevo mensaje desde Axysmed" />
-            <input type="hidden" name="from_name" value="Axysmed Website" />
-            <input type="hidden" name="botcheck" value="" />
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input id="nombre" name="name" type="text" placeholder="Tu nombre completo" required />
-              </div>
-              <div class="form-group">
-                <label for="correo">Correo</label>
-                <input id="correo" name="email" type="email" placeholder="tu@correo.com" required />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="perfil">Perfil</label>
-              <select id="perfil" name="perfil">
-                <option value="">Selecciona tu perfil</option>
-                <option>Estudiante de salud</option>
-                <option>Profesional de salud</option>
-                <option>Institución educativa</option>
-                <option>Centro de salud / Clínica</option>
-                <option>Inversionista / Aliado</option>
-                <option>Otro</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="message" placeholder="Cuéntanos cómo podemos ayudarte o colaborar..." required></textarea>
-            </div>
-
-            <button type="submit" class="btn-form">Enviar mensaje</button>
-            <p class="contact-feedback" aria-live="polite"></p>
-          </form>
-          <p class="contact-note">
-            También puedes escribirnos a
-            <a href="mailto:axysmedtech@gmail.com">axysmedtech@gmail.com</a>
-          </p>
+          <div class="button-row">
+            <a href="/psyke#demo" class="btn btn-primary" data-track-click data-track-product="Psyke" data-track-location="home-final-cta">
+              Solicitar demo de Psyke
+            </a>
+            <a href="/vita#demo" class="btn btn-secondary" data-track-click data-track-product="Vita" data-track-location="home-final-cta">
+              Agendar demo de Vita
+            </a>
+            <a href="/psyke" class="btn btn-secondary" data-track-click data-track-product="Psyke" data-track-location="home-final-secondary">
+              Ver Psyke primero
+            </a>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <img src="./assets/axysmed-logo-light.svg" alt="Axysmed" class="brand-logo brand-logo-footer" />
-          </div>
-          <p>
-            Health-tech enfocada en monitoreo clínico, educación en salud y
-            experiencias digitales con estándar profesional. Hecha en Ecuador para
-            Ecuador.
-          </p>
-        </div>
-
-        <div class="footer-col">
-          <h4>Plataforma</h4>
-          <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#productos">Vita</a></li>
-            <li><a href="#productos">Psyke</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#vision">Visión</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Contacto</h4>
-          <ul>
-            <li><a href="mailto:axysmedtech@gmail.com">axysmedtech@gmail.com</a></li>
-            <li><a href="#contacto">Formulario</a></li>
-            <li><a href="#contacto">Solicitar demo</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>(c) 2025 <span>Axysmed</span>. Todos los derechos reservados.</p>
-        <p>Hecho en Ecuador para Ecuador · Guayaquil</p>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <img src="/assets/axysmed-logo-dark.svg" alt="Axysmed" class="footer-logo" />
+        <p>Axysmed organiza formación clínica y atención al paciente en rutas de decisión más claras.</p>
       </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>

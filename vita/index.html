@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vita | Atención y seguimiento del paciente en tiempo real</title>
+    <meta
+      name="description"
+      content="Vita ayuda a clínicas y profesionales a registrar, monitorear y dar seguimiento al paciente en tiempo real desde una operación más ordenada."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Figtree:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="/assets/axysmed-logo-dark.svg" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="site-body theme-vita">
+    <header class="site-header" id="top">
+      <nav class="navbar">
+        <a class="nav-logo" href="/" aria-label="Ir al inicio de Axysmed">
+          <img src="/assets/axysmed-logo-dark.svg" alt="Axysmed" class="brand-logo" />
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Abrir menú"
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu" id="nav-menu">
+          <a href="/">Inicio</a>
+          <a href="/psyke">Psyke</a>
+          <a href="/vita" aria-current="page">Vita</a>
+          <a href="#demo" class="btn btn-primary nav-cta">
+            Agendar demostración
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero product-hero">
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal>
+            <span class="eyebrow">Vita / operación clínica</span>
+            <h1>Optimiza la atención y seguimiento del paciente en tiempo real</h1>
+            <p class="hero-lead">
+              <strong>Problema:</strong> la atención se complica cuando hay saturación,
+              mala coordinación y poco seguimiento. <strong>Solución:</strong> Vita
+              centraliza registro, monitoreo y continuidad clínica.
+              <strong>Resultado:</strong> menos errores, menos tiempo perdido y una
+              operación más ordenada.
+            </p>
+            <div class="button-row">
+              <a href="#demo" class="btn btn-primary" data-track-click data-track-product="Vita" data-track-location="vita-hero">
+                Agendar demostración
+              </a>
+              <a href="#solucion" class="btn btn-secondary">Ver solución</a>
+            </div>
+          </div>
+
+          <aside class="hero-panel hero-form-panel" data-reveal id="demo">
+            <img src="/assets/vita-lockup.svg" alt="Vita" class="hero-logo" />
+            <p class="panel-lead">
+              Agenda una demostración enfocada en clínica, consulta o equipo profesional.
+            </p>
+            <form class="lead-form" data-lead-form data-product="Vita" data-target-email="axysmedtech@gmail.com">
+              <input type="text" name="honey" class="field-trap" tabindex="-1" autocomplete="off" />
+              <label>
+                Nombre
+                <input type="text" name="nombre" placeholder="Tu nombre" required />
+              </label>
+              <label>
+                Organización
+                <input type="text" name="institucion" placeholder="Clínica, centro o consulta" required />
+              </label>
+              <label>
+                Correo
+                <input type="email" name="correo" placeholder="tu@clinica.com" required />
+              </label>
+              <label>
+                Perfil
+                <select name="perfil" required>
+                  <option value="">Selecciona una opción</option>
+                  <option>Clínica</option>
+                  <option>Profesional independiente</option>
+                  <option>Coordinación médica</option>
+                  <option>Administración</option>
+                </select>
+              </label>
+              <label>
+                Qué quieres optimizar
+                <textarea
+                  name="mensaje"
+                  rows="4"
+                  placeholder="Cuéntanos si buscas mejorar registro, monitoreo, coordinación o seguimiento del paciente."
+                  required
+                ></textarea>
+              </label>
+              <button type="submit" class="btn btn-primary">Agendar demo de Vita</button>
+              <p class="form-feedback" aria-live="polite"></p>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Señales de confianza</span>
+          <h2>La credibilidad crece cuando la demo demuestra orden operativo real</h2>
+          <p>
+            Igual que en Psyke, esta estructura queda lista para sumar más adelante logos,
+            métricas y testimonios reales. Por ahora refuerza la evaluación con criterios
+            concretos para clínicas y profesionales.
+          </p>
+        </div>
+
+        <div class="container trust-grid">
+          <article class="trust-card" data-reveal>
+            <h3>Qué debe comprobar una clínica</h3>
+            <p>Si puede centralizar información, reducir tiempos muertos y sostener seguimiento después de la consulta.</p>
+          </article>
+          <article class="trust-card" data-reveal>
+            <h3>Qué debe comprobar un profesional</h3>
+            <p>Si la herramienta mejora lectura clínica, continuidad y control del paciente sin agregar más fricción diaria.</p>
+          </article>
+          <article class="trust-card" data-reveal>
+            <h3>Qué debe comprobar administración</h3>
+            <p>Si el flujo ayuda a ordenar operación, disminuir errores y dar trazabilidad más clara a cada caso.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block" id="problema">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Problema</span>
+          <h2>La atención pierde continuidad cuando la operación está fragmentada</h2>
+          <p>
+            Vita responde a un escenario común en consulta y centros clínicos: demasiada
+            carga operativa, coordinación irregular y seguimiento incompleto después de
+            la atención inicial.
+          </p>
+        </div>
+
+        <div class="container card-grid three-up">
+          <article class="info-card" data-reveal>
+            <h3>Saturación operativa</h3>
+            <p>Cuando el volumen de pacientes crece, el tiempo se va en ordenar información y no en atender mejor.</p>
+          </article>
+          <article class="info-card" data-reveal>
+            <h3>Mala coordinación</h3>
+            <p>Si cada dato queda en un lugar distinto, el equipo clínico pierde visibilidad y continuidad en cada caso.</p>
+          </article>
+          <article class="info-card" data-reveal>
+            <h3>Poco seguimiento</h3>
+            <p>Después de la consulta, muchos pacientes quedan sin trazabilidad clara para signos, evolución o alertas.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block section-tinted">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Producto</span>
+          <h2>Qué verá una clínica durante la demostración</h2>
+          <p>
+            En Vita la conversión mejora cuando se puede ver el orden operativo en pantallas reales.
+          </p>
+        </div>
+
+        <div class="container product-showcase-grid">
+          <figure class="product-shot product-shot-large" data-reveal>
+            <img src="/assets/vita/vita-dashboard-web.png" alt="Dashboard clínico en Vita" />
+            <figcaption>
+              <strong>Dashboard centralizado</strong>
+              <span>Vista clínica para seguimiento, estado del paciente y control operativo.</span>
+            </figcaption>
+          </figure>
+          <figure class="product-shot" data-reveal>
+            <img src="/assets/vita/vita-signos.png" alt="Monitoreo de signos vitales en Vita" />
+            <figcaption>
+              <strong>Monitoreo de signos vitales</strong>
+              <span>Datos visibles para actuar con más rapidez y continuidad.</span>
+            </figcaption>
+          </figure>
+          <figure class="product-shot" data-reveal>
+            <img src="/assets/vita/vita-pacientes-web.png" alt="Listado y control de pacientes en Vita" />
+            <figcaption>
+              <strong>Organización del paciente</strong>
+              <span>Registro y trazabilidad dentro de una operación más clara.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section-block section-tinted" id="solucion">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Solución</span>
+          <h2>Una sola base de trabajo para registrar, monitorear y seguir al paciente</h2>
+          <p>
+            Vita ordena la operación clínica para que el equipo consulte la misma
+            información, actúe a tiempo y mantenga seguimiento después de la consulta.
+          </p>
+        </div>
+
+        <div class="container card-grid four-up">
+          <article class="info-card" data-reveal>
+            <h3>Registro digital</h3>
+            <p>La información del paciente se documenta en un flujo más claro y accesible para el equipo tratante.</p>
+          </article>
+          <article class="info-card" data-reveal>
+            <h3>Monitoreo de signos vitales</h3>
+            <p>Los datos clínicos se visualizan con más rapidez para detectar cambios y responder a tiempo.</p>
+          </article>
+          <article class="info-card" data-reveal>
+            <h3>Seguimiento post consulta</h3>
+            <p>El paciente no desaparece al salir: Vita facilita continuidad, observación y seguimiento clínico posterior.</p>
+          </article>
+          <article class="info-card" data-reveal>
+            <h3>Organización centralizada</h3>
+            <p>Consulta, registro y seguimiento se articulan desde una operación más ordenada para clínicas y profesionales.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-band cta-product">
+        <div class="container cta-band-inner" data-reveal>
+          <div>
+            <span class="section-kicker">CTA</span>
+            <h2>Si el problema es el desorden operativo, la demo debe mostrar una operación más clara</h2>
+            <p>
+              Agenda una demostración de Vita para revisar cómo puede adaptarse a tu
+              flujo de atención, control y seguimiento clínico.
+            </p>
+          </div>
+          <div class="button-row">
+            <a href="#demo" class="btn btn-primary" data-track-click data-track-product="Vita" data-track-location="vita-mid-cta">
+              Agendar demostración
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="resultados">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Resultados</span>
+          <h2>Menos fricción operativa y mejor continuidad en la atención</h2>
+          <p>
+            Cuando el seguimiento se vuelve visible y centralizado, el equipo gana
+            tiempo y reduce errores en la operación diaria.
+          </p>
+        </div>
+
+        <div class="container result-grid">
+          <article class="result-card" data-reveal>
+            <h3>Reducción de tiempos</h3>
+            <p>Menos tiempo buscando datos y más tiempo actuando sobre la información clínica correcta.</p>
+          </article>
+          <article class="result-card" data-reveal>
+            <h3>Mejor organización</h3>
+            <p>El equipo trabaja sobre una base compartida y entiende mejor el estado de cada paciente.</p>
+          </article>
+          <article class="result-card" data-reveal>
+            <h3>Menos errores</h3>
+            <p>La trazabilidad y la visibilidad clínica ayudan a reducir omisiones y descoordinaciones.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="container split-fit-grid">
+          <article class="fit-panel" data-reveal>
+            <span class="section-kicker">Para quién es</span>
+            <h2>Vita encaja si necesitas ordenar atención y seguimiento</h2>
+            <ul class="decision-list">
+              <li>Clínicas que quieren centralizar información y reducir fricción operativa.</li>
+              <li>Profesionales que necesitan mejor seguimiento post consulta.</li>
+              <li>Equipos que manejan pacientes, signos vitales y trazabilidad en un solo flujo.</li>
+            </ul>
+          </article>
+          <article class="fit-panel fit-panel-muted" data-reveal>
+            <span class="section-kicker">Para quién no es</span>
+            <h2>No encaja si solo buscas una agenda simple</h2>
+            <ul class="decision-list">
+              <li>No está pensado para resolver únicamente reservas o calendario sin operación clínica.</li>
+              <li>No tiene sentido si tu equipo no necesita trazabilidad o seguimiento del paciente.</li>
+              <li>No reemplaza criterio clínico; organiza mejor la información para tomar decisiones.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block section-tinted">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Preguntas frecuentes</span>
+          <h2>Objeciones que conviene resolver antes de agendar la demo</h2>
+        </div>
+
+        <div class="container faq-list" data-reveal>
+          <details class="faq-item">
+            <summary>¿Vita está pensado para clínicas o para profesionales independientes?</summary>
+            <p>Puede servir a ambos, pero la demo debe enfocarse en el flujo real de atención de cada caso.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Qué debería mostrar una demostración útil?</summary>
+            <p>Cómo se registra al paciente, cómo se visualizan signos vitales y cómo se sostiene el seguimiento posterior.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Ayuda a reducir errores?</summary>
+            <p>La propuesta se orienta a reducir omisiones y descoordinación al centralizar la información clínica relevante.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Reemplaza otros sistemas?</summary>
+            <p>Depende del flujo actual. La demo debe evaluar si Vita complementa o sustituye herramientas fragmentadas que hoy generan fricción.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="container final-cta-box" data-reveal>
+          <span class="section-kicker">Cierre</span>
+          <h2>Lleva Vita a tu clínica o práctica profesional</h2>
+          <p>
+            Si necesitas una operación más ordenada y seguimiento real del paciente,
+            Vita puede convertirse en la base de trabajo de tu equipo.
+          </p>
+          <div class="button-row">
+            <a href="#demo" class="btn btn-primary" data-track-click data-track-product="Vita" data-track-location="vita-final-cta">
+              Agendar demostración
+            </a>
+            <a href="/psyke" class="btn btn-secondary" data-track-click data-track-product="Psyke" data-track-location="vita-cross-sell">
+              Conocer Psyke
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <img src="/assets/axysmed-logo-dark.svg" alt="Axysmed" class="footer-logo" />
+        <p>Vita concentra atención, monitoreo y seguimiento del paciente en una sola operación.</p>
+      </div>
+    </footer>
+
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>

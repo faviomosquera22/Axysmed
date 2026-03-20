@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Psyke | Simulación clínica para estudiantes y universidades</title>
+    <meta
+      name="description"
+      content="Psyke ayuda a estudiantes y universidades a practicar casos clínicos, evaluar decisiones y mejorar la seguridad antes del contacto con pacientes reales."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Figtree:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="/assets/axysmed-logo-dark.svg" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="site-body theme-psyke">
+    <header class="site-header" id="top">
+      <nav class="navbar">
+        <a class="nav-logo" href="/" aria-label="Ir al inicio de Axysmed">
+          <img src="/assets/axysmed-logo-dark.svg" alt="Axysmed" class="brand-logo" />
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Abrir menú"
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu" id="nav-menu">
+          <a href="/">Inicio</a>
+          <a href="/psyke" aria-current="page">Psyke</a>
+          <a href="/vita">Vita</a>
+          <a href="#demo" class="btn btn-primary nav-cta">
+            Solicitar demo
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero product-hero">
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal>
+            <span class="eyebrow">Psyke / formación clínica</span>
+            <h1>Practica casos clínicos reales antes de enfrentarte a pacientes</h1>
+            <p class="hero-lead">
+              <strong>Problema:</strong> aprender teoría no basta cuando falta práctica
+              clínica. <strong>Solución:</strong> Psyke permite entrenar escenarios
+              repetibles con evaluación automática. <strong>Resultado:</strong> más
+              criterio, más seguridad y mejor preparación para el entorno real.
+            </p>
+            <div class="button-row">
+              <a href="#demo" class="btn btn-primary" data-track-click data-track-product="Psyke" data-track-location="psyke-hero">
+                Solicitar demo
+              </a>
+              <a href="#solucion" class="btn btn-secondary">Ver solución</a>
+            </div>
+          </div>
+
+          <aside class="hero-panel hero-form-panel" data-reveal id="demo">
+            <img src="/assets/psyke-lockup-dark.svg" alt="Psyke" class="hero-logo" />
+            <p class="panel-lead">
+              Solicita una demo enfocada en universidad, internado o preparación clínica.
+            </p>
+            <form class="lead-form" data-lead-form data-product="Psyke" data-target-email="axysmedtech@gmail.com">
+              <input type="text" name="honey" class="field-trap" tabindex="-1" autocomplete="off" />
+              <label>
+                Nombre
+                <input type="text" name="nombre" placeholder="Tu nombre" required />
+              </label>
+              <label>
+                Institución
+                <input type="text" name="institucion" placeholder="Universidad o programa" required />
+              </label>
+              <label>
+                Correo
+                <input type="email" name="correo" placeholder="tu@institucion.com" required />
+              </label>
+              <label>
+                Perfil
+                <select name="perfil" required>
+                  <option value="">Selecciona una opción</option>
+                  <option>Universidad</option>
+                  <option>Docente</option>
+                  <option>Coordinación académica</option>
+                  <option>Estudiante</option>
+                </select>
+              </label>
+              <label>
+                Qué necesitas evaluar
+                <textarea
+                  name="mensaje"
+                  rows="4"
+                  placeholder="Cuéntanos si buscas práctica clínica, preparación tipo CACES o entrenamiento para una cohorte."
+                  required
+                ></textarea>
+              </label>
+              <button type="submit" class="btn btn-primary">Solicitar demo de Psyke</button>
+              <p class="form-feedback" aria-live="polite"></p>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Señales de confianza</span>
+          <h2>La credibilidad aumenta cuando la demo muestra casos, evaluación y contexto real</h2>
+          <p>
+            Esta sección queda lista para que luego agreguen logos, testimonios y métricas
+            reales. Por ahora la reforcé con criterios concretos de evaluación para no
+            inventar prueba social que todavía no existe.
+          </p>
+        </div>
+
+        <div class="container trust-grid">
+          <article class="trust-card" data-reveal>
+            <h3>Qué debe comprobar una universidad</h3>
+            <p>Cómo se integran los casos, qué tipo de feedback recibe el estudiante y qué tan fácil es escalar la práctica.</p>
+          </article>
+          <article class="trust-card" data-reveal>
+            <h3>Qué debe comprobar un docente</h3>
+            <p>Si puede usar escenarios repetibles, medir avances y detectar errores frecuentes antes de la práctica real.</p>
+          </article>
+          <article class="trust-card" data-reveal>
+            <h3>Qué debe comprobar un coordinador</h3>
+            <p>Si la plataforma ayuda a preparar cohortes completas con más consistencia y menor dependencia de simulación presencial.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block" id="problema">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Problema</span>
+          <h2>La formación clínica pierde fuerza cuando la práctica llega tarde</h2>
+          <p>
+            Psyke parte de un problema concreto: muchos estudiantes llegan al entorno
+            clínico con teoría suficiente, pero con poca repetición, baja exposición a
+            casos y temor a equivocarse.
+          </p>
+        </div>
+
+        <div class="container card-grid three-up">
+          <article class="info-card" data-reveal>
+            <h3>Falta de práctica</h3>
+            <p>La teoría no siempre se convierte en criterio clínico si no existe un espacio para practicar decisiones.</p>
+          </article>
+          <article class="info-card" data-reveal>
+            <h3>Miedo a equivocarse</h3>
+            <p>El error pesa más cuando el primer contacto con un caso complejo ocurre frente a un paciente real.</p>
+          </article>
+          <article class="info-card" data-reveal>
+            <h3>Poca simulación</h3>
+            <p>Muchos programas no cuentan con escenarios suficientes para entrenar entrevistas, análisis y respuesta clínica.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block section-tinted">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Producto</span>
+          <h2>Qué verá una universidad durante la demo</h2>
+          <p>
+            La demo debe mostrar el flujo real del estudiante, no solo una lista de funciones.
+            Por eso añadí una vista visual del recorrido principal.
+          </p>
+        </div>
+
+        <div class="container product-showcase-grid">
+          <figure class="product-shot product-shot-large" data-reveal>
+            <img src="/assets/psyke/psyke-case.png" alt="Resolución de caso clínico en Psyke" />
+            <figcaption>
+              <strong>Resolución de caso clínico</strong>
+              <span>Entrenamiento guiado para observación, decisión y respuesta clínica.</span>
+            </figcaption>
+          </figure>
+          <figure class="product-shot" data-reveal>
+            <img src="/assets/psyke/psyke-caces.png" alt="Escenario tipo CACES en Psyke" />
+            <figcaption>
+              <strong>Escenarios tipo CACES</strong>
+              <span>Práctica alineada a evaluación y preparación académica.</span>
+            </figcaption>
+          </figure>
+          <figure class="product-shot" data-reveal>
+            <img src="/assets/psyke/psyke-dashboard.png" alt="Panel de seguimiento en Psyke" />
+            <figcaption>
+              <strong>Seguimiento del entrenamiento</strong>
+              <span>Progreso, estructura y repetición dentro de una misma experiencia.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section-block section-tinted" id="solucion">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Solución</span>
+          <h2>Una plataforma para repetir, evaluar y mejorar antes del entorno real</h2>
+          <p>
+            Psyke convierte la práctica clínica en un proceso repetible: el estudiante
+            resuelve casos, recibe retroalimentación y vuelve a intentarlo con más
+            criterio.
+          </p>
+        </div>
+
+        <div class="container card-grid four-up">
+          <article class="info-card" data-reveal>
+            <h3>Simulación de casos reales</h3>
+            <p>Escenarios clínicos que exigen observación, análisis y toma de decisiones en contextos cercanos a la práctica real.</p>
+          </article>
+          <article class="info-card" data-reveal>
+            <h3>Evaluación automática</h3>
+            <p>Retroalimentación inmediata para que cada intento se convierta en aprendizaje medible.</p>
+          </article>
+          <article class="info-card" data-reveal>
+            <h3>Escenarios tipo CACES</h3>
+            <p>Práctica alineada a formatos de evaluación exigidos en procesos académicos y de preparación profesional.</p>
+          </article>
+          <article class="info-card" data-reveal>
+            <h3>Entrenamiento ilimitado</h3>
+            <p>La práctica no depende de una sola clase o de un solo laboratorio: el estudiante puede repetir hasta ganar seguridad.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-band cta-product">
+        <div class="container cta-band-inner" data-reveal>
+          <div>
+            <span class="section-kicker">CTA</span>
+            <h2>Si el problema es la falta de práctica, la demo debe mostrar práctica real</h2>
+            <p>
+              Agenda una demo de Psyke para evaluar cómo encaja en universidades,
+              internados o programas de preparación clínica.
+            </p>
+          </div>
+          <div class="button-row">
+            <a href="#demo" class="btn btn-primary" data-track-click data-track-product="Psyke" data-track-location="psyke-mid-cta">
+              Solicitar demo
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="resultados">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Resultados</span>
+          <h2>Más preparación antes de la práctica clínica real</h2>
+          <p>
+            Cuando el entrenamiento deja de ser esporádico y se vuelve repetible, la
+            mejora aparece en la forma de pensar y responder ante un caso clínico.
+          </p>
+        </div>
+
+        <div class="container result-grid">
+          <article class="result-card" data-reveal>
+            <h3>Mejor toma de decisiones</h3>
+            <p>El estudiante compara opciones, interpreta contexto y entrena juicio clínico con cada caso.</p>
+          </article>
+          <article class="result-card" data-reveal>
+            <h3>Mayor seguridad clínica</h3>
+            <p>La repetición reduce incertidumbre y permite llegar con más confianza al encuentro con pacientes.</p>
+          </article>
+          <article class="result-card" data-reveal>
+            <h3>Mejor preparación</h3>
+            <p>Universidades y estudiantes cuentan con un entorno de práctica más estructurado y fácil de escalar.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="container split-fit-grid">
+          <article class="fit-panel" data-reveal>
+            <span class="section-kicker">Para quién es</span>
+            <h2>Psyke encaja si necesitas práctica repetible y evaluable</h2>
+            <ul class="decision-list">
+              <li>Universidades que necesitan más simulación sin depender de sesiones aisladas.</li>
+              <li>Docentes que quieren práctica medible antes del contacto con pacientes reales.</li>
+              <li>Programas que preparan estudiantes para evaluación clínica y toma de decisiones.</li>
+            </ul>
+          </article>
+          <article class="fit-panel fit-panel-muted" data-reveal>
+            <span class="section-kicker">Para quién no es</span>
+            <h2>No encaja si solo buscas contenido teórico estático</h2>
+            <ul class="decision-list">
+              <li>No está pensado para reemplazar clases con PDFs o banco de preguntas básico.</li>
+              <li>No resuelve por sí solo la operación clínica de una institución asistencial.</li>
+              <li>No tiene sentido si no vas a usar la práctica como parte del proceso formativo.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block section-tinted">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Preguntas frecuentes</span>
+          <h2>Objeciones que conviene resolver antes de la demo</h2>
+        </div>
+
+        <div class="container faq-list" data-reveal>
+          <details class="faq-item">
+            <summary>¿Psyke está pensado para estudiantes o para universidades?</summary>
+            <p>Para ambos, pero la compra normalmente se justifica mejor desde universidad, coordinación o programa académico.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Qué se debería ver en una demo efectiva?</summary>
+            <p>Un caso completo, el tipo de feedback que recibe el estudiante y cómo se repite el entrenamiento para mejorar resultados.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Sirve para preparación tipo CACES?</summary>
+            <p>Sí, la propuesta está planteada para incluir escenarios tipo CACES dentro de una práctica clínica más constante.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Reemplaza la práctica clínica presencial?</summary>
+            <p>No. La fortalece al permitir que el estudiante llegue con más criterio antes del entorno clínico real.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="container final-cta-box" data-reveal>
+          <span class="section-kicker">Cierre</span>
+          <h2>Lleva Psyke a tu universidad o programa de formación</h2>
+          <p>
+            Si buscas que la práctica clínica empiece antes del contacto con pacientes,
+            Psyke te permite convertir la simulación en un proceso constante.
+          </p>
+          <div class="button-row">
+            <a href="#demo" class="btn btn-primary" data-track-click data-track-product="Psyke" data-track-location="psyke-final-cta">
+              Solicitar demo
+            </a>
+            <a href="/vita" class="btn btn-secondary" data-track-click data-track-product="Vita" data-track-location="psyke-cross-sell">
+              Conocer Vita
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <img src="/assets/axysmed-logo-dark.svg" alt="Axysmed" class="footer-logo" />
+        <p>Psyke concentra práctica clínica, evaluación y preparación en una sola experiencia.</p>
+      </div>
+    </footer>
+
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>

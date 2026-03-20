@@ -1,38 +1,36 @@
-const nav = document.getElementById("navbar");
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.getElementById("nav-menu");
-const navLinks = document.querySelectorAll(".nav-links a");
-const revealItems = document.querySelectorAll(".reveal");
-const contactForm = document.querySelector(".contact-form");
-const carouselItems = document.querySelectorAll("[data-carousel]");
+const navLinks = document.querySelectorAll(".nav-menu a");
+const revealItems = document.querySelectorAll("[data-reveal]");
+const leadForms = document.querySelectorAll("[data-lead-form]");
+const trackedClicks = document.querySelectorAll("[data-track-click]");
 
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
-
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      });
+function postJson(url, payload, useKeepalive = false) {
+  return fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
     },
-    { threshold: 0.1 }
-  );
-
-  revealItems.forEach((item) => observer.observe(item));
-} else {
-  revealItems.forEach((item) => item.classList.add("visible"));
+    body: JSON.stringify(payload),
+    keepalive: useKeepalive,
+  });
 }
 
-window.addEventListener("scroll", () => {
-  if (!nav) {
+function trackClick(product, location) {
+  if (!product || !location) {
     return;
   }
 
-  nav.classList.toggle("scrolled", window.scrollY > 30);
-});
+  postJson(
+    "/api/track",
+    {
+      eventName: "CTA Clicked",
+      product,
+      location,
+    },
+    true
+  ).catch(() => {});
+}
 
 if (navToggle && navMenu) {
   navToggle.addEventListener("click", () => {
@@ -48,150 +46,107 @@ if (navToggle && navMenu) {
   });
 }
 
-if (contactForm) {
-  contactForm.addEventListener("submit", async (event) => {
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+}
+
+trackedClicks.forEach((element) => {
+  element.addEventListener("click", () => {
+    trackClick(element.dataset.trackProduct, element.dataset.trackLocation);
+  });
+});
+
+leadForms.forEach((form) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const submitButton = contactForm.querySelector(".btn-form");
-    const feedback = contactForm.querySelector(".contact-feedback");
-    if (!submitButton) {
+    const product = form.dataset.product || "Axysmed";
+    const feedback = form.querySelector(".form-feedback");
+    const submitButton = form.querySelector('button[type="submit"]');
+    const formData = new FormData(form);
+
+    const fields = {
+      nombre: String(formData.get("nombre") || "").trim(),
+      institucion: String(formData.get("institucion") || "").trim(),
+      correo: String(formData.get("correo") || "").trim(),
+      perfil: String(formData.get("perfil") || "").trim(),
+      mensaje: String(formData.get("mensaje") || "").trim(),
+      honey: String(formData.get("honey") || "").trim(),
+    };
+
+    const requiredFields = {
+      nombre: fields.nombre,
+      institucion: fields.institucion,
+      correo: fields.correo,
+      perfil: fields.perfil,
+      mensaje: fields.mensaje,
+    };
+
+    if (Object.values(requiredFields).some((value) => !value)) {
+      if (feedback) {
+        feedback.textContent = "Completa todos los campos para continuar.";
+        feedback.classList.add("is-error");
+        feedback.classList.remove("is-success");
+      }
       return;
     }
 
-    const defaultLabel = "Enviar mensaje";
-    submitButton.disabled = true;
-    submitButton.textContent = "Enviando...";
-    submitButton.style.background = "#0d7f93";
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = product === "Vita" ? "Enviando solicitud..." : "Enviando demo...";
+    }
 
     if (feedback) {
       feedback.textContent = "";
-      feedback.classList.remove("is-success", "is-error");
+      feedback.classList.remove("is-error", "is-success");
     }
 
     try {
-      const formData = new FormData(contactForm);
-      formData.append("pagina", window.location.href);
-
-      const response = await fetch(contactForm.action, {
-        method: "POST",
-        body: formData,
+      const response = await postJson("/api/lead", {
+        product,
+        ...fields,
+        page: window.location.href,
       });
 
-      const result = await response.json();
+      const result = await response.json().catch(() => ({}));
 
-      if (!response.ok || !result.success) {
-        throw new Error(result.message || "No se pudo enviar el mensaje.");
+      if (!response.ok || !result.ok) {
+        throw new Error(result.message || "No se pudo enviar la solicitud.");
       }
 
-      submitButton.textContent = "Mensaje enviado";
-      submitButton.style.background = "#00897B";
-
       if (feedback) {
-        feedback.textContent = "Tu mensaje fue enviado correctamente. Revisaremos tu solicitud pronto.";
+        feedback.textContent = "Solicitud enviada. Te contactaremos pronto.";
         feedback.classList.add("is-success");
       }
 
-      contactForm.reset();
+      form.reset();
     } catch (error) {
-      submitButton.textContent = defaultLabel;
-      submitButton.style.background = "";
-
       if (feedback) {
-        feedback.textContent = "Hubo un problema al enviar el mensaje. Intenta de nuevo o escríbenos a axysmedtech@gmail.com.";
+        feedback.textContent =
+          error instanceof Error ? error.message : "No se pudo enviar la solicitud.";
         feedback.classList.add("is-error");
       }
     } finally {
-      submitButton.disabled = false;
-      if (submitButton.textContent === "Enviando...") {
-        submitButton.textContent = defaultLabel;
-        submitButton.style.background = "";
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = product === "Vita" ? "Agendar demo de Vita" : "Solicitar demo de Psyke";
       }
     }
   });
-}
-
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-carouselItems.forEach((carousel) => {
-  const track = carousel.querySelector(".showcase-carousel-track");
-  const slides = Array.from(carousel.querySelectorAll(".showcase-slide"));
-  const dotsRoot = carousel.querySelector(".showcase-carousel-dots");
-  const prevButton = carousel.querySelector("[data-carousel-prev]");
-  const nextButton = carousel.querySelector("[data-carousel-next]");
-  const autoplayDelay = Number(carousel.dataset.autoplay || 0);
-
-  if (!track || slides.length === 0) {
-    return;
-  }
-
-  let currentIndex = 0;
-  let autoplayId = null;
-  const dots = [];
-
-  const updateCarousel = (nextIndex) => {
-    currentIndex = (nextIndex + slides.length) % slides.length;
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-    slides.forEach((slide, index) => {
-      slide.classList.toggle("is-active", index === currentIndex);
-    });
-
-    dots.forEach((dot, index) => {
-      const isActive = index === currentIndex;
-      dot.classList.toggle("is-active", isActive);
-      dot.setAttribute("aria-current", isActive ? "true" : "false");
-    });
-  };
-
-  const stopAutoplay = () => {
-    if (autoplayId) {
-      window.clearInterval(autoplayId);
-      autoplayId = null;
-    }
-  };
-
-  const startAutoplay = () => {
-    stopAutoplay();
-
-    if (prefersReducedMotion.matches || autoplayDelay <= 0 || slides.length < 2) {
-      return;
-    }
-
-    autoplayId = window.setInterval(() => {
-      updateCarousel(currentIndex + 1);
-    }, autoplayDelay);
-  };
-
-  if (dotsRoot) {
-    slides.forEach((slide, index) => {
-      const dot = document.createElement("button");
-      dot.type = "button";
-      dot.className = "showcase-carousel-dot";
-      dot.setAttribute("aria-label", `Ir a la imagen ${index + 1}`);
-      dot.addEventListener("click", () => {
-        updateCarousel(index);
-        startAutoplay();
-      });
-      dotsRoot.appendChild(dot);
-      dots.push(dot);
-    });
-  }
-
-  prevButton?.addEventListener("click", () => {
-    updateCarousel(currentIndex - 1);
-    startAutoplay();
-  });
-
-  nextButton?.addEventListener("click", () => {
-    updateCarousel(currentIndex + 1);
-    startAutoplay();
-  });
-
-  carousel.addEventListener("mouseenter", stopAutoplay);
-  carousel.addEventListener("mouseleave", startAutoplay);
-  carousel.addEventListener("focusin", stopAutoplay);
-  carousel.addEventListener("focusout", startAutoplay);
-
-  updateCarousel(0);
-  startAutoplay();
 });
