@@ -386,6 +386,7 @@ p {
 .showcase-rotator {
   position: relative;
   aspect-ratio: 16 / 10;
+  padding: 0.85rem;
   background: linear-gradient(180deg, rgba(10, 31, 60, 0.03), rgba(10, 31, 60, 0.06));
 }
 
@@ -466,8 +467,9 @@ p {
 
 .rotator-image {
   position: absolute;
-  inset: 0;
+  inset: 0.85rem;
   opacity: 0;
+  object-fit: contain;
   transition: opacity 0.45s ease;
 }
 
