@@ -388,6 +388,11 @@ p {
   gap: 1rem;
 }
 
+.card-actions {
+  display: grid;
+  gap: 0.85rem;
+}
+
 .showcase-card {
   overflow: hidden;
 }
@@ -619,6 +624,20 @@ p {
   height: 7px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--teal), var(--blue));
+}
+
+.text-link {
+  width: fit-content;
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid rgba(10, 31, 60, 0.18);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.text-link:hover {
+  color: var(--blue);
+  border-color: rgba(31, 111, 229, 0.4);
 }
 
 .faq-list {
