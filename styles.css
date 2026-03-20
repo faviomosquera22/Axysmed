@@ -597,6 +597,15 @@ p {
   background: linear-gradient(135deg, rgba(11, 157, 122, 0.12), rgba(32, 180, 134, 0.14));
 }
 
+.closing-story {
+  cursor: default;
+}
+
+.closing-story:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 .final-cta-box {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(242, 247, 252, 0.9));
 }
