@@ -141,7 +141,7 @@ leadForms.forEach((form) => {
     }
 
     try {
-      const response = await postJson("/api/lead", {
+      const response = await postJson("/api/lead-submit", {
         product,
         ...fields,
         page: window.location.href,
