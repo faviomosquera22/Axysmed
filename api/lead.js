@@ -13,6 +13,49 @@ function normalize(value) {
   return String(value || "").trim();
 }
 
+function getFormSubmitHeaders(page, req) {
+  const headers = {
+    Accept: "application/json",
+    "X-Requested-With": "XMLHttpRequest",
+  };
+
+  const normalizedPage = normalize(page);
+  if (normalizedPage) {
+    try {
+      const pageUrl = new URL(normalizedPage);
+      headers.Origin = pageUrl.origin;
+      headers.Referer = pageUrl.toString();
+      return headers;
+    } catch (error) {
+      console.warn("invalid_page_url", error instanceof Error ? error.message : String(error));
+    }
+  }
+
+  const forwardedProto = normalize(req.headers["x-forwarded-proto"]) || "https";
+  const forwardedHost = normalize(req.headers["x-forwarded-host"] || req.headers.host);
+
+  if (forwardedHost) {
+    headers.Origin = `${forwardedProto}://${forwardedHost}`;
+    headers.Referer = `${forwardedProto}://${forwardedHost}`;
+  }
+
+  return headers;
+}
+
+function getProviderMessage(message) {
+  const normalizedMessage = normalize(message).toLowerCase();
+
+  if (normalizedMessage.includes("needs activation")) {
+    return "El formulario necesita activación en FormSubmit. Revisa el correo de axysmedtech@gmail.com y haz clic en 'Activate Form'.";
+  }
+
+  if (normalizedMessage.includes("open this page through a web server")) {
+    return "FormSubmit rechazó el origen del formulario. Verifica que la solicitud salga desde el dominio publicado.";
+  }
+
+  return "";
+}
+
 module.exports = async function handler(req, res) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -69,15 +112,13 @@ module.exports = async function handler(req, res) {
   try {
     const response = await fetch(FORM_ENDPOINT, {
       method: "POST",
-      headers: {
-        Accept: "application/json",
-      },
+      headers: getFormSubmitHeaders(lead.page, req),
       body: payload,
     });
 
     const result = await response.json().catch(() => ({}));
 
-    if (!response.ok || result.success === "false") {
+    if (!response.ok || result.success === false || result.success === "false") {
       throw new Error(result.message || "No se pudo enviar el lead.");
     }
 
@@ -102,6 +143,8 @@ module.exports = async function handler(req, res) {
       message: "Solicitud enviada correctamente.",
     });
   } catch (error) {
+    const providerMessage = getProviderMessage(error instanceof Error ? error.message : String(error));
+
     console.error(
       JSON.stringify({
         type: "lead_error",
@@ -114,7 +157,7 @@ module.exports = async function handler(req, res) {
 
     return res.status(502).json({
       ok: false,
-      message: "No pudimos enviar la solicitud. Intenta de nuevo en unos minutos.",
+      message: providerMessage || "No pudimos enviar la solicitud. Intenta de nuevo en unos minutos.",
     });
   }
 };
