@@ -154,7 +154,7 @@ leadForms.forEach((form) => {
       }
 
       if (feedback) {
-        feedback.textContent = "Solicitud enviada. Te contactaremos pronto.";
+        feedback.textContent = result.message || "Solicitud enviada. Te contactaremos pronto.";
         feedback.classList.add("is-success");
       }
 

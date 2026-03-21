@@ -56,6 +56,10 @@ function getProviderMessage(message) {
   return "";
 }
 
+function isActivationError(message) {
+  return normalize(message).toLowerCase().includes("needs activation");
+}
+
 module.exports = async function handler(req, res) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -143,17 +147,40 @@ module.exports = async function handler(req, res) {
       message: "Solicitud enviada correctamente.",
     });
   } catch (error) {
-    const providerMessage = getProviderMessage(error instanceof Error ? error.message : String(error));
+    const rawErrorMessage = error instanceof Error ? error.message : String(error);
+    const providerMessage = getProviderMessage(rawErrorMessage);
 
     console.error(
       JSON.stringify({
         type: "lead_error",
         product: lead.product,
         page: lead.page,
-        message: error instanceof Error ? error.message : String(error),
+        message: rawErrorMessage,
         timestamp: new Date().toISOString(),
       })
     );
+
+    if (isActivationError(rawErrorMessage)) {
+      console.info(
+        JSON.stringify({
+          type: "lead_manual_followup",
+          delivery: "provider_activation_pending",
+          product: lead.product,
+          nombre: lead.nombre,
+          correo: lead.correo,
+          institucion: lead.institucion,
+          perfil: lead.perfil,
+          mensaje: lead.mensaje,
+          page: lead.page,
+          timestamp: new Date().toISOString(),
+        })
+      );
+
+      return res.status(200).json({
+        ok: true,
+        message: "Solicitud recibida. La estamos procesando manualmente mientras terminamos de activar el formulario.",
+      });
+    }
 
     return res.status(502).json({
       ok: false,
