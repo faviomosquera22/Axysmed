@@ -17,6 +17,31 @@ function postJson(url, payload, useKeepalive = false) {
   });
 }
 
+function getLeadProviderMessage(message) {
+  const normalizedMessage = String(message || "").trim().toLowerCase();
+
+  if (normalizedMessage.includes("needs activation")) {
+    return "El formulario todavía no está activado en FormSubmit. Revisa el correo de axysmedtech@gmail.com y haz clic en 'Activate Form'.";
+  }
+
+  if (normalizedMessage.includes("open this page through a web server")) {
+    return "El proveedor rechazó el origen del formulario. Recarga la página publicada e inténtalo otra vez.";
+  }
+
+  return "";
+}
+
+function submitLeadToFormSubmit(targetEmail, payload) {
+  return fetch(`https://formsubmit.co/ajax/${encodeURIComponent(targetEmail)}`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "X-Requested-With": "XMLHttpRequest",
+    },
+    body: payload,
+  });
+}
+
 function trackClick(product, location) {
   if (!product || !location) {
     return;
@@ -100,6 +125,7 @@ leadForms.forEach((form) => {
     event.preventDefault();
 
     const product = form.dataset.product || "Axysmed";
+    const targetEmail = form.dataset.targetEmail || "axysmedtech@gmail.com";
     const feedback = form.querySelector(".form-feedback");
     const submitButton = form.querySelector('button[type="submit"]');
     const formData = new FormData(form);
@@ -141,20 +167,32 @@ leadForms.forEach((form) => {
     }
 
     try {
-      const response = await postJson("/api/lead-submit", {
-        product,
-        ...fields,
-        page: window.location.href,
-      });
+      const payload = new FormData();
+      payload.append("name", fields.nombre);
+      payload.append("email", fields.correo);
+      payload.append("organization", fields.institucion);
+      payload.append("profile", fields.perfil);
+      payload.append("product", product);
+      payload.append("message", fields.mensaje);
+      payload.append("page", window.location.href);
+      payload.append("_subject", `Nuevo lead ${product}`);
+      payload.append("_replyto", fields.correo);
+      payload.append("_template", "table");
+      payload.append("_captcha", "false");
 
+      const response = await submitLeadToFormSubmit(targetEmail, payload);
       const result = await response.json().catch(() => ({}));
 
-      if (!response.ok || !result.ok) {
-        throw new Error(result.message || "No se pudo enviar la solicitud.");
+      if (!response.ok || result.success === false || result.success === "false") {
+        throw new Error(
+          getLeadProviderMessage(result.message) ||
+            result.message ||
+            "No se pudo enviar la solicitud."
+        );
       }
 
       if (feedback) {
-        feedback.textContent = result.message || "Solicitud enviada. Te contactaremos pronto.";
+        feedback.textContent = "Solicitud enviada. Te contactaremos pronto.";
         feedback.classList.add("is-success");
       }
 
