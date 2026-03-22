@@ -17,29 +17,49 @@ function postJson(url, payload, useKeepalive = false) {
   });
 }
 
-function getLeadProviderMessage(message) {
-  const normalizedMessage = String(message || "").trim().toLowerCase();
+function setHiddenField(form, name, value) {
+  let input = form.querySelector(`input[type="hidden"][name="${name}"]`);
 
-  if (normalizedMessage.includes("needs activation")) {
-    return "El formulario todavía no está activado en FormSubmit. Revisa el correo de axysmedtech@gmail.com y haz clic en 'Activate Form'.";
+  if (!input) {
+    input = document.createElement("input");
+    input.type = "hidden";
+    input.name = name;
+    form.appendChild(input);
   }
 
-  if (normalizedMessage.includes("open this page through a web server")) {
-    return "El proveedor rechazó el origen del formulario. Recarga la página publicada e inténtalo otra vez.";
-  }
-
-  return "";
+  input.value = value;
 }
 
-function submitLeadToFormSubmit(targetEmail, payload) {
-  return fetch(`https://formsubmit.co/ajax/${encodeURIComponent(targetEmail)}`, {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "X-Requested-With": "XMLHttpRequest",
-    },
-    body: payload,
+function buildLeadReturnUrl(product) {
+  const url = new URL(window.location.href);
+  url.searchParams.set("lead", "submitted");
+  url.searchParams.set("product", String(product || "").toLowerCase());
+  url.hash = "demo";
+  return url.toString();
+}
+
+function showLeadSuccessFromQuery() {
+  const url = new URL(window.location.href);
+
+  if (url.searchParams.get("lead") !== "submitted") {
+    return;
+  }
+
+  leadForms.forEach((form) => {
+    const feedback = form.querySelector(".form-feedback");
+    if (!feedback) {
+      return;
+    }
+
+    feedback.textContent = "Solicitud enviada. Te contactaremos pronto.";
+    feedback.classList.add("is-success");
+    feedback.classList.remove("is-error");
+    form.reset();
   });
+
+  url.searchParams.delete("lead");
+  url.searchParams.delete("product");
+  history.replaceState({}, document.title, `${url.pathname}${url.search}${url.hash}`);
 }
 
 function trackClick(product, location) {
@@ -121,11 +141,20 @@ rotators.forEach((rotator) => {
 });
 
 leadForms.forEach((form) => {
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
+  const product = form.dataset.product || "Axysmed";
+  const targetEmail = form.dataset.targetEmail || "axysmedtech@gmail.com";
 
-    const product = form.dataset.product || "Axysmed";
-    const targetEmail = form.dataset.targetEmail || "axysmedtech@gmail.com";
+  form.action = `https://formsubmit.co/${targetEmail}`;
+  form.method = "POST";
+  form.acceptCharset = "UTF-8";
+
+  setHiddenField(form, "_captcha", "false");
+  setHiddenField(form, "_template", "table");
+  setHiddenField(form, "_subject", `Nuevo lead ${product}`);
+  setHiddenField(form, "product", product);
+  setHiddenField(form, "_next", buildLeadReturnUrl(product));
+
+  form.addEventListener("submit", (event) => {
     const feedback = form.querySelector(".form-feedback");
     const submitButton = form.querySelector('button[type="submit"]');
     const formData = new FormData(form);
@@ -148,6 +177,7 @@ leadForms.forEach((form) => {
     };
 
     if (Object.values(requiredFields).some((value) => !value)) {
+      event.preventDefault();
       if (feedback) {
         feedback.textContent = "Completa todos los campos para continuar.";
         feedback.classList.add("is-error");
@@ -166,48 +196,9 @@ leadForms.forEach((form) => {
       feedback.classList.remove("is-error", "is-success");
     }
 
-    try {
-      const payload = new FormData();
-      payload.append("name", fields.nombre);
-      payload.append("email", fields.correo);
-      payload.append("organization", fields.institucion);
-      payload.append("profile", fields.perfil);
-      payload.append("product", product);
-      payload.append("message", fields.mensaje);
-      payload.append("page", window.location.href);
-      payload.append("_subject", `Nuevo lead ${product}`);
-      payload.append("_replyto", fields.correo);
-      payload.append("_template", "table");
-      payload.append("_captcha", "false");
-
-      const response = await submitLeadToFormSubmit(targetEmail, payload);
-      const result = await response.json().catch(() => ({}));
-
-      if (!response.ok || result.success === false || result.success === "false") {
-        throw new Error(
-          getLeadProviderMessage(result.message) ||
-            result.message ||
-            "No se pudo enviar la solicitud."
-        );
-      }
-
-      if (feedback) {
-        feedback.textContent = "Solicitud enviada. Te contactaremos pronto.";
-        feedback.classList.add("is-success");
-      }
-
-      form.reset();
-    } catch (error) {
-      if (feedback) {
-        feedback.textContent =
-          error instanceof Error ? error.message : "No se pudo enviar la solicitud.";
-        feedback.classList.add("is-error");
-      }
-    } finally {
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.textContent = product === "Vita" ? "Agendar demo de Vita" : "Solicitar demo de Psyke";
-      }
-    }
+    setHiddenField(form, "_replyto", fields.correo);
+    setHiddenField(form, "page", window.location.href);
   });
 });
+
+showLeadSuccessFromQuery();
