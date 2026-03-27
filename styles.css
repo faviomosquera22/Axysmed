@@ -506,36 +506,22 @@ p {
   justify-self: center;
 }
 
-.showcase-media-incluya {
-  min-height: 292px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  padding: 1rem 0.75rem;
+.showcase-media-incluya-horizontal {
+  min-height: 180px;
+  padding: 0.85rem;
   background: linear-gradient(180deg, rgba(53, 183, 242, 0.08), rgba(103, 223, 189, 0.08));
 }
 
-.incluya-shot {
-  width: 74px;
-  height: auto;
-  aspect-ratio: 9 / 19.5;
+.showcase-media-incluya-horizontal .rotator-image-phone {
+  inset: 0.8rem;
+  width: min(100%, 116px);
+  height: calc(100% - 1.6rem);
+  margin: auto;
+  border-radius: 20px;
   object-fit: contain;
   object-position: center center;
-  border-radius: 22px;
-  box-shadow: 0 14px 28px rgba(12, 35, 64, 0.12);
-  border: 1px solid rgba(10, 31, 60, 0.08);
   background: #edf4fb;
-}
-
-.incluya-shot-center {
-  width: 86px;
-  transform: translateY(-2px);
-}
-
-.incluya-shot-left,
-.incluya-shot-right {
-  opacity: 0.96;
+  box-shadow: 0 14px 28px rgba(12, 35, 64, 0.12);
 }
 
 .rotator-image {
