@@ -13,6 +13,8 @@
   --mint: #20b486;
   --psyke: #1f6fe5;
   --vita: #0b9d7a;
+  --incluya: #35b7f2;
+  --incluya-soft: #67dfbd;
   --shadow: 0 18px 48px rgba(12, 35, 64, 0.08);
   --shadow-soft: 0 10px 30px rgba(12, 35, 64, 0.05);
   --radius-sm: 16px;
@@ -169,6 +171,15 @@ a {
 .btn-vita {
   background: linear-gradient(135deg, var(--vita), #17b18b);
   box-shadow: 0 12px 24px rgba(11, 157, 122, 0.2);
+}
+
+.btn-incluya {
+  background: linear-gradient(135deg, var(--incluya), var(--incluya-soft));
+  box-shadow: 0 12px 24px rgba(53, 183, 242, 0.22);
+}
+
+.btn-incluya:hover {
+  box-shadow: 0 16px 30px rgba(53, 183, 242, 0.28);
 }
 
 .nav-cta {
@@ -354,8 +365,10 @@ p {
 
 .card-grid,
 .audience-grid,
+.audience-grid-home,
 .result-grid,
 .showcase-grid,
+.showcase-grid-home,
 .trust-grid,
 .split-fit-grid,
 .product-showcase-grid {
@@ -367,8 +380,16 @@ p {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.audience-grid-home {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .showcase-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.showcase-grid-home {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .showcase-grid-compact .showcase-card {
@@ -465,6 +486,19 @@ p {
   object-fit: cover;
 }
 
+.showcase-card-mobile .showcase-copy p {
+  max-width: 32ch;
+}
+
+.showcase-media-mobile {
+  aspect-ratio: 9 / 16;
+  background: linear-gradient(180deg, rgba(53, 183, 242, 0.08), rgba(103, 223, 189, 0.08));
+}
+
+.showcase-media-mobile .rotator-image {
+  object-fit: contain;
+}
+
 .rotator-image {
   position: absolute;
   inset: 0.85rem;
@@ -485,9 +519,58 @@ p {
   background: linear-gradient(180deg, rgba(245, 255, 251, 0.98), rgba(235, 250, 244, 0.95));
 }
 
+.audience-card-incluya {
+  background: linear-gradient(180deg, rgba(244, 252, 255, 0.98), rgba(233, 247, 255, 0.95));
+}
+
 .product-lockup {
   width: 144px;
   height: auto;
+}
+
+.product-brand,
+.hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.product-brand {
+  font-family: var(--font-head);
+  font-size: clamp(1.45rem, 2.2vw, 1.9rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.product-mark,
+.hero-mark {
+  width: 72px;
+  height: 72px;
+  border-radius: 22px;
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-mark {
+  width: 82px;
+  height: 82px;
+}
+
+.hero-brand-copy {
+  display: grid;
+  gap: 0.18rem;
+}
+
+.hero-brand-copy strong {
+  font-family: var(--font-head);
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.hero-brand-copy span {
+  color: var(--muted);
+  font-weight: 600;
 }
 
 .info-card,
@@ -529,6 +612,13 @@ p {
   aspect-ratio: 4 / 3;
   border-radius: 18px;
   border: 1px solid var(--line);
+}
+
+.product-shot-mobile img {
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  padding: 0.8rem;
+  background: linear-gradient(180deg, rgba(53, 183, 242, 0.06), rgba(103, 223, 189, 0.08));
 }
 
 .section-tinted {
@@ -587,7 +677,7 @@ p {
 
 .closing-actions {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -627,6 +717,10 @@ p {
 
 .closing-link-vita {
   background: linear-gradient(135deg, rgba(11, 157, 122, 0.12), rgba(32, 180, 134, 0.14));
+}
+
+.closing-link-incluya {
+  background: linear-gradient(135deg, rgba(53, 183, 242, 0.12), rgba(103, 223, 189, 0.14));
 }
 
 .closing-story {
@@ -817,6 +911,13 @@ p {
   width: 118px;
 }
 
+.site-body.theme-incluya {
+  background:
+    radial-gradient(circle at top left, rgba(53, 183, 242, 0.12), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(103, 223, 189, 0.1), transparent 32%),
+    var(--bg);
+}
+
 [data-reveal] {
   opacity: 0;
   transform: translateY(18px);
@@ -847,7 +948,9 @@ p {
 @media (max-width: 980px) {
   .hero-grid,
   .audience-grid,
+  .audience-grid-home,
   .showcase-grid,
+  .showcase-grid-home,
   .three-up,
   .four-up,
   .trust-grid,
@@ -936,6 +1039,18 @@ p {
   .cta-band-inner,
   .final-cta-box {
     padding: 1.35rem;
+  }
+
+  .product-brand,
+  .hero-brand {
+    align-items: flex-start;
+  }
+
+  .product-mark,
+  .hero-mark {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
   }
 
   .btn {

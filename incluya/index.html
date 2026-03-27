@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incluya | Accesibilidad y comunicación asistida</title>
+    <meta
+      name="description"
+      content="Incluya ayuda a personas, cuidadores e instituciones a ver, oír, comunicarse y pedir ayuda rápida desde una sola experiencia accesible."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Figtree:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="/assets/axysmed-logo-dark.svg" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="site-body theme-incluya">
+    <header class="site-header" id="top">
+      <nav class="navbar">
+        <a class="nav-logo" href="/" aria-label="Ir al inicio de Axysmed">
+          <img src="/assets/axysmed-logo-dark.svg" alt="Axysmed" class="brand-logo" />
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Abrir menú"
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu" id="nav-menu">
+          <a href="/">Inicio</a>
+          <a href="/psyke">Psyke</a>
+          <a href="/vita">Vita</a>
+          <a href="/incluya" aria-current="page">Incluya</a>
+          <a href="#demo" class="btn btn-primary btn-incluya nav-cta">
+            Solicitar demo
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero product-hero">
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal>
+            <span class="eyebrow">Incluya / accesibilidad asistida</span>
+            <h1>Ver, oír, conversar y pedir ayuda desde una sola app</h1>
+            <p class="hero-lead">
+              <strong>Problema:</strong> la accesibilidad diaria se rompe cuando leer,
+              escuchar, expresarse o pedir apoyo depende de demasiadas herramientas
+              separadas. <strong>Solución:</strong> Incluya reúne modos para ver, oír,
+              conversar, leer señas y activar SOS desde una sola interfaz.
+              <strong>Resultado:</strong> más autonomía, comunicación más clara y
+              respuesta más rápida en contextos sensibles.
+            </p>
+            <div class="button-row">
+              <a href="#demo" class="btn btn-primary btn-incluya" data-track-click data-track-product="Incluya" data-track-location="incluya-hero">
+                Solicitar demo
+              </a>
+              <a href="#solucion" class="btn btn-secondary">Ver solución</a>
+            </div>
+          </div>
+
+          <aside class="hero-panel hero-form-panel" data-reveal id="demo">
+            <div class="hero-brand">
+              <img src="/assets/incluya-logo-dark.svg" alt="Incluya" class="hero-mark" />
+              <div class="hero-brand-copy">
+                <strong>Incluya</strong>
+                <span>Accesibilidad y comunicación asistida</span>
+              </div>
+            </div>
+            <p class="panel-lead">
+              Solicita una demo enfocada en accesibilidad, acompañamiento o puntos de atención.
+            </p>
+            <form class="lead-form" data-lead-form data-product="Incluya" data-target-email="axysmedtech@gmail.com">
+              <input type="text" name="honey" class="field-trap" tabindex="-1" autocomplete="off" />
+              <label>
+                Nombre
+                <input type="text" name="nombre" placeholder="Tu nombre" required />
+              </label>
+              <label>
+                Organización o contexto
+                <input type="text" name="institucion" placeholder="Centro, fundación, familia o uso personal" required />
+              </label>
+              <label>
+                Correo
+                <input type="email" name="correo" placeholder="tu@correo.com" required />
+              </label>
+              <label>
+                Perfil
+                <select name="perfil" required>
+                  <option value="">Selecciona una opción</option>
+                  <option>Institución de salud</option>
+                  <option>Fundación u ONG</option>
+                  <option>Cuidador o familiar</option>
+                  <option>Usuario final</option>
+                  <option>Equipo de accesibilidad</option>
+                </select>
+              </label>
+              <label>
+                Qué necesitas resolver
+                <textarea
+                  name="mensaje"
+                  rows="4"
+                  placeholder="Cuéntanos si necesitas apoyo para comunicación, subtítulos, lectura de señas, accesibilidad visual u opciones de emergencia."
+                  required
+                ></textarea>
+              </label>
+              <button type="submit" class="btn btn-primary btn-incluya">Solicitar demo de Incluya</button>
+              <p class="form-feedback" aria-live="polite"></p>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Señales de confianza</span>
+          <h2>Una demo útil debe mostrar autonomía, claridad y respuesta inmediata</h2>
+          <p>
+            Incluya gana credibilidad cuando se ve funcionando sobre tareas reales:
+            escuchar, detectar entorno, comunicarse con frases rápidas o activar ayuda
+            sin fricción innecesaria.
+          </p>
+        </div>
+
+        <div class="container trust-grid">
+          <article class="trust-card" data-reveal>
+            <h3>Qué debe comprobar el usuario</h3>
+            <p>Si puede percibir mejor el entorno, entender mejor la información y comunicarse con menos barreras.</p>
+          </article>
+          <article class="trust-card" data-reveal>
+            <h3>Qué debe comprobar el cuidador</h3>
+            <p>Si la app realmente ayuda a pedir apoyo, compartir contexto útil y actuar rápido ante una urgencia.</p>
+          </article>
+          <article class="trust-card" data-reveal>
+            <h3>Qué debe comprobar una institución</h3>
+            <p>Si la solución mejora accesibilidad, acompañamiento y comunicación dentro de puntos de atención o servicio.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block" id="problema">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Problema</span>
+          <h2>La accesibilidad se vuelve frágil cuando cada necesidad vive por separado</h2>
+          <p>
+            Incluya responde a una fricción concreta: muchas personas necesitan ver,
+            oír, expresarse o pedir ayuda, pero normalmente deben saltar entre
+            herramientas distintas que no comparten contexto.
+          </p>
+        </div>
+
+        <div class="container card-grid three-up">
+          <article class="info-card" data-reveal>
+            <h3>Información difícil de percibir</h3>
+            <p>Cuando el entorno, la voz o el texto no se presentan con claridad, la autonomía disminuye de inmediato.</p>
+          </article>
+          <article class="info-card" data-reveal>
+            <h3>Comunicación bloqueada</h3>
+            <p>Hablar, leer señas o usar frases rápidas no debería depender de varias apps aisladas y lentas.</p>
+          </article>
+          <article class="info-card" data-reveal>
+            <h3>Apoyo urgente disperso</h3>
+            <p>En una emergencia, pedir ayuda, compartir ubicación o activar una señal visual debe resolverse en pocos pasos.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block section-tinted">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Producto</span>
+          <h2>Qué verá una persona o institución durante la demo</h2>
+          <p>
+            La propuesta se entiende mejor viendo pantallas reales: acceso principal,
+            subtítulos en vivo, módulos de señas y conversación asistida.
+          </p>
+        </div>
+
+        <div class="container product-showcase-grid">
+          <figure class="product-shot product-shot-large product-shot-mobile" data-reveal>
+            <img src="/assets/Incluya/IMG_2141.PNG" alt="Pantalla principal de Incluya con accesos principales" />
+            <figcaption>
+              <strong>Pantalla central de accesos</strong>
+              <span>Entrada rápida a ver, oír, conversar, señas y SOS desde una sola vista.</span>
+            </figcaption>
+          </figure>
+          <figure class="product-shot product-shot-mobile" data-reveal>
+            <img src="/assets/Incluya/IMG_2144.PNG" alt="Modo oír de Incluya con subtítulos en vivo" />
+            <figcaption>
+              <strong>Modo oír con subtítulos grandes</strong>
+              <span>Escucha y transcripción visible para seguir conversaciones con más claridad.</span>
+            </figcaption>
+          </figure>
+          <figure class="product-shot product-shot-mobile" data-reveal>
+            <img src="/assets/Incluya/IMG_2147.PNG" alt="Avatar clínico en Incluya para frases rápidas" />
+            <figcaption>
+              <strong>Comunicación asistida</strong>
+              <span>Frases clínicas rápidas y avatar para transmitir mensajes de forma más clara.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section-block section-tinted" id="solucion">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Solución</span>
+          <h2>Una sola experiencia para percibir mejor el entorno y comunicarse con apoyo</h2>
+          <p>
+            Incluya organiza la accesibilidad en módulos claros para que la persona
+            pueda elegir cómo ver, oír, conversar, leer señas o pedir ayuda según el
+            contexto.
+          </p>
+        </div>
+
+        <div class="container card-grid four-up">
+          <article class="info-card" data-reveal>
+            <h3>Modo ver</h3>
+            <p>Usa cámara en vivo para detectar objetos o contexto cercano y traducirlo en señales útiles para la persona.</p>
+          </article>
+          <article class="info-card" data-reveal>
+            <h3>Modo oír</h3>
+            <p>Convierte voz en subtítulos grandes y visibles para reducir barreras durante conversaciones presenciales.</p>
+          </article>
+          <article class="info-card" data-reveal>
+            <h3>Señas y conversación</h3>
+            <p>Incluye lectura de señas, frases rápidas y un avatar clínico para facilitar comunicación en situaciones sensibles.</p>
+          </article>
+          <article class="info-card" data-reveal>
+            <h3>SOS y accesibilidad</h3>
+            <p>Activa ayuda rápida, comparte ubicación y ajusta idioma, contraste, vibración o voz guiada desde la misma app.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-band cta-product">
+        <div class="container cta-band-inner" data-reveal>
+          <div>
+            <span class="section-kicker">CTA</span>
+            <h2>Si el problema es la accesibilidad fragmentada, la demo debe mostrar continuidad real</h2>
+            <p>
+              Solicita una demostración de Incluya para revisar cómo puede adaptarse a
+              atención clínica, acompañamiento familiar, fundaciones o espacios de servicio.
+            </p>
+          </div>
+          <div class="button-row">
+            <a href="#demo" class="btn btn-primary btn-incluya" data-track-click data-track-product="Incluya" data-track-location="incluya-mid-cta">
+              Solicitar demo
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="resultados">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Resultados</span>
+          <h2>Más autonomía, mejor comunicación y apoyo más rápido</h2>
+          <p>
+            Cuando accesibilidad y comunicación conviven dentro de una sola interfaz,
+            la respuesta cotidiana se vuelve más clara y más útil.
+          </p>
+        </div>
+
+        <div class="container result-grid">
+          <article class="result-card" data-reveal>
+            <h3>Más independencia</h3>
+            <p>La persona puede resolver tareas de percepción y comunicación sin cambiar constantemente de herramienta.</p>
+          </article>
+          <article class="result-card" data-reveal>
+            <h3>Interacciones más claras</h3>
+            <p>Subtítulos, frases rápidas y lectura de señas ayudan a reducir malentendidos en momentos importantes.</p>
+          </article>
+          <article class="result-card" data-reveal>
+            <h3>Mejor capacidad de respuesta</h3>
+            <p>Las rutas de SOS y configuración accesible permiten actuar con menos fricción en contextos urgentes.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="container split-fit-grid">
+          <article class="fit-panel" data-reveal>
+            <span class="section-kicker">Para quién es</span>
+            <h2>Incluya encaja si necesitas accesibilidad práctica y comunicación asistida</h2>
+            <ul class="decision-list">
+              <li>Personas que necesitan apoyo visual, auditivo o de comunicación desde el teléfono.</li>
+              <li>Cuidadores y familias que buscan herramientas claras para acompañamiento diario o emergencia.</li>
+              <li>Instituciones que quieren mejorar accesibilidad dentro de atención, recepción o servicio.</li>
+            </ul>
+          </article>
+          <article class="fit-panel fit-panel-muted" data-reveal>
+            <span class="section-kicker">Para quién no es</span>
+            <h2>No encaja si solo buscas una función aislada</h2>
+            <ul class="decision-list">
+              <li>No está pensado como una sola utilidad suelta si no existe necesidad de accesibilidad integral.</li>
+              <li>No reemplaza acompañamiento humano o criterio profesional cuando la situación requiere intervención directa.</li>
+              <li>No tiene sentido si el contexto no exige comunicación rápida, apoyo accesible o rutas de ayuda claras.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block section-tinted">
+        <div class="container section-intro" data-reveal>
+          <span class="section-kicker">Preguntas frecuentes</span>
+          <h2>Objeciones que conviene resolver antes de la demo</h2>
+        </div>
+
+        <div class="container faq-list" data-reveal>
+          <details class="faq-item">
+            <summary>¿Incluya está pensado solo para salud?</summary>
+            <p>No necesariamente. También puede servir en acompañamiento familiar, fundaciones, atención al público o espacios donde la comunicación accesible importa.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Qué debería mostrar una demostración útil?</summary>
+            <p>Cómo cambia entre ver, oír, conversar, señas y SOS; y qué tan rápido una persona puede usar esas funciones sin entrenamiento complejo.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Incluye opciones de personalización accesible?</summary>
+            <p>Sí. La propuesta contempla ajustes como contraste, vibración, voz guiada, idioma y preferencias de interacción.</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Puede ayudar en contextos urgentes?</summary>
+            <p>Sí, porque concentra rutas de ayuda rápida, ubicación y señales visuales dentro de un flujo más directo.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="container final-cta-box" data-reveal>
+          <span class="section-kicker">Cierre</span>
+          <h2>Lleva Incluya a tu espacio de atención o acompañamiento</h2>
+          <p>
+            Si necesitas una experiencia más accesible para percibir, comunicar y pedir
+            apoyo, Incluya puede convertirse en una herramienta central para uso real.
+          </p>
+          <div class="button-row">
+            <a href="#demo" class="btn btn-primary btn-incluya" data-track-click data-track-product="Incluya" data-track-location="incluya-final-cta">
+              Solicitar demo
+            </a>
+            <a href="/vita" class="btn btn-secondary" data-track-click data-track-product="Vita" data-track-location="incluya-cross-sell">
+              Conocer Vita
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <img src="/assets/axysmed-logo-dark.svg" alt="Axysmed" class="footer-logo" />
+        <p>Incluya concentra accesibilidad, comunicación y apoyo inmediato en una sola experiencia.</p>
+      </div>
+    </footer>
+
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
