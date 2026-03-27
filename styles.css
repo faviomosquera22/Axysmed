@@ -382,6 +382,7 @@ p {
 
 .audience-grid-home {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
 }
 
 .showcase-grid {
@@ -390,6 +391,7 @@ p {
 
 .showcase-grid-home {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
 }
 
 .showcase-grid-compact .showcase-card {
@@ -492,10 +494,13 @@ p {
 
 .showcase-card-mobile {
   align-content: start;
+  max-width: 320px;
+  width: 100%;
+  justify-self: center;
 }
 
 .showcase-media-mobile {
-  width: min(100%, 260px);
+  width: min(100%, 210px);
   margin: 0 auto;
   aspect-ratio: 9 / 19.5;
   padding: 0.7rem;
@@ -507,7 +512,8 @@ p {
 .showcase-media-mobile .rotator-image {
   inset: 0.7rem;
   border-radius: 24px;
-  object-fit: cover;
+  object-fit: contain;
+  background: #edf4fb;
 }
 
 .rotator-image {
@@ -558,7 +564,9 @@ p {
 .hero-mark {
   width: 72px;
   height: 72px;
+  flex: 0 0 auto;
   border-radius: 22px;
+  object-fit: contain;
   box-shadow: var(--shadow-soft);
 }
 
@@ -639,10 +647,21 @@ p {
   align-items: start;
 }
 
+.product-showcase-grid-mobile .product-shot-large {
+  grid-row: auto;
+}
+
 .product-shot-mobile {
-  max-width: 320px;
+  max-width: 260px;
   width: 100%;
   justify-self: center;
+}
+
+.product-shot-mobile img {
+  width: min(100%, 210px);
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 .product-shot-mobile figcaption {
