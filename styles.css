@@ -496,18 +496,6 @@ p {
   align-content: start;
 }
 
-.showcase-grid-home .showcase-media:not(.showcase-media-mobile) {
-  width: min(100%, 220px);
-  margin: 0 auto;
-}
-
-.showcase-grid-home .showcase-media:not(.showcase-media-mobile) .rotator-image {
-  inset: 0.6rem;
-  border-radius: 16px;
-  object-fit: contain;
-  background: #f5f8fc;
-}
-
 .showcase-card-mobile {
   align-content: start;
   width: 100%;
@@ -515,7 +503,7 @@ p {
 }
 
 .showcase-media-mobile {
-  width: min(100%, 170px);
+  width: min(100%, 150px);
   margin: 0 auto;
   aspect-ratio: 9 / 19.5;
   padding: 0.7rem;
