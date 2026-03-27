@@ -390,9 +390,8 @@ p {
 }
 
 .showcase-grid-home {
-  grid-template-columns: repeat(3, minmax(220px, 280px));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: start;
-  justify-content: center;
 }
 
 .showcase-grid-compact .showcase-card {
@@ -494,8 +493,6 @@ p {
 }
 
 .showcase-grid-home .showcase-card {
-  width: 100%;
-  justify-self: center;
   align-content: start;
 }
 
@@ -511,13 +508,8 @@ p {
   background: #f5f8fc;
 }
 
-.showcase-grid-home .showcase-copy {
-  max-width: 24ch;
-}
-
 .showcase-card-mobile {
   align-content: start;
-  max-width: 280px;
   width: 100%;
   justify-self: center;
 }
