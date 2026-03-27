@@ -5,6 +5,10 @@ const revealItems = document.querySelectorAll("[data-reveal]");
 const leadForms = document.querySelectorAll("[data-lead-form]");
 const trackedClicks = document.querySelectorAll("[data-track-click]");
 const rotators = document.querySelectorAll("[data-rotator]");
+const lightboxImages = document.querySelectorAll(".product-shot img, .incluya-shot");
+const lightboxRotators = document.querySelectorAll(".showcase-rotator");
+
+let lightboxState = null;
 
 function postJson(url, payload, useKeepalive = false) {
   return fetch(url, {
@@ -78,6 +82,62 @@ function trackClick(product, location) {
   ).catch(() => {});
 }
 
+function getOrCreateLightbox() {
+  if (lightboxState) {
+    return lightboxState;
+  }
+
+  const backdrop = document.createElement("div");
+  backdrop.className = "lightbox";
+  backdrop.hidden = true;
+  backdrop.innerHTML = `
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <figure class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Vista ampliada de imagen">
+      <button type="button" class="lightbox-close" aria-label="Cerrar imagen" data-lightbox-close>×</button>
+      <img class="lightbox-image" alt="" />
+      <figcaption class="lightbox-caption"></figcaption>
+    </figure>
+  `;
+
+  document.body.appendChild(backdrop);
+
+  const image = backdrop.querySelector(".lightbox-image");
+  const caption = backdrop.querySelector(".lightbox-caption");
+
+  function closeLightbox() {
+    backdrop.hidden = true;
+    document.body.classList.remove("lightbox-open");
+  }
+
+  backdrop.addEventListener("click", (event) => {
+    if (event.target instanceof HTMLElement && event.target.hasAttribute("data-lightbox-close")) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !backdrop.hidden) {
+      closeLightbox();
+    }
+  });
+
+  lightboxState = { backdrop, image, caption, closeLightbox };
+  return lightboxState;
+}
+
+function openLightbox(src, alt = "") {
+  if (!src) {
+    return;
+  }
+
+  const { backdrop, image, caption } = getOrCreateLightbox();
+  image.src = src;
+  image.alt = alt;
+  caption.textContent = alt;
+  backdrop.hidden = false;
+  document.body.classList.add("lightbox-open");
+}
+
 if (navToggle && navMenu) {
   navToggle.addEventListener("click", () => {
     const isOpen = navMenu.classList.toggle("is-open");
@@ -138,6 +198,46 @@ rotators.forEach((rotator) => {
     currentIndex = (currentIndex + 1) % images.length;
     images[currentIndex].classList.add("is-active");
   }, interval);
+});
+
+lightboxImages.forEach((image) => {
+  image.classList.add("is-lightbox-trigger");
+  image.tabIndex = 0;
+
+  image.addEventListener("click", () => {
+    openLightbox(image.currentSrc || image.src, image.alt);
+  });
+
+  image.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openLightbox(image.currentSrc || image.src, image.alt);
+    }
+  });
+});
+
+lightboxRotators.forEach((rotator) => {
+  rotator.classList.add("is-lightbox-trigger");
+  rotator.tabIndex = 0;
+
+  const openActiveRotatorImage = () => {
+    const activeImage =
+      rotator.querySelector(".rotator-image.is-active") || rotator.querySelector(".rotator-image");
+
+    if (!(activeImage instanceof HTMLImageElement)) {
+      return;
+    }
+
+    openLightbox(activeImage.currentSrc || activeImage.src, activeImage.alt);
+  };
+
+  rotator.addEventListener("click", openActiveRotatorImage);
+  rotator.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openActiveRotatorImage();
+    }
+  });
 });
 
 leadForms.forEach((form) => {
