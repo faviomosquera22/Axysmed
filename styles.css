@@ -577,7 +577,7 @@ p {
 
 .showcase-media-incluya-horizontal .rotator-image-phone {
   inset: 0.8rem;
-  width: min(100%, 116px);
+  width: min(100%, 180px);
   height: calc(100% - 1.6rem);
   margin: auto;
   border-radius: 20px;
@@ -1452,8 +1452,8 @@ p {
 }
 
 .showcase-carousel-media.showcase-mobile-media .showcase-rotator {
-  min-height: 280px;
-  padding: 0.85rem;
+  min-height: 360px;
+  padding: 1rem;
   background: linear-gradient(180deg, rgba(53, 183, 242, 0.08), rgba(103, 223, 189, 0.08));
   display: flex;
   align-items: center;
