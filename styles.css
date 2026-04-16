@@ -393,10 +393,11 @@ h3 {
 }
 
 .audience-card h3 {
-  font-size: 1.35rem;
+  font-size: 1.55rem;
   font-weight: 800;
   color: var(--text);
   margin-top: 0.3rem;
+  line-height: 1.3;
 }
 
 p {
@@ -1413,13 +1414,13 @@ p {
 
 .carousel-track {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
 }
 
 .carousel-track .audience-card {
-  flex: 0 0 calc(40% - 0.6rem);
+  flex: 0 0 calc(48% - 0.5rem);
   min-height: 100%;
 }
 
