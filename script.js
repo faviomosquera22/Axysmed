@@ -368,7 +368,61 @@ class Carousel {
 
 // Initialize carousel when DOM is ready
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => new Carousel());
+  document.addEventListener("DOMContentLoaded", () => {
+    new Carousel();
+    new ShowcaseCarousel();
+  });
 } else {
   new Carousel();
+  new ShowcaseCarousel();
+}
+
+// Showcase Carousel functionality
+class ShowcaseCarousel {
+  constructor() {
+    this.track = document.querySelector(".showcase-carousel-track");
+    this.prevBtn = document.querySelector(".showcase-carousel-prev");
+    this.nextBtn = document.querySelector(".showcase-carousel-next");
+    this.dots = document.querySelectorAll(".showcase-carousel-dot");
+    this.currentSlide = 0;
+    this.totalSlides = this.dots.length;
+
+    if (!this.track) return;
+
+    this.init();
+  }
+
+  init() {
+    this.prevBtn?.addEventListener("click", () => this.prev());
+    this.nextBtn?.addEventListener("click", () => this.next());
+    this.dots.forEach((dot) => {
+      dot.addEventListener("click", (e) => this.goToSlide(parseInt(e.target.dataset.slide)));
+    });
+
+    this.updateCarousel();
+  }
+
+  prev() {
+    this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+    this.updateCarousel();
+  }
+
+  next() {
+    this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+    this.updateCarousel();
+  }
+
+  goToSlide(index) {
+    this.currentSlide = Math.max(0, Math.min(index, this.totalSlides - 1));
+    this.updateCarousel();
+  }
+
+  updateCarousel() {
+    const offset = -this.currentSlide * 100;
+    this.track.style.transform = `translateX(${offset}%)`;
+
+    this.dots.forEach((dot, index) => {
+      dot.classList.toggle("is-active", index === this.currentSlide);
+    });
+  }
 }
