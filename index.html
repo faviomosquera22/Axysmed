@@ -127,7 +127,15 @@
           </p>
         </div>
 
-        <div class="container audience-grid audience-grid-home">
+        <div class="carousel-wrapper">
+          <button class="carousel-btn carousel-btn-prev" aria-label="Producto anterior" id="carousel-prev">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <div class="container carousel-container">
+            <div class="carousel-track" id="carousel-track">
           <article class="audience-card audience-card-psyke" data-reveal>
             <img src="/assets/psyke-lockup-dark.svg" alt="Psyke" class="product-lockup" />
             <span class="audience-tag">Estudiantes y universidades</span>
@@ -160,7 +168,7 @@
           </article>
 
           <article class="audience-card audience-card-vita" data-reveal>
-            <img src="/assets/vita-lockup-new.svg" alt="Vita" class="product-lockup" />
+            <img src="/assets/vita-lockup-complete.svg" alt="Vita" class="product-lockup" />
             <span class="audience-tag">Clínicas y profesionales</span>
             <h3>Optimiza la atención y seguimiento del paciente</h3>
             <p>
@@ -254,6 +262,21 @@
               </a>
             </div>
           </article>
+            </div>
+          </div>
+
+          <button class="carousel-btn carousel-btn-next" aria-label="Producto siguiente" id="carousel-next">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <div class="carousel-indicators">
+          <button class="carousel-dot is-active" data-slide="0" aria-label="Ir a Psyke"></button>
+          <button class="carousel-dot" data-slide="1" aria-label="Ir a Vita"></button>
+          <button class="carousel-dot" data-slide="2" aria-label="Ir a Incluya"></button>
+          <button class="carousel-dot" data-slide="3" aria-label="Ir a Axyscare"></button>
         </div>
       </section>
 

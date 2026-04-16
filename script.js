@@ -302,3 +302,73 @@ leadForms.forEach((form) => {
 });
 
 showLeadSuccessFromQuery();
+
+// Carousel functionality
+class Carousel {
+  constructor() {
+    this.track = document.getElementById("carousel-track");
+    this.prevBtn = document.getElementById("carousel-prev");
+    this.nextBtn = document.getElementById("carousel-next");
+    this.dots = document.querySelectorAll(".carousel-dot");
+    this.currentSlide = 0;
+    this.totalSlides = this.dots.length;
+    this.itemsPerView = this.getItemsPerView();
+
+    if (!this.track) return;
+
+    this.init();
+  }
+
+  getItemsPerView() {
+    if (window.innerWidth <= 720) return 1;
+    if (window.innerWidth <= 980) return 1;
+    return 2;
+  }
+
+  init() {
+    this.prevBtn?.addEventListener("click", () => this.prev());
+    this.nextBtn?.addEventListener("click", () => this.next());
+    this.dots.forEach((dot) => {
+      dot.addEventListener("click", (e) => this.goToSlide(parseInt(e.target.dataset.slide)));
+    });
+
+    window.addEventListener("resize", () => {
+      this.itemsPerView = this.getItemsPerView();
+      this.updateCarousel();
+    });
+
+    this.updateCarousel();
+  }
+
+  prev() {
+    this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+    this.updateCarousel();
+  }
+
+  next() {
+    this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+    this.updateCarousel();
+  }
+
+  goToSlide(index) {
+    this.currentSlide = Math.max(0, Math.min(index, this.totalSlides - 1));
+    this.updateCarousel();
+  }
+
+  updateCarousel() {
+    const cardWidth = 100 / this.itemsPerView;
+    const offset = -this.currentSlide * cardWidth;
+    this.track.style.transform = `translateX(${offset}%)`;
+
+    this.dots.forEach((dot, index) => {
+      dot.classList.toggle("is-active", index === this.currentSlide);
+    });
+  }
+}
+
+// Initialize carousel when DOM is ready
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => new Carousel());
+} else {
+  new Carousel();
+}
