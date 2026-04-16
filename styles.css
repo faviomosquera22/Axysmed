@@ -563,14 +563,16 @@ p {
   aspect-ratio: 16 / 10;
   display: grid;
   place-items: center;
-  padding: 1.4rem;
-  background: linear-gradient(180deg, rgba(15, 143, 158, 0.08), rgba(88, 187, 197, 0.14));
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(15, 143, 158, 0.12), rgba(88, 187, 197, 0.18));
+  border: 1px solid rgba(15, 143, 158, 0.15);
 }
 
 .showcase-logo {
-  width: min(100%, 320px);
+  width: min(100%, 340px);
   height: auto;
   object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(15, 143, 158, 0.15));
 }
 
 .showcase-media-incluya-horizontal .rotator-image-phone {
