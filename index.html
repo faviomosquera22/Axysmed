@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Axysmed | Formación clínica, atención, accesibilidad y cuidado</title>
+    <title>
+      Axysmed | Formación clínica, atención, accesibilidad y cuidado
+    </title>
     <meta
       name="description"
       content="Axysmed organiza su propuesta en cuatro rutas claras: Psyke para formación clínica, Vita para atención y seguimiento del paciente, Incluya para accesibilidad y comunicación asistida, y Axyscare para acompañamiento en cuidado y bienestar."
@@ -11,19 +13,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Figtree:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Figtree:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/svg+xml" href="/assets/axysmed-logo-dark.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/axysmed-logo-dark.svg"
+    />
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/home.css?v=20261003" />
   </head>
-  <body class="site-body">
+  <body class="site-body home-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class="site-header" id="top">
-      <nav class="navbar">
-        <a class="nav-logo" href="/" aria-label="Ir al inicio de Axysmed">
-          <img src="/assets/axysmed-logo-dark.svg" alt="Axysmed" class="brand-logo" />
-        </a>
-
+      <nav class="navbar" aria-label="Navegación principal">
+        <a href="/" aria-label="AxysMed, inicio"
+          ><img
+            src="/assets/axysmed-logo-dark.svg"
+            alt="AxysMed"
+            class="brand-logo"
+        /></a>
         <button
           class="nav-toggle"
           type="button"
@@ -31,425 +41,638 @@
           aria-controls="nav-menu"
           aria-label="Abrir menú"
         >
-          <span></span>
-          <span></span>
+          <span></span><span></span>
         </button>
-
         <div class="nav-menu" id="nav-menu">
-          <a href="/" aria-current="page">Inicio</a>
-          <a href="/psyke">Psyke</a>
-          <a href="/vita">Vita</a>
-          <a href="/incluya">Incluya</a>
-          <a href="https://axys-care-web.vercel.app" target="_blank" rel="noreferrer">Axyscare</a>
-          <a href="#elige-tu-ruta" class="btn btn-primary nav-cta">
-            Contactar
-          </a>
+          <a href="#elige-tu-ruta">Soluciones</a
+          ><a href="#experiencia">Nuestros productos</a
+          ><a href="#nosotros">Sobre AxysMed</a
+          ><a href="#contacto" class="btn btn-primary nav-cta"
+            >Conversemos <span aria-hidden="true">↗</span></a
+          >
         </div>
       </nav>
     </header>
-
-    <main>
-      <section class="page-hero hero-home">
-        <div class="container hero-grid">
-          <div class="hero-copy" data-reveal>
-            <span class="eyebrow">Axysmed / cuatro productos, cuatro rutas claras</span>
-            <h1>Tecnología para formación clínica, atención y accesibilidad</h1>
-            <p class="hero-lead">
-              La formación clínica falla cuando falta práctica. La atención falla
-              cuando falta seguimiento. La accesibilidad falla cuando ver, oír o
-              comunicarse depende de demasiadas herramientas sueltas. Axysmed organiza
-              estas necesidades en cuatro productos: <strong>Psyke</strong> para
-              entrenar casos clínicos, <strong>Vita</strong> para optimizar la atención
-              del paciente, <strong>Incluya</strong> para accesibilidad y
-              comunicación asistida, y <strong>Axyscare</strong> para acompañamiento
-              en cuidado y bienestar.
-            </p>
-            <div class="button-row">
-              <a
-                href="https://simulador-mental.vercel.app"
-                class="btn btn-primary"
-                target="_blank"
-                rel="noreferrer"
-                data-track-click
-                data-track-product="Psyke"
-                data-track-location="home-hero-live"
+    <main id="contenido">
+      <section class="home-hero">
+        <div class="container hero-layout">
+          <div class="hero-editorial">
+            <span class="overline"
+              ><i></i> TECNOLOGÍA CON PROPÓSITO HUMANO</span
+            >
+            <h1>
+              Conectamos<br />tecnología.<br /><span
+                >Acercamos<br />el cuidado.</span
               >
-                Ver Psyke en vivo
-              </a>
-              <a
-                href="https://website-gilt-seven-66.vercel.app"
-                class="btn btn-secondary"
-                target="_blank"
-                rel="noreferrer"
-                data-track-click
-                data-track-product="Vita"
-                data-track-location="home-hero-live"
-              >
-                Ver Vita en vivo
-              </a>
-              <a
-                href="https://incluya-demo.vercel.app/#demo"
-                class="btn btn-secondary"
-                target="_blank"
-                rel="noreferrer"
-                data-track-click
-                data-track-product="Incluya"
-                data-track-location="home-hero-demo"
-              >
-                Revisa la demo
-              </a>
-              <a
-                href="https://axys-care-web.vercel.app"
-                class="btn btn-secondary"
-                target="_blank"
-                rel="noreferrer"
-                data-track-click
-                data-track-product="Axyscare"
-                data-track-location="home-hero-live"
-              >
-                Ver Axyscare en vivo
-              </a>
-            </div>
-            <a href="#elige-tu-ruta" class="text-link hero-text-link" data-track-click data-track-product="Axysmed" data-track-location="home-hero-secondary">
-              Ver cómo se divide la propuesta
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-block" id="elige-tu-ruta">
-        <div class="container section-intro" data-reveal>
-          <span class="section-kicker">Elige tu ruta</span>
-          <h2>Cada producto responde a un problema distinto</h2>
-          <p>
-            En lugar de mezclar mensajes, la home ahora dirige a cada audiencia hacia
-            la propuesta que realmente necesita evaluar.
-          </p>
-        </div>
-
-        <div class="carousel-wrapper">
-          <button class="carousel-btn carousel-btn-prev" aria-label="Producto anterior" id="carousel-prev">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-
-          <div class="container carousel-container">
-            <div class="carousel-track" id="carousel-track">
-          <article class="audience-card audience-card-psyke" data-reveal>
-            <img src="/assets/psyke-lockup-dark.svg" alt="Psyke" class="product-lockup" />
-            <span class="audience-tag">Estudiantes y universidades</span>
-            <h3>Entrena casos clínicos sin riesgo</h3>
-            <p class="problem-text">
-              <strong>🔴 Problema:</strong> la formación clínica suele llegar con poca
-              práctica real y miedo a equivocarse.
-            </p>
-            <p class="solution-text">
-              <strong>✅ Solución:</strong> Psyke permite practicar casos clínicos,
-              repetir escenarios y recibir evaluación automática.
-            </p>
-            <p class="result-text">
-              <strong>🎯 Resultado:</strong> estudiantes mejor preparados para tomar
-              decisiones antes de atender pacientes reales.
-            </p>
-            <div class="card-actions">
-              <a
-                href="https://simulador-mental.vercel.app"
-                class="btn btn-primary"
-                target="_blank"
-                rel="noreferrer"
-                data-track-click
-                data-track-product="Psyke"
-                data-track-location="home-card-live"
-              >
-                Ver Psyke en vivo
-              </a>
-            </div>
-          </article>
-
-          <article class="audience-card audience-card-vita" data-reveal>
-            <div class="product-brand">
-              <img src="/assets/vita-mark.png" alt="Vita" class="product-mark" />
-              <span>Vita</span>
-            </div>
-            <span class="audience-tag">Clínicas y profesionales</span>
-            <h3>Optimiza la atención y seguimiento del paciente</h3>
-            <p class="problem-text">
-              <strong>🔴 Problema:</strong> la operación diaria se vuelve lenta cuando la
-              información del paciente está dispersa y el seguimiento es irregular.
-            </p>
-            <p class="solution-text">
-              <strong>✅ Solución:</strong> Vita centraliza registro, monitoreo y
-              seguimiento clínico en tiempo real.
-            </p>
-            <p class="result-text">
-              <strong>🎯 Resultado:</strong> equipos más organizados, menos errores y
-              pacientes con mejor continuidad de atención.
-            </p>
-            <div class="card-actions">
-              <a
-                href="https://website-gilt-seven-66.vercel.app"
-                class="btn btn-primary btn-vita"
-                target="_blank"
-                rel="noreferrer"
-                data-track-click
-                data-track-product="Vita"
-                data-track-location="home-card-live"
-              >
-                Ver Vita en vivo
-              </a>
-            </div>
-          </article>
-
-          <article class="audience-card audience-card-incluya" data-reveal>
-            <div class="product-brand">
-              <img src="/assets/incluya-logo-dark.png?v=2" alt="Incluya" class="product-mark" />
-              <span>Incluya</span>
-            </div>
-            <span class="audience-tag">Pacientes, cuidadores y atención accesible</span>
-            <h3>Accesibilidad y comunicación en una sola app</h3>
-            <p class="problem-text">
-              <strong>🔴 Problema:</strong> ver, oír, hablar o pedir apoyo rápido suele
-              depender de herramientas separadas y poco claras.
-            </p>
-            <p class="solution-text">
-              <strong>✅ Solución:</strong> Incluya reúne modos para ver, oír,
-              conversar, leer señas y activar SOS desde una sola interfaz.
-            </p>
-            <p class="result-text">
-              <strong>🎯 Resultado:</strong> más autonomía, comunicación más clara y
-              mejor capacidad de respuesta en contextos sensibles.
-            </p>
-            <div class="card-actions">
-              <a
-                href="https://incluya-demo.vercel.app/#demo"
-                class="btn btn-primary btn-incluya"
-                target="_blank"
-                rel="noreferrer"
-                data-track-click
-                data-track-product="Incluya"
-                data-track-location="home-card-demo"
-              >
-                Revisa la demo
-              </a>
-            </div>
-          </article>
-
-          <article class="audience-card audience-card-axyscare" data-reveal>
-            <img src="/assets/axyscare-logo.png" alt="Axyscare" class="product-lockup product-lockup-wide" />
-            <span class="audience-tag">Pacientes y seguimiento de cuidado</span>
-            <h3>Acompaña procesos de cuidado con una experiencia más clara</h3>
-            <p class="problem-text">
-              <strong>🔴 Problema:</strong> cuando el cuidado y el seguimiento dependen de
-              demasiados pasos, la experiencia se vuelve confusa para pacientes y equipos.
-            </p>
-            <p class="solution-text">
-              <strong>✅ Solución:</strong> Axyscare concentra la propuesta en una interfaz
-              simple para ordenar acompañamiento, orientación y acceso al producto.
-            </p>
-            <p class="result-text">
-              <strong>🎯 Resultado:</strong> una experiencia más directa para entender,
-              acceder y sostener procesos de cuidado y bienestar.
-            </p>
-            <div class="card-actions">
-              <a
-                href="https://axys-care-web.vercel.app"
-                class="btn btn-primary btn-axyscare"
-                target="_blank"
-                rel="noreferrer"
-                data-track-click
-                data-track-product="Axyscare"
-                data-track-location="home-card-live"
-              >
-                Ver Axyscare en vivo
-              </a>
-            </div>
-          </article>
-            </div>
-          </div>
-
-          <button class="carousel-btn carousel-btn-next" aria-label="Producto siguiente" id="carousel-next">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-        </div>
-
-        <div class="carousel-indicators">
-          <button class="carousel-dot is-active" data-slide="0" aria-label="Ir a Psyke"></button>
-          <button class="carousel-dot" data-slide="1" aria-label="Ir a Vita"></button>
-          <button class="carousel-dot" data-slide="2" aria-label="Ir a Incluya"></button>
-        </div>
-      </section>
-
-      <section class="section-block section-tinted">
-        <div class="container section-intro" data-reveal>
-          <span class="section-kicker">Prueba visual</span>
-          <h2>Así se ven Psyke, Vita, Incluya y Axyscare</h2>
-          <p>
-            Después de elegir la ruta correcta, esta sección solo confirma cómo se ve
-            cada producto en uso real.
-          </p>
-        </div>
-
-        <div class="showcase-carousel-wrapper">
-          <div class="showcase-carousel-track" id="showcase-track">
-            <!-- Psyke -->
-            <div class="showcase-carousel-slide">
-              <div class="showcase-carousel-media">
-                <div class="showcase-rotator" data-rotator data-interval="2600">
-                  <img src="/assets/psyke/psyke-case.png" alt="Caso clínico dentro de Psyke" class="rotator-image is-active" />
-                  <img src="/assets/psyke/psyke-dashboard.png" alt="Panel de progreso dentro de Psyke" class="rotator-image" />
-                  <img src="/assets/psyke/psyke-caces.png" alt="Escenario tipo CACES dentro de Psyke" class="rotator-image" />
-                  <img src="/assets/psyke/psyke-ecg.png" alt="Simulador de ECG dentro de Psyke" class="rotator-image" />
-                </div>
-              </div>
-              <div class="showcase-carousel-content">
-                <span class="audience-tag">Psyke</span>
-                <h3>Simulación clínica guiada</h3>
-                <p>Casos estructurados, práctica repetible y evaluación automática.</p>
-              </div>
-            </div>
-
-            <!-- Vita -->
-            <div class="showcase-carousel-slide">
-              <div class="showcase-carousel-media">
-                <div class="showcase-rotator" data-rotator data-interval="2800">
-                  <img src="/assets/vita/vita-dashboard-web.png" alt="Dashboard clínico dentro de Vita" class="rotator-image is-active" />
-                  <img src="/assets/vita/vita-pacientes-web.png" alt="Listado de pacientes dentro de Vita" class="rotator-image" />
-                  <img src="/assets/vita/vita-signos.png" alt="Monitoreo de signos vitales dentro de Vita" class="rotator-image" />
-                  <img src="/assets/vita/vita-kardex.png" alt="Registro clínico tipo kardex dentro de Vita" class="rotator-image" />
-                </div>
-              </div>
-              <div class="showcase-carousel-content">
-                <span class="audience-tag">Vita</span>
-                <h3>Operación clínica ordenada</h3>
-                <p>Registro, monitoreo y seguimiento del paciente en una misma base.</p>
-              </div>
-            </div>
-
-            <!-- Incluya -->
-            <div class="showcase-carousel-slide">
-              <div class="showcase-carousel-media showcase-mobile-media">
-                <div class="showcase-rotator showcase-media-incluya-horizontal" data-rotator data-interval="3000">
-                  <img src="/assets/Incluya/IMG_2141.PNG" alt="Pantalla principal de Incluya" class="rotator-image rotator-image-phone is-active" />
-                  <img src="/assets/Incluya/IMG_2142.PNG" alt="Modo oír de Incluya con subtítulos grandes" class="rotator-image rotator-image-phone" />
-                  <img src="/assets/Incluya/IMG_2143.PNG" alt="Modo conversar de Incluya con frases rápidas" class="rotator-image rotator-image-phone" />
-                  <img src="/assets/Incluya/IMG_2145.PNG" alt="Pantalla SOS de Incluya" class="rotator-image rotator-image-phone" />
-                </div>
-              </div>
-              <div class="showcase-carousel-content">
-                <span class="audience-tag">Incluya</span>
-                <h3>Accesibilidad y apoyo inmediato</h3>
-                <p>Entorno en vivo, subtítulos, frases rápidas, señas y SOS en una sola experiencia.</p>
-              </div>
-            </div>
-
-            <!-- Axyscare -->
-            <div class="showcase-carousel-slide">
-              <div class="showcase-carousel-media">
-                <div class="showcase-rotator" data-rotator data-interval="3000">
-                  <img src="/assets/Axyscare/axyscare-1.png" alt="Dashboard de Axyscare" class="rotator-image is-active" />
-                  <img src="/assets/Axyscare/axyscare-2.png" alt="Pantalla de control de Axyscare" class="rotator-image" />
-                  <img src="/assets/Axyscare/axyscare-3.png" alt="Vista de pacientes en Axyscare" class="rotator-image" />
-                  <img src="/assets/Axyscare/axyscare-4.png" alt="Modo de seguimiento en Axyscare" class="rotator-image" />
-                  <img src="/assets/Axyscare/axyscare-5.png" alt="Panel de información en Axyscare" class="rotator-image" />
-                  <img src="/assets/Axyscare/axyscare-6.png" alt="Vista de citas en Axyscare" class="rotator-image" />
-                  <img src="/assets/Axyscare/axyscare-7.png" alt="Interfaz de Axyscare" class="rotator-image" />
-                </div>
-              </div>
-              <div class="showcase-carousel-content">
-                <span class="audience-tag">Axyscare</span>
-                <h3>Cuidado y bienestar con acceso más simple</h3>
-                <p>Una entrada clara al producto para acompañamiento, orientación y seguimiento.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="showcase-carousel-controls">
-            <button class="showcase-carousel-btn showcase-carousel-prev" aria-label="Producto anterior">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="15 18 9 12 15 6"></polyline>
-              </svg>
-            </button>
-            <div class="showcase-carousel-dots">
-              <button class="showcase-carousel-dot is-active" data-slide="0" aria-label="Ir a Psyke"></button>
-              <button class="showcase-carousel-dot" data-slide="1" aria-label="Ir a Vita"></button>
-              <button class="showcase-carousel-dot" data-slide="2" aria-label="Ir a Incluya"></button>
-              <button class="showcase-carousel-dot" data-slide="3" aria-label="Ir a Axyscare"></button>
-            </div>
-            <button class="showcase-carousel-btn showcase-carousel-next" aria-label="Producto siguiente">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-block section-closing">
-        <div class="container closing-panel" data-reveal>
-          <div class="closing-copy">
-            <span class="section-kicker">Por Qué Existe Axysmed</span>
-            <h2>Axysmed nació para resolver formación, atención, accesibilidad y cuidado</h2>
+            </h1>
             <p>
-              Vimos que la formación clínica muchas veces llega con poca práctica, y
-              que la atención al paciente pierde continuidad cuando la información y el
-              seguimiento no están bien organizados. También vimos que la accesibilidad
-              cotidiana falla cuando escuchar, leer, expresarse o pedir ayuda depende
-              de demasiados pasos. Por eso desarrollamos <strong>Psyke</strong> para
-              entrenar casos clínicos, <strong>Vita</strong> para mejorar la atención y
-              el seguimiento, <strong>Incluya</strong> para comunicación accesible y
-              apoyo inmediato, y <strong>Axyscare</strong> para acompañamiento en procesos
-              de cuidado y bienestar.
+              Un ecosistema de soluciones para aprender, acompañar y hacer más
+              accesible la experiencia en salud.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#elige-tu-ruta"
+                >Explorar soluciones <span aria-hidden="true">↗</span></a
+              ><a class="quiet-link" href="#nosotros"
+                >Conoce AxysMed <span aria-hidden="true">→</span></a
+              >
+            </div>
+            <div class="hero-footnote">
+              <span class="small-cross" aria-hidden="true">+</span> Diseñado
+              alrededor de las personas.
+            </div>
+          </div>
+          <div
+            class="ecosystem-art"
+            aria-label="Ecosistema AxysMed: formación, atención, accesibilidad y cuidado"
+          >
+            <div class="art-top">
+              <span>EL ECOSISTEMA AXYSMED</span
+              ><span class="art-index">01 — 04</span>
+            </div>
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="orbit-line horizontal"></div>
+            <div class="orbit-line vertical"></div>
+            <div class="ecosystem-core">
+              <img src="/assets/axysmed-logo-light.svg" alt="AxysMed" /><span
+                >Personas en el centro.</span
+              >
+            </div>
+            <a href="/psyke" class="ecosystem-node node-psyke"
+              ><span class="node-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m3 9 9-5 9 5-9 5-9-5Z" />
+                  <path d="M6 11v6c4 3 8 3 12 0v-6M21 9v7" /></svg></span
+              ><span
+                ><strong>Psyke</strong><small>Formación clínica</small></span
+              ><span class="node-arrow" aria-hidden="true">↗</span></a
+            ><a href="/vita" class="ecosystem-node node-vita"
+              ><span class="node-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M3 12h4l3-7 4 14 3-7h4" /></svg></span
+              ><span
+                ><strong>Vita</strong
+                ><small>Atención y seguimiento</small></span
+              ><span class="node-arrow" aria-hidden="true">↗</span></a
+            ><a href="/incluya" class="ecosystem-node node-incluya"
+              ><span class="node-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="5" r="2" />
+                  <path d="m4 9 8 2 8-2M12 11v5m0 0-5 5m5-5 5 5" /></svg></span
+              ><span><strong>Incluya</strong><small>Accesibilidad</small></span
+              ><span class="node-arrow" aria-hidden="true">↗</span></a
+            ><a
+              href="https://axys-care-web.vercel.app"
+              class="ecosystem-node node-axyscare"
+              ><span class="node-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 0 0-7.1 7.1L12 21l8.8-8.3a5 5 0 0 0 0-7.1Z"
+                  /></svg></span
+              ><span
+                ><strong>Axyscare</strong
+                ><small>Cuidado y bienestar</small></span
+              ><span class="node-arrow" aria-hidden="true">↗</span></a
+            >
+            <div class="art-bottom">
+              <span class="art-signal"
+                ><i></i> CUATRO SOLUCIONES. UN MISMO PROPÓSITO.</span
+              ><span aria-hidden="true">✳</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="discipline-band">
+        <div class="container">
+          <span>Una visión integral de la salud</span><span>Formación</span
+          ><b aria-hidden="true">✳</b><span>Atención</span
+          ><b aria-hidden="true">✳</b><span>Accesibilidad</span
+          ><b aria-hidden="true">✳</b><span>Cuidado</span>
+        </div>
+      </div>
+      <section class="solutions-section" id="elige-tu-ruta">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="overline">01 / NUESTRAS SOLUCIONES</span>
+              <h2>Distintas necesidades.<br />Un propósito compartido.</h2>
+            </div>
+            <p>
+              Encuentra la herramienta que acompaña tu forma de aprender,
+              trabajar o cuidar.
             </p>
           </div>
-
-          <div class="closing-actions">
-            <article class="closing-link closing-story">
-              <strong>Lo que buscamos aportar</strong>
-              <span>
-                Crear herramientas que ayuden a preparar mejor a los futuros
-                profesionales y a ordenar mejor la atención en salud.
-              </span>
+          <div class="solution-grid">
+            <article class="solution-card solution-psyke">
+              <div class="solution-top">
+                <span class="solution-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="m3 9 9-5 9 5-9 5-9-5Z" />
+                    <path d="M6 11v6c4 3 8 3 12 0v-6M21 9v7" /></svg></span
+                ><span class="solution-number">01</span>
+              </div>
+              <span class="solution-category">Formación clínica</span>
+              <h3>Psyke</h3>
+              <h4>Aprender haciendo.</h4>
+              <p>
+                Casos clínicos, escenarios de práctica y evaluación para
+                acompañar la formación de futuros profesionales.
+              </p>
+              <div class="solution-bottom">
+                <span>Estudiantes y universidades</span
+                ><a
+                  href="/psyke"
+                  data-track-click
+                  data-track-product="Psyke"
+                  data-track-location="home-solution"
+                  >Explorar Psyke <span aria-hidden="true">↗</span></a
+                >
+              </div>
             </article>
-            <article class="closing-link closing-story closing-link-vita">
-              <strong>Cómo lo estamos haciendo</strong>
-              <span>
-                Construyendo productos enfocados en problemas concretos, con criterio
-                clínico, estructura clara y uso real para estudiantes, clínicas y profesionales.
-              </span>
+            <article class="solution-card solution-vita">
+              <div class="solution-top">
+                <span class="solution-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M3 12h4l3-7 4 14 3-7h4" /></svg></span
+                ><span class="solution-number">02</span>
+              </div>
+              <span class="solution-category">Atención y seguimiento</span>
+              <h3>Vita</h3>
+              <h4>La información, más cerca del cuidado.</h4>
+              <p>
+                Herramientas para el registro, el pretriaje digital y el
+                seguimiento de pacientes desde el entorno profesional.
+              </p>
+              <div class="solution-bottom">
+                <span>Profesionales e instituciones</span
+                ><a
+                  href="/vita"
+                  data-track-click
+                  data-track-product="Vita"
+                  data-track-location="home-solution"
+                  >Explorar Vita <span aria-hidden="true">↗</span></a
+                >
+              </div>
             </article>
-            <article class="closing-link closing-story closing-link-incluya">
-              <strong>Qué sumamos con Incluya</strong>
-              <span>
-                Una capa de accesibilidad para ver, oír, conversar y activar apoyo rápido
-                desde una experiencia pensada para uso real.
-              </span>
+            <article class="solution-card solution-incluya">
+              <div class="solution-top">
+                <span class="solution-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="5" r="2" />
+                    <path
+                      d="m4 9 8 2 8-2M12 11v5m0 0-5 5m5-5 5 5"
+                    /></svg></span
+                ><span class="solution-number">03</span>
+              </div>
+              <span class="solution-category">Accesibilidad</span>
+              <h3>Incluya</h3>
+              <h4>Más formas de conectar.</h4>
+              <p>
+                Modos para ver, oír y conversar en una experiencia de
+                comunicación asistida accesible.
+              </p>
+              <div class="solution-bottom">
+                <span>Personas y cuidadores</span
+                ><a
+                  href="/incluya"
+                  data-track-click
+                  data-track-product="Incluya"
+                  data-track-location="home-solution"
+                  >Explorar Incluya <span aria-hidden="true">↗</span></a
+                >
+              </div>
             </article>
-            <article class="closing-link closing-story closing-link-axyscare">
-              <strong>Qué sumamos con Axyscare</strong>
-              <span>
-                Una propuesta enfocada en acompañar el cuidado con una experiencia clara,
-                directa y lista para mostrarse en vivo.
-              </span>
+            <article class="solution-card solution-axyscare">
+              <div class="solution-top">
+                <span class="solution-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 0 0-7.1 7.1L12 21l8.8-8.3a5 5 0 0 0 0-7.1Z"
+                    /></svg></span
+                ><span class="solution-number">04</span>
+              </div>
+              <span class="solution-category">Cuidado y bienestar</span>
+              <h3>Axyscare</h3>
+              <h4>Acompañar también es cuidar.</h4>
+              <p>
+                Un espacio para acceder a herramientas de orientación y
+                acompañamiento en los procesos de cuidado.
+              </p>
+              <div class="solution-bottom">
+                <span>Pacientes y equipos de cuidado</span
+                ><a
+                  href="https://axys-care-web.vercel.app"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-track-click
+                  data-track-product="Axyscare"
+                  data-track-location="home-solution"
+                  >Conocer Axyscare <span aria-hidden="true">↗</span></a
+                >
+              </div>
             </article>
           </div>
+        </div>
+      </section>
+      <section class="experience-section" id="experiencia">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="overline">02 / DE LA IDEA A LA EXPERIENCIA</span>
+              <h2>Conoce lo que estamos<br />construyendo.</h2>
+            </div>
+            <p>
+              Explora las interfaces y descubre el enfoque de cada solución.
+            </p>
+          </div>
+          <div
+            class="product-tabs"
+            role="tablist"
+            aria-label="Vista previa de productos"
+          >
+            <button
+              id="tab-psyke"
+              role="tab"
+              aria-selected="true"
+              aria-controls="preview-psyke"
+              tabindex="0"
+              data-preview-tab="psyke"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m3 9 9-5 9 5-9 5-9-5Z" />
+                <path d="M6 11v6c4 3 8 3 12 0v-6M21 9v7" /></svg
+              >Psyke<span aria-hidden="true">↗</span></button
+            ><button
+              id="tab-vita"
+              role="tab"
+              aria-selected="false"
+              aria-controls="preview-vita"
+              tabindex="-1"
+              data-preview-tab="vita"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M3 12h4l3-7 4 14 3-7h4" /></svg
+              >Vita<span aria-hidden="true">↗</span></button
+            ><button
+              id="tab-incluya"
+              role="tab"
+              aria-selected="false"
+              aria-controls="preview-incluya"
+              tabindex="-1"
+              data-preview-tab="incluya"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="5" r="2" />
+                <path d="m4 9 8 2 8-2M12 11v5m0 0-5 5m5-5 5 5" /></svg
+              >Incluya<span aria-hidden="true">↗</span></button
+            ><button
+              id="tab-axyscare"
+              role="tab"
+              aria-selected="false"
+              aria-controls="preview-axyscare"
+              tabindex="-1"
+              data-preview-tab="axyscare"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 0 0-7.1 7.1L12 21l8.8-8.3a5 5 0 0 0 0-7.1Z"
+                /></svg
+              >Axyscare<span aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <div
+            class="product-preview"
+            role="tabpanel"
+            id="preview-psyke"
+            aria-labelledby="tab-psyke"
+            tabindex="0"
+          >
+            <div class="preview-media preview-psyke">
+              <div class="browser-bar">
+                <span aria-hidden="true">● ● ●</span
+                ><span>Psyke · Vista del producto</span
+                ><span aria-hidden="true">↗</span>
+              </div>
+              <img
+                src="/assets/psyke/psyke-case.png"
+                alt="Interfaz de Psyke"
+                loading="lazy"
+              />
+            </div>
+            <div class="preview-copy">
+              <span class="overline">Formación clínica</span>
+              <h3>Casos que convierten el conocimiento en práctica.</h3>
+              <p>
+                Explora escenarios clínicos estructurados y herramientas de
+                evaluación dentro de Psyke.
+              </p>
+              <span class="preview-tags"
+                >Casos clínicos / Simulación / Evaluación</span
+              ><a class="quiet-link" href="/psyke"
+                >Conocer Psyke <span aria-hidden="true">→</span></a
+              >
+            </div>
+          </div>
+          <div
+            class="product-preview"
+            role="tabpanel"
+            id="preview-vita"
+            aria-labelledby="tab-vita"
+            tabindex="0"
+            hidden
+          >
+            <div class="preview-media preview-vita">
+              <div class="browser-bar">
+                <span aria-hidden="true">● ● ●</span
+                ><span>Vita · Vista del producto</span
+                ><span aria-hidden="true">↗</span>
+              </div>
+              <img
+                src="/assets/vita/vita-welcome.png"
+                alt="Interfaz de Vita"
+                loading="lazy"
+              />
+            </div>
+            <div class="preview-copy">
+              <span class="overline">Atención y seguimiento</span>
+              <h3>Una mirada integral al seguimiento.</h3>
+              <p>
+                Conoce la propuesta de Vita para conectar el registro y el
+                seguimiento con el trabajo del equipo profesional.
+              </p>
+              <span class="preview-tags"
+                >Registro / Pretriaje / Seguimiento</span
+              ><a class="quiet-link" href="/vita"
+                >Conocer Vita <span aria-hidden="true">→</span></a
+              >
+            </div>
+          </div>
+          <div
+            class="product-preview"
+            role="tabpanel"
+            id="preview-incluya"
+            aria-labelledby="tab-incluya"
+            tabindex="0"
+            hidden
+          >
+            <div class="preview-media preview-incluya">
+              <div class="browser-bar">
+                <span aria-hidden="true">● ● ●</span
+                ><span>Incluya · Vista del producto</span
+                ><span aria-hidden="true">↗</span>
+              </div>
+              <img
+                src="/assets/Incluya/IMG_2141.PNG"
+                alt="Interfaz de Incluya"
+                loading="lazy"
+              />
+            </div>
+            <div class="preview-copy">
+              <span class="overline">Accesibilidad</span>
+              <h3>La comunicación tiene muchas formas.</h3>
+              <p>
+                Descubre una interfaz que reúne diferentes modos de comunicación
+                y asistencia cotidiana.
+              </p>
+              <span class="preview-tags">Ver / Oír / Conversar</span
+              ><a class="quiet-link" href="/incluya"
+                >Conocer Incluya <span aria-hidden="true">→</span></a
+              >
+            </div>
+          </div>
+          <div
+            class="product-preview"
+            role="tabpanel"
+            id="preview-axyscare"
+            aria-labelledby="tab-axyscare"
+            tabindex="0"
+            hidden
+          >
+            <div class="preview-media preview-axyscare">
+              <div class="browser-bar">
+                <span aria-hidden="true">● ● ●</span
+                ><span>Axyscare · Vista del producto</span
+                ><span aria-hidden="true">↗</span>
+              </div>
+              <img
+                src="/assets/Axyscare/axyscare-1.png"
+                alt="Interfaz de Axyscare"
+                loading="lazy"
+              />
+            </div>
+            <div class="preview-copy">
+              <span class="overline">Cuidado y bienestar</span>
+              <h3>El cuidado comienza con acompañamiento.</h3>
+              <p>
+                Conoce el entorno de Axyscare y su propuesta para orientar y
+                acompañar procesos de cuidado.
+              </p>
+              <span class="preview-tags"
+                >Orientación / Acompañamiento / Bienestar</span
+              ><a class="quiet-link" href="https://axys-care-web.vercel.app"
+                >Conocer Axyscare <span aria-hidden="true">→</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="purpose-section" id="nosotros">
+        <div class="container purpose-grid">
+          <div>
+            <span class="overline">03 / NUESTRA RAZÓN DE SER</span>
+            <h2>
+              La tecnología tiene sentido cuando<br /><span
+                >está al servicio<br />de las personas.</span
+              >
+            </h2>
+          </div>
+          <div class="purpose-copy">
+            <p>
+              En AxysMed partimos de necesidades concretas: practicar antes de
+              atender, organizar la información y facilitar la comunicación y el
+              acompañamiento.
+            </p>
+            <p>
+              Construimos herramientas con una visión compartida: acercar la
+              tecnología a quienes aprenden, a quienes cuidan y a quienes
+              necesitan apoyo.
+            </p>
+            <div class="principle">
+              <span>01</span>
+              <div>
+                <h3>Enfoque humano</h3>
+                <p>Personas y necesidades reales como punto de partida.</p>
+              </div>
+            </div>
+            <div class="principle">
+              <span>02</span>
+              <div>
+                <h3>Claridad en cada experiencia</h3>
+                <p>Un propósito definido para cada solución.</p>
+              </div>
+            </div>
+            <div class="principle">
+              <span>03</span>
+              <div>
+                <h3>Una visión de conjunto</h3>
+                <p>Formación, atención, accesibilidad y cuidado.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact-section" id="contacto">
+        <div class="container contact-panel">
+          <div>
+            <span class="overline">CONSTRUYAMOS EL SIGUIENTE PASO</span>
+            <h2>Hablemos de lo que<br />tu institución necesita.</h2>
+            <p>Conoce nuestras soluciones y conversemos sobre tu proyecto.</p>
+          </div>
+          <a
+            href="mailto:axysmedtech@gmail.com"
+            class="btn contact-button"
+            data-track-click
+            data-track-product="Axysmed"
+            data-track-location="home-contact"
+            >Contactar al equipo <span aria-hidden="true">↗</span></a
+          >
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <img src="/assets/axysmed-logo-dark.svg" alt="Axysmed" class="footer-logo" />
-        <p>Axysmed organiza formación clínica, atención al paciente, accesibilidad y cuidado en rutas de decisión más claras.</p>
+    <footer class="home-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <img src="/assets/axysmed-logo-dark.svg" alt="AxysMed" />
+            <p>Tecnología con propósito humano.</p>
+          </div>
+          <div class="footer-nav" aria-label="Productos">
+            <a href="/psyke">Psyke</a><a href="/vita">Vita</a
+            ><a href="/incluya">Incluya</a
+            ><a
+              href="https://axys-care-web.vercel.app"
+              target="_blank"
+              rel="noreferrer"
+              >Axyscare ↗</a
+            >
+          </div>
+          <a class="footer-email" href="mailto:axysmedtech@gmail.com"
+            >axysmedtech@gmail.com ↗</a
+          >
+        </div>
+        <div class="footer-bottom">
+          <span
+            >© <span id="copyright-year">2026</span> AxysMed. Todos los derechos
+            reservados.</span
+          ><a href="#top">Volver arriba ↑</a>
+        </div>
       </div>
     </footer>
-
     <script>
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+      window.va =
+        window.va ||
+        function () {
+          (window.vaq = window.vaq || []).push(arguments);
+        };
     </script>
-    <script defer src="/_vercel/insights/script.js"></script>
-    <script src="/script.js"></script>
+    <script defer src="/_vercel/insights/script.js?v=20261003"></script>
+    <script defer src="/script.js?v=20261003"></script>
+    <script defer src="/home.js"></script>
   </body>
 </html>

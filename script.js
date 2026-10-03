@@ -5,7 +5,9 @@ const revealItems = document.querySelectorAll("[data-reveal]");
 const leadForms = document.querySelectorAll("[data-lead-form]");
 const trackedClicks = document.querySelectorAll("[data-track-click]");
 const rotators = document.querySelectorAll("[data-rotator]");
-const lightboxImages = document.querySelectorAll(".product-shot img, .incluya-shot");
+const lightboxImages = document.querySelectorAll(
+  ".product-shot img, .incluya-shot",
+);
 const lightboxRotators = document.querySelectorAll(".showcase-rotator");
 
 let lightboxState = null;
@@ -63,7 +65,11 @@ function showLeadSuccessFromQuery() {
 
   url.searchParams.delete("lead");
   url.searchParams.delete("product");
-  history.replaceState({}, document.title, `${url.pathname}${url.search}${url.hash}`);
+  history.replaceState(
+    {},
+    document.title,
+    `${url.pathname}${url.search}${url.hash}`,
+  );
 }
 
 function trackClick(product, location) {
@@ -78,7 +84,7 @@ function trackClick(product, location) {
       product,
       location,
     },
-    true
+    true,
   ).catch(() => {});
 }
 
@@ -110,7 +116,10 @@ function getOrCreateLightbox() {
   }
 
   backdrop.addEventListener("click", (event) => {
-    if (event.target instanceof HTMLElement && event.target.hasAttribute("data-lightbox-close")) {
+    if (
+      event.target instanceof HTMLElement &&
+      event.target.hasAttribute("data-lightbox-close")
+    ) {
       closeLightbox();
     }
   });
@@ -164,7 +173,7 @@ if ("IntersectionObserver" in window) {
         observer.unobserve(entry.target);
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.12 },
   );
 
   revealItems.forEach((item) => observer.observe(item));
@@ -186,7 +195,9 @@ rotators.forEach((rotator) => {
     return;
   }
 
-  let currentIndex = images.findIndex((image) => image.classList.contains("is-active"));
+  let currentIndex = images.findIndex((image) =>
+    image.classList.contains("is-active"),
+  );
 
   if (currentIndex < 0) {
     currentIndex = 0;
@@ -222,7 +233,8 @@ lightboxRotators.forEach((rotator) => {
 
   const openActiveRotatorImage = () => {
     const activeImage =
-      rotator.querySelector(".rotator-image.is-active") || rotator.querySelector(".rotator-image");
+      rotator.querySelector(".rotator-image.is-active") ||
+      rotator.querySelector(".rotator-image");
 
     if (!(activeImage instanceof HTMLImageElement)) {
       return;
@@ -288,7 +300,8 @@ leadForms.forEach((form) => {
 
     if (submitButton) {
       submitButton.disabled = true;
-      submitButton.textContent = product === "Vita" ? "Enviando solicitud..." : "Enviando demo...";
+      submitButton.textContent =
+        product === "Vita" ? "Enviando solicitud..." : "Enviando demo...";
     }
 
     if (feedback) {
@@ -329,7 +342,9 @@ class Carousel {
     this.prevBtn?.addEventListener("click", () => this.prev());
     this.nextBtn?.addEventListener("click", () => this.next());
     this.dots.forEach((dot) => {
-      dot.addEventListener("click", (e) => this.goToSlide(parseInt(e.target.dataset.slide)));
+      dot.addEventListener("click", (e) =>
+        this.goToSlide(parseInt(e.target.dataset.slide)),
+      );
     });
 
     window.addEventListener("resize", () => {
@@ -341,7 +356,8 @@ class Carousel {
   }
 
   prev() {
-    this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+    this.currentSlide =
+      (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
     this.updateCarousel();
   }
 
@@ -366,17 +382,6 @@ class Carousel {
   }
 }
 
-// Initialize carousel when DOM is ready
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => {
-    new Carousel();
-    new ShowcaseCarousel();
-  });
-} else {
-  new Carousel();
-  new ShowcaseCarousel();
-}
-
 // Showcase Carousel functionality
 class ShowcaseCarousel {
   constructor() {
@@ -396,14 +401,17 @@ class ShowcaseCarousel {
     this.prevBtn?.addEventListener("click", () => this.prev());
     this.nextBtn?.addEventListener("click", () => this.next());
     this.dots.forEach((dot) => {
-      dot.addEventListener("click", (e) => this.goToSlide(parseInt(e.target.dataset.slide)));
+      dot.addEventListener("click", (e) =>
+        this.goToSlide(parseInt(e.target.dataset.slide)),
+      );
     });
 
     this.updateCarousel();
   }
 
   prev() {
-    this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+    this.currentSlide =
+      (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
     this.updateCarousel();
   }
 
@@ -425,4 +433,15 @@ class ShowcaseCarousel {
       dot.classList.toggle("is-active", index === this.currentSlide);
     });
   }
+}
+
+// Initialize carousel when DOM is ready
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => {
+    new Carousel();
+    new ShowcaseCarousel();
+  });
+} else {
+  new Carousel();
+  new ShowcaseCarousel();
 }
