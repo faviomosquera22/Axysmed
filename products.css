@@ -846,3 +846,118 @@
     width: 195px;
   }
 }
+
+/* Native video controls retain keyboard, fullscreen and mobile playback support. */
+.product-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #102d36;
+}
+.device-phone .product-video {
+  aspect-ratio: 1180/2556;
+  border-radius: 25px;
+}
+.device-browser .product-video {
+  aspect-ratio: 3504/2340;
+}
+.phone-single {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 56px 20px 45px;
+}
+.phone-single .device-phone {
+  width: 230px;
+  max-width: 100%;
+}
+.video-feature {
+  display: grid;
+  align-items: center;
+  gap: 65px;
+  border: 1px solid #dce5dd;
+  background: #eef3ed;
+  border-radius: 12px;
+  padding: 40px;
+}
+.video-feature-mobile {
+  grid-template-columns: 1fr 1fr;
+}
+.video-feature-mobile > .device-phone {
+  width: 260px;
+  max-width: 100%;
+  justify-self: center;
+}
+.video-feature-desktop {
+  grid-template-columns: 1.65fr 1fr;
+}
+.video-feature-copy h3 {
+  font-size: 32px;
+  line-height: 1.25;
+  margin: 20px 0;
+}
+.video-feature-copy p {
+  font-size: 14px;
+}
+.video-feature-copy .video-hint {
+  font-size: 11px;
+  margin-top: 22px;
+  color: #697f72;
+}
+.home-page .preview-psyke:has(video) {
+  height: auto;
+  padding: 16px;
+  background: #e2e9e1;
+}
+.home-page .preview-psyke video {
+  aspect-ratio: 3504/2340;
+  border-radius: 6px;
+}
+.home-page .preview-media .device-phone video {
+  border-radius: 21px;
+}
+@media (max-width: 1100px) {
+  .phone-single .device-phone {
+    width: 200px;
+  }
+  .video-feature {
+    gap: 35px;
+    padding: 28px;
+  }
+  .video-feature-copy h3 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 800px) {
+  .phone-single .device-phone {
+    width: 220px;
+  }
+  .video-feature-desktop {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .phone-single .device-phone {
+    width: 182px;
+  }
+  .video-feature {
+    grid-template-columns: 1fr;
+    padding: 28px 20px;
+    gap: 30px;
+  }
+  .video-feature-mobile > .device-phone {
+    width: 230px;
+  }
+  .video-feature-copy h3 {
+    font-size: 26px;
+  }
+  .device-phone .product-video {
+    border-radius: 19px;
+  }
+}
+@media (max-width: 360px) {
+  .phone-single .device-phone {
+    width: 164px;
+  }
+}

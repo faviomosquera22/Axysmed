@@ -21,7 +21,7 @@
     />
     <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="/home.css?v=20261003" />
-    <link rel="stylesheet" href="/products.css?v=20261003b" />
+    <link rel="stylesheet" href="/products.css?v=20261003c" />
   </head>
   <body class="site-body home-page product-page product-psyke">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -95,18 +95,21 @@
                 <span>PSYKE / EXPERIENCIA DIGITAL</span><span>AXYSMED</span>
               </div>
               <div class="device-browser">
-                <div class="device-toolbar" aria-hidden="true">
-                  <span>● ● ●</span><span>Vista del producto</span
-                  ><span>↗</span>
-                </div>
-                <img
-                  src="/assets/psyke/psyke-case.png"
-                  alt="Simulación clínica"
-                  loading="eager"
-                />
+                <video
+                  class="product-video"
+                  controls
+                  playsinline
+                  preload="none"
+                  poster="/assets/videos/psyke-poster.jpg"
+                  aria-label="Demostración de la plataforma Psyke"
+                >
+                  <source src="/assets/videos/psyke.mp4" type="video/mp4" />
+                  Tu navegador no puede reproducir este video.
+                  <a href="/assets/videos/psyke.mp4">Abrir video de psyke</a>.
+                </video>
               </div>
               <span class="stage-note"
-                >Capturas de la interfaz del producto</span
+                >Video del producto · Reproduce para explorar</span
               >
             </div>
           </div>
@@ -157,68 +160,35 @@
               Explora las herramientas de simulación y preparación de Psyke.
             </p>
           </div>
-          <div class="device-gallery desktop-gallery">
-            <figure class="gallery-item">
-              <div class="device-browser">
-                <div class="device-toolbar" aria-hidden="true">
-                  <span>● ● ●</span><span>Vista del producto</span
-                  ><span>↗</span>
-                </div>
-                <img
-                  src="/assets/psyke/psyke-case.png"
-                  alt="Simulación clínica"
-                  loading="lazy"
-                />
-              </div>
-              <figcaption>
-                <span class="overline">01 / PSYKE</span>
-                <h3>Simulación clínica</h3>
-                <p>
-                  Escenarios para observar, interpretar y practicar decisiones.
-                </p>
-              </figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <div class="device-browser">
-                <div class="device-toolbar" aria-hidden="true">
-                  <span>● ● ●</span><span>Vista del producto</span
-                  ><span>↗</span>
-                </div>
-                <img
-                  src="/assets/psyke/psyke-caces.png"
-                  alt="Preparación tipo CACES"
-                  loading="lazy"
-                />
-              </div>
-              <figcaption>
-                <span class="overline">02 / PSYKE</span>
-                <h3>Preparación tipo CACES</h3>
-                <p>Un espacio de práctica para la preparación académica.</p>
-              </figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <div class="device-browser">
-                <div class="device-toolbar" aria-hidden="true">
-                  <span>● ● ●</span><span>Vista del producto</span
-                  ><span>↗</span>
-                </div>
-                <img
-                  src="/assets/psyke/psyke-dashboard.png"
-                  alt="Panel de entrenamiento"
-                  loading="lazy"
-                />
-              </div>
-              <figcaption>
-                <span class="overline">03 / PSYKE</span>
-                <h3>Panel de entrenamiento</h3>
-                <p>
-                  Consulta del recorrido de práctica dentro de la plataforma.
-                </p>
-              </figcaption>
-            </figure>
+          <div class="video-feature video-feature-desktop">
+            <div class="device-browser">
+              <video
+                class="product-video"
+                controls
+                playsinline
+                preload="none"
+                poster="/assets/videos/psyke-poster.jpg"
+                aria-label="Demostración de la plataforma Psyke"
+              >
+                <source src="/assets/videos/psyke.mp4" type="video/mp4" />
+                Tu navegador no puede reproducir este video.
+                <a href="/assets/videos/psyke.mp4">Abrir video de psyke</a>.
+              </video>
+            </div>
+            <div class="video-feature-copy">
+              <span class="overline">PSYKE / SIMULACIÓN CLÍNICA</span>
+              <h3>Explora las herramientas en acción.</h3>
+              <p>
+                Un recorrido por la plataforma, los escenarios de simulación y
+                las opciones de práctica clínica.
+              </p>
+              <p class="video-hint">
+                Reproduce el video y amplíalo para revisar cada detalle.
+              </p>
+            </div>
           </div>
           <div class="gallery-action">
-            <span>Pantallas del producto · Plataforma web</span
+            <span>Demostración en video · Plataforma web</span
             ><a
               class="quiet-link"
               href="https://simulador-mental.vercel.app"
@@ -413,5 +383,6 @@
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
     <script defer src="/script.js?v=20261003b"></script>
+    <script defer src="/media.js"></script>
   </body>
 </html>

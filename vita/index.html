@@ -21,7 +21,7 @@
     />
     <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="/home.css?v=20261003" />
-    <link rel="stylesheet" href="/products.css?v=20261003b" />
+    <link rel="stylesheet" href="/products.css?v=20261003c" />
   </head>
   <body class="site-body home-page product-page product-vita">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -91,28 +91,29 @@
               <div class="stage-caption">
                 <span>VITA / EXPERIENCIA DIGITAL</span><span>AXYSMED</span>
               </div>
-              <div class="phone-pair">
+              <div class="phone-single">
                 <div class="device-phone">
-                  <img
-                    src="/assets/vita/vita-options.png"
-                    alt="Inicio de la aplicación"
-                    loading="eager"
-                    width="1170"
-                    height="2532"
-                  />
-                </div>
-                <div class="device-phone">
-                  <img
-                    src="/assets/vita/vita-home-mobile.png"
-                    alt="Seguimiento de vacunación"
-                    loading="eager"
-                    width="1170"
-                    height="2532"
-                  />
+                  <video
+                    class="product-video"
+                    controls
+                    playsinline
+                    preload="none"
+                    poster="/assets/videos/vita-app-poster.jpg"
+                    aria-label="Recorrido de Vita en la aplicación móvil"
+                  >
+                    <source
+                      src="/assets/videos/vita-app.mp4"
+                      type="video/mp4"
+                    />
+                    Tu navegador no puede reproducir este video.
+                    <a href="/assets/videos/vita-app.mp4"
+                      >Abrir video de vita-app</a
+                    >.
+                  </video>
                 </div>
               </div>
               <span class="stage-note"
-                >Capturas de la interfaz del producto</span
+                >Video de la aplicación · Reproduce para explorar</span
               >
             </div>
           </div>
@@ -159,60 +160,38 @@
               <span class="overline">01 / EXPLORA VITA</span>
               <h2>La experiencia del paciente,<br />en la palma de su mano.</h2>
             </div>
-            <p>Explora las pantallas de la aplicación móvil de Vita.</p>
+            <p>Un recorrido en video por la experiencia móvil de Vita.</p>
           </div>
-          <div class="device-gallery mobile-gallery">
-            <figure class="gallery-item">
-              <div class="device-phone">
-                <img
-                  src="/assets/vita/vita-options.png"
-                  alt="Inicio de la aplicación"
-                  loading="lazy"
-                  width="1170"
-                  height="2532"
-                />
-              </div>
-              <figcaption>
-                <span class="overline">01 / VITA</span>
-                <h3>Inicio de la aplicación</h3>
-                <p>Acceso a las herramientas de la experiencia móvil.</p>
-              </figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <div class="device-phone">
-                <img
-                  src="/assets/vita/vita-home-mobile.png"
-                  alt="Seguimiento de vacunación"
-                  loading="lazy"
-                  width="1170"
-                  height="2532"
-                />
-              </div>
-              <figcaption>
-                <span class="overline">02 / VITA</span>
-                <h3>Seguimiento de vacunación</h3>
-                <p>Consulta del historial y del esquema de vacunación.</p>
-              </figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <div class="device-phone">
-                <img
-                  src="/assets/vita/vita-welcome.png"
-                  alt="Pretriaje digital"
-                  loading="lazy"
-                  width="1170"
-                  height="2532"
-                />
-              </div>
-              <figcaption>
-                <span class="overline">03 / VITA</span>
-                <h3>Pretriaje digital</h3>
-                <p>Vista de una evaluación dentro de la aplicación.</p>
-              </figcaption>
-            </figure>
+          <div class="video-feature video-feature-mobile">
+            <div class="device-phone">
+              <video
+                class="product-video"
+                controls
+                playsinline
+                preload="none"
+                poster="/assets/videos/vita-app-poster.jpg"
+                aria-label="Recorrido de Vita en la aplicación móvil"
+              >
+                <source src="/assets/videos/vita-app.mp4" type="video/mp4" />
+                Tu navegador no puede reproducir este video.
+                <a href="/assets/videos/vita-app.mp4">Abrir video de vita-app</a
+                >.
+              </video>
+            </div>
+            <div class="video-feature-copy">
+              <span class="overline">VITA / APLICACIÓN MÓVIL</span>
+              <h3>Descubre la experiencia, paso a paso.</h3>
+              <p>
+                Reproduce el recorrido por la aplicación: inicio, herramientas
+                de seguimiento y evaluación guiada.
+              </p>
+              <p class="video-hint">
+                Usa los controles para pausar, avanzar o ampliar el video.
+              </p>
+            </div>
           </div>
           <div class="gallery-action">
-            <span>Pantallas del producto · Aplicación móvil</span
+            <span>Demostración en video · Aplicación móvil</span
             ><a
               class="quiet-link"
               href="https://website-gilt-seven-66.vercel.app"
@@ -226,7 +205,7 @@
           </div>
         </div>
       </section>
-      <section class="portal-section">
+      <section class="portal-section" id="portal">
         <div class="container portal-layout">
           <div>
             <span class="overline">VITA / ENTORNO PROFESIONAL</span>
@@ -244,14 +223,18 @@
             >
           </div>
           <div class="device-browser">
-            <div class="device-toolbar" aria-hidden="true">
-              <span>● ● ●</span><span>Vista del producto</span><span>↗</span>
-            </div>
-            <img
-              src="/assets/vita/vita-dashboard-web.png"
-              alt="Vista del portal profesional de Vita"
-              loading="lazy"
-            />
+            <video
+              class="product-video"
+              controls
+              playsinline
+              preload="none"
+              poster="/assets/videos/vita-web-poster.jpg"
+              aria-label="Demostración del portal profesional de Vita"
+            >
+              <source src="/assets/videos/vita-web.mp4" type="video/mp4" />
+              Tu navegador no puede reproducir este video.
+              <a href="/assets/videos/vita-web.mp4">Abrir video de vita-web</a>.
+            </video>
           </div>
         </div>
       </section>
@@ -439,5 +422,6 @@
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
     <script defer src="/script.js?v=20261003b"></script>
+    <script defer src="/media.js"></script>
   </body>
 </html>

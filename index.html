@@ -23,7 +23,7 @@
     />
     <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="/home.css?v=20261003" />
-    <link rel="stylesheet" href="/products.css?v=20261003b" />
+    <link rel="stylesheet" href="/products.css?v=20261003c" />
   </head>
   <body class="site-body home-page">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -441,16 +441,18 @@
             tabindex="0"
           >
             <div class="preview-media preview-psyke">
-              <div class="browser-bar">
-                <span aria-hidden="true">● ● ●</span
-                ><span>Psyke · Vista del producto</span
-                ><span aria-hidden="true">↗</span>
-              </div>
-              <img
-                src="/assets/psyke/psyke-case.png"
-                alt="Interfaz de Psyke"
-                loading="lazy"
-              />
+              <video
+                class="product-video"
+                controls
+                playsinline
+                preload="none"
+                poster="/assets/videos/psyke-poster.jpg"
+                aria-label="Demostración de la plataforma Psyke"
+              >
+                <source src="/assets/videos/psyke.mp4" type="video/mp4" />
+                Tu navegador no puede reproducir este video.
+                <a href="/assets/videos/psyke.mp4">Abrir video de psyke</a>.
+              </video>
             </div>
             <div class="preview-copy">
               <span class="overline">Formación clínica</span>
@@ -477,13 +479,20 @@
             <div class="preview-media preview-vita">
               <span class="home-device-label">Vita / Aplicación móvil</span>
               <div class="device-phone">
-                <img
-                  src="/assets/vita/vita-options.png"
-                  alt="Inicio de la aplicación"
-                  loading="lazy"
-                  width="1170"
-                  height="2532"
-                />
+                <video
+                  class="product-video"
+                  controls
+                  playsinline
+                  preload="none"
+                  poster="/assets/videos/vita-app-poster.jpg"
+                  aria-label="Recorrido de Vita en la aplicación móvil"
+                >
+                  <source src="/assets/videos/vita-app.mp4" type="video/mp4" />
+                  Tu navegador no puede reproducir este video.
+                  <a href="/assets/videos/vita-app.mp4"
+                    >Abrir video de vita-app</a
+                  >.
+                </video>
               </div>
             </div>
             <div class="preview-copy">
@@ -665,5 +674,6 @@
     <script defer src="/_vercel/insights/script.js?v=20261003"></script>
     <script defer src="/script.js?v=20261003"></script>
     <script defer src="/home.js"></script>
+    <script defer src="/media.js"></script>
   </body>
 </html>
